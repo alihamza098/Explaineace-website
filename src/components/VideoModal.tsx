@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { X, ExternalLink, Sparkles } from "lucide-react";
 import Link from "next/link";
 
@@ -23,6 +24,9 @@ export const VideoModal: React.FC<VideoModalProps> = ({
   category,
   projectId,
 }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -43,7 +47,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen || (!videoId && !videoUrl)) return null;
+  if (!mounted || !isOpen || (!videoId && !videoUrl)) return null;
 
   // Extract YouTube ID if not directly provided
   let embedUrl = "";
@@ -56,16 +60,16 @@ export const VideoModal: React.FC<VideoModalProps> = ({
     }
   }
 
-  return (
+  return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-ink/70 backdrop-blur-xl animate-fade-in"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-black/85"
       role="dialog"
       aria-modal="true"
       aria-labelledby="video-modal-title"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden animate-fade-in"
+        className="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar */}
@@ -141,6 +145,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
