@@ -119,13 +119,13 @@ export default function ServicesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-400">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">
             Specialized Video Production Services
           </span>
-          <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight text-ink leading-tight">
             Video Services for SaaS & Software Teams
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
             Every software package is built to resolve specific customer friction points—whether you need a high-converting homepage product walkthrough, an onboarding screencast series, a mobile app demo, or high-velocity AI UGC ads.
           </p>
         </div>
@@ -137,38 +137,38 @@ export default function ServicesPage() {
             return (
               <div
                 key={service.slug}
-                className="p-8 sm:p-10 rounded-3xl bg-surface-card border border-white/[0.08] shadow-card hover:border-brand-500/40 transition-all duration-300 flex flex-col justify-between group"
+                className="p-8 sm:p-10 rounded-3xl bg-surface-card border border-surface-border shadow-card hover:border-brand-500/40 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 text-xs font-semibold uppercase tracking-wider">
                       <Icon className="w-3.5 h-3.5" />
                       <span>{service.badge}</span>
                     </div>
-                    <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                    <span className="text-xs font-bold text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
                       {service.price}
                     </span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white group-hover:text-brand-300 transition-colors">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-ink group-hover:text-brand-700 transition-colors">
                     {service.title}
                   </h2>
 
-                  <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+                  <p className="mt-3 text-ink-soft text-sm sm:text-base leading-relaxed">
                     {service.description}
                   </p>
 
-                  <div className="mt-6 pt-6 border-t border-white/[0.06] space-y-2.5">
-                    <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                  <div className="mt-6 pt-6 border-t border-surface-border space-y-2.5">
+                    <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
                       Key Highlights:
                     </h3>
                     <ul className="space-y-2">
                       {service.highlights.map((h) => (
                         <li
                           key={h}
-                          className="flex items-start gap-2 text-xs sm:text-sm text-slate-300"
+                          className="flex items-start gap-2 text-xs sm:text-sm text-ink-soft"
                         >
-                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                           <span>{h}</span>
                         </li>
                       ))}
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-white/[0.06] flex items-center justify-between">
+                <div className="mt-8 pt-6 border-t border-surface-border flex items-center justify-between">
                   <Link
                     href={service.slug}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 px-6 py-3 rounded-full shadow-glow transition-all"
@@ -186,7 +186,7 @@ export default function ServicesPage() {
                   </Link>
                   <Link
                     href="/pricing"
-                    className="text-xs text-slate-400 hover:text-white transition-colors"
+                    className="text-xs text-ink-muted hover:text-ink transition-colors"
                   >
                     View Rates &rarr;
                   </Link>
@@ -199,13 +199,13 @@ export default function ServicesPage() {
         {/* Technical Foundation */}
         <div className="mb-20">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-semibold uppercase tracking-wider text-brand-400">
+            <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">
               Technical Foundation
             </span>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-white">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink">
               Every package includes full post-production tooling.
             </h2>
-            <p className="mt-3 text-slate-400 text-sm leading-relaxed">
+            <p className="mt-3 text-ink-muted text-sm leading-relaxed">
               No hidden fees for cursor smoothing, subtitle files, or high-definition framing.
             </p>
           </div>
@@ -214,13 +214,13 @@ export default function ServicesPage() {
             {valueAddItems.map((val) => (
               <div
                 key={val.title}
-                className="p-6 rounded-2xl bg-surface-card border border-white/[0.06] hover:border-brand-500/30 transition-all"
+                className="p-6 rounded-2xl bg-surface-card border border-surface-border hover:border-brand-500/30 transition-all"
               >
-                <h3 className="text-base font-semibold text-white mb-2 flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <h3 className="text-base font-semibold text-ink mb-2 flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                   <span>{val.title}</span>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
                   {val.desc}
                 </p>
               </div>

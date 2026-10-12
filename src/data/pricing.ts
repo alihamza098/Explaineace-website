@@ -93,7 +93,7 @@ export const pricingTiers: PricingTier[] = [
     name: "Custom UI Motion Explainer",
     price: "$800 – $1,200",
     priceUnit: "per project (scope-dependent)",
-    badge: "Enterprise Launches",
+    badge: "Enterprise",
     duration: "60s – 90s+ custom scope",
     discountNote: "Final price depends on animation complexity, asset design & total duration",
     description:

@@ -1,85 +1,83 @@
 import React from "react";
 import Link from "next/link";
-import { User, ArrowRight, ShieldCheck, Video, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { Reveal } from "@/components/motion/Reveal";
+import { SplitText } from "@/components/motion/SplitText";
+import { Parallax } from "@/components/motion/Parallax";
 
 export const AboutPreview: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24 relative overflow-hidden">
+    <section className="py-24 sm:py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="p-8 sm:p-12 rounded-3xl bg-surface-card border border-white/[0.08] shadow-card">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Left: Avatar placeholder & badge */}
-            <div className="lg:col-span-4 flex flex-col items-center text-center">
-              <div className="relative">
-                {/* Avatar stylized container */}
-                <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl bg-gradient-to-tr from-brand-600 to-accent-cyan p-1 shadow-glow">
-                  <div className="w-full h-full rounded-xl bg-surface-card flex flex-col items-center justify-center p-4">
-                    <User className="w-16 h-16 text-brand-300 mb-2" />
-                    <span className="text-xs font-semibold text-white tracking-wide uppercase">
-                      Ali
-                    </span>
-                    <span className="text-[10px] text-slate-400">
-                      Video Specialist
-                    </span>
-                  </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Portrait card */}
+          <Reveal variant="clip" className="lg:col-span-5">
+            <div className="relative aspect-[4/5] max-w-sm mx-auto rounded-[2rem] overflow-hidden bg-gradient-to-br from-brand-600 via-violet-600 to-cyan-500 shadow-stage">
+              <Parallax speed={-0.08} className="absolute inset-[-10%]">
+                <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,0.6)_1px,transparent_1px)] [background-size:18px_18px]" />
+              </Parallax>
+              <div className="absolute inset-0 flex flex-col justify-between p-8 text-white">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">Founder</span>
+                  <span className="text-xs font-mono text-white/70">@{siteConfig.fiverr.username}</span>
                 </div>
-
-                {/* Floating Level 2 badge */}
-                <div className="float-slow absolute -bottom-3 bg-emerald-500/20 border border-emerald-500/40 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-semibold text-emerald-300 shadow-lg flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Level 2 Seller</span>
+                <div>
+                  <span className="block text-[7rem] sm:text-[9rem] leading-[0.8] font-bold tracking-[-0.06em]">Ali</span>
+                  <span className="mt-3 block text-sm font-medium text-white/85">
+                    Software tutorial &amp; SaaS video specialist
+                  </span>
                 </div>
               </div>
+              <div className="float-slow absolute top-1/2 -right-3 sm:right-4 bg-white px-3.5 py-2 rounded-full text-xs font-semibold text-emerald-700 shadow-lift flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                Level 2 Seller
+              </div>
+            </div>
+          </Reveal>
 
-              <div className="mt-6 text-center">
-                <span className="text-xs font-mono text-slate-400">
-                  Fiverr: @{siteConfig.fiverr.username}
+          {/* Bio */}
+          <div className="lg:col-span-7 space-y-6">
+            <Reveal>
+              <span className="eyebrow">About The Specialist</span>
+            </Reveal>
+            <SplitText
+              text="Helping software teams *explain what they build.*"
+              className="text-4xl sm:text-5xl font-bold tracking-[-0.03em] text-ink leading-[1.05]"
+            />
+
+            <Reveal delay={150} className="relative pl-8 border-l-2 border-brand-200">
+              <span aria-hidden="true" className="serif-accent absolute -left-5 -top-4 text-6xl leading-none text-brand-600 bg-background px-1">&ldquo;</span>
+              <div className="space-y-4 text-ink-soft text-base sm:text-lg leading-relaxed">
+                <p>
+                  I&apos;m Ali, a video specialist focused on software tutorials, app demos, walkthroughs and instructional content.
+                </p>
+                <p>
+                  I help SaaS companies, startups, software teams and app developers turn complicated products and workflows into clear, professional videos.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={250} className="pt-2 flex flex-wrap items-center gap-3">
+              <Link
+                href="/about"
+                className="btn-sheen group inline-flex items-center gap-2 text-sm font-semibold text-white bg-ink hover:bg-brand-700 px-6 py-3.5 rounded-full transition-colors duration-300 shadow-glow"
+              >
+                <span>Learn More About Me</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/work"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-ink-soft hover:text-ink px-4 py-3 transition-colors"
+              >
+                <span className="bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat group-hover:bg-[length:100%_1px] transition-[background-size] duration-500">
+                  See 27 Verified Examples
                 </span>
-              </div>
-            </div>
-
-            {/* Right: Bio copy */}
-            <div className="lg:col-span-8 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider">
-                <Video className="w-3.5 h-3.5" />
-                <span>About The Specialist</span>
-              </div>
-
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
-                Helping software teams explain what they build.
-              </h2>
-
-              <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-                <p>
-                  &ldquo;I&apos;m Ali, a video specialist focused on software tutorials, app demos, walkthroughs and instructional content.
-                </p>
-                <p>
-                  I help SaaS companies, startups, software teams and app developers turn complicated products and workflows into clear, professional videos.&rdquo;
-                </p>
-              </div>
-
-              <div className="pt-3 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-white/[0.08] hover:bg-white/[0.14] border border-white/[0.12] px-6 py-3 rounded-full transition-all duration-200 group"
-                >
-                  <span>Learn More About Me</span>
-                  <ArrowRight className="w-4 h-4 text-brand-400 group-hover:translate-x-1 transition-transform" />
-                </Link>
-
-                <Link
-                  href="/work"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white px-4 py-3 transition-colors"
-                >
-                  <span>See 27 Verified Examples</span>
-                  <span>&rarr;</span>
-                </Link>
-              </div>
-            </div>
+                <span>&rarr;</span>
+              </Link>
+            </Reveal>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

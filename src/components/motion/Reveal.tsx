@@ -7,7 +7,7 @@ interface RevealProps {
   /** Delay in ms before the element animates in once visible. */
   delay?: number;
   /** Animation variant. */
-  variant?: "up" | "fade" | "scale" | "left" | "right";
+  variant?: "up" | "fade" | "scale" | "left" | "right" | "clip" | "words";
   className?: string;
   as?: keyof JSX.IntrinsicElements;
 }

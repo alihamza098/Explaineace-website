@@ -50,14 +50,14 @@ export default function BlogListingPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 text-xs font-semibold uppercase tracking-wider mb-4">
             <BookOpen className="w-3.5 h-3.5 text-accent-cyan" />
             <span>SaaS Video Resources & Insights</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink leading-tight">
             How to explain software that sells.
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed max-w-2xl mx-auto">
             Practical guides on pricing, scripting, screen recording craft, and onboarding psychology to turn complex software into clear, high-converting video.
           </p>
         </div>
@@ -68,20 +68,20 @@ export default function BlogListingPage() {
             {blogPosts.slice(0, 1).map((post) => (
               <div
                 key={post.slug}
-                className="group relative rounded-3xl bg-surface-card border border-white/[0.08] hover:border-brand-500/40 transition-all duration-300 overflow-hidden shadow-card hover:shadow-glow-lg"
+                className="group relative rounded-3xl bg-surface-card border border-surface-border hover:border-brand-500/40 transition-all duration-300 overflow-hidden shadow-card hover:shadow-glow-lg"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-10">
                   <div className="lg:col-span-7 space-y-4">
                     <div className="flex flex-wrap items-center gap-3">
-                      <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-500/20 text-brand-300 border border-brand-500/30">
+                      <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-500/20 text-brand-600 border border-brand-500/30">
                         Featured · {post.category}
                       </span>
-                      <span className="text-xs text-slate-400 flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-slate-500" />
+                      <span className="text-xs text-ink-muted flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5 text-ink-muted" />
                         {post.readingTime}
                       </span>
-                      <span className="text-xs text-slate-400 flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5 text-slate-500" />
+                      <span className="text-xs text-ink-muted flex items-center gap-1">
+                        <Calendar className="w-3.5 h-3.5 text-ink-muted" />
                         {new Date(post.publishedAt).toLocaleDateString("en-US", {
                           month: "short",
                           day: "numeric",
@@ -91,12 +91,12 @@ export default function BlogListingPage() {
                     </div>
 
                     <Link href={`/blog/${post.slug}`}>
-                      <h2 className="text-2xl sm:text-3xl font-extrabold text-white group-hover:text-brand-300 transition-colors leading-tight">
+                      <h2 className="text-2xl sm:text-3xl font-extrabold text-ink group-hover:text-brand-700 transition-colors leading-tight">
                         {post.title}
                       </h2>
                     </Link>
 
-                    <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                    <p className="text-sm sm:text-base text-ink-soft leading-relaxed">
                       {post.excerpt}
                     </p>
 
@@ -104,7 +104,7 @@ export default function BlogListingPage() {
                       {post.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2.5 py-1 rounded-lg bg-surface-subtle text-[11px] font-medium text-slate-400 border border-white/[0.04]"
+                          className="px-2.5 py-1 rounded-lg bg-surface-subtle text-[11px] font-medium text-ink-muted border border-surface-border"
                         >
                           #{tag}
                         </span>
@@ -122,7 +122,7 @@ export default function BlogListingPage() {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-5 relative aspect-video rounded-2xl overflow-hidden border border-white/[0.08] bg-[#0E111A]">
+                  <div className="lg:col-span-5 relative aspect-video rounded-2xl overflow-hidden border border-surface-border bg-white">
                     <Image
                       src={post.featuredImage}
                       alt={post.title}
@@ -148,11 +148,11 @@ export default function BlogListingPage() {
         {/* Additional Articles Grid */}
         {blogPosts.length > 1 && (
           <div className="space-y-8 mb-20">
-            <div className="flex items-center justify-between border-b border-white/[0.06] pb-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            <div className="flex items-center justify-between border-b border-surface-border pb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-ink tracking-tight">
                 All Strategy Guides & Case Studies
               </h3>
-              <span className="text-xs text-slate-400 font-medium">
+              <span className="text-xs text-ink-muted font-medium">
                 {blogPosts.length} articles published
               </span>
             </div>
@@ -161,10 +161,10 @@ export default function BlogListingPage() {
               {blogPosts.slice(1).map((post) => (
                 <div
                   key={post.slug}
-                  className="group rounded-3xl bg-surface-card border border-white/[0.08] hover:border-brand-500/40 transition-all duration-300 overflow-hidden shadow-card flex flex-col justify-between"
+                  className="group rounded-3xl bg-surface-card border border-surface-border hover:border-brand-500/40 transition-all duration-300 overflow-hidden shadow-card flex flex-col justify-between"
                 >
                   <div className="p-6 sm:p-7 space-y-4">
-                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/[0.06] bg-[#0E111A] mb-4">
+                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-surface-border bg-white mb-4">
                       <Image
                         src={post.featuredImage}
                         alt={post.title}
@@ -180,9 +180,9 @@ export default function BlogListingPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3 text-xs text-slate-400">
+                    <div className="flex items-center gap-3 text-xs text-ink-muted">
                       <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-slate-500" />
+                        <Clock className="w-3.5 h-3.5 text-ink-muted" />
                         {post.readingTime}
                       </span>
                       <span>•</span>
@@ -196,12 +196,12 @@ export default function BlogListingPage() {
                     </div>
 
                     <Link href={`/blog/${post.slug}`}>
-                      <h4 className="text-xl font-bold text-white group-hover:text-brand-300 transition-colors leading-snug">
+                      <h4 className="text-xl font-bold text-ink group-hover:text-brand-700 transition-colors leading-snug">
                         {post.title}
                       </h4>
                     </Link>
 
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3">
+                    <p className="text-xs sm:text-sm text-ink-soft leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
 
@@ -209,7 +209,7 @@ export default function BlogListingPage() {
                       {post.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="px-2 py-0.5 rounded-md bg-surface-subtle text-[10px] font-medium text-slate-400 border border-white/[0.04]"
+                          className="px-2 py-0.5 rounded-md bg-surface-subtle text-[10px] font-medium text-ink-muted border border-surface-border"
                         >
                           #{tag}
                         </span>
@@ -217,10 +217,10 @@ export default function BlogListingPage() {
                     </div>
                   </div>
 
-                  <div className="p-6 pt-0 border-t border-white/[0.04]">
+                  <div className="p-6 pt-0 border-t border-surface-border">
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-brand-300 hover:text-white transition-colors group-hover:translate-x-1 duration-200"
+                      className="inline-flex items-center gap-2 text-xs font-semibold text-brand-600 hover:text-ink transition-colors group-hover:translate-x-1 duration-200"
                     >
                       <span>Read Breakdown</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -233,14 +233,14 @@ export default function BlogListingPage() {
         )}
 
         {/* Bottom CTA Block */}
-        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-brand-950/60 via-surface-card to-surface-subtle border border-brand-500/30 text-center max-w-4xl mx-auto shadow-glow">
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-300">
+        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-brand-50 via-surface-card to-surface-subtle border border-brand-500/30 text-center max-w-4xl mx-auto shadow-glow">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">
             Have a project in mind?
           </span>
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mt-2">
+          <h3 className="text-2xl sm:text-3xl font-bold text-ink mt-2">
             Let&apos;s turn your software into a high-converting video.
           </h3>
-          <p className="mt-3 text-sm text-slate-300 max-w-xl mx-auto">
+          <p className="mt-3 text-sm text-ink-soft max-w-xl mx-auto">
             Get an exact, transparent quote within hours. No agencies, no bloated markups—direct collaboration with Ali.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -255,7 +255,7 @@ export default function BlogListingPage() {
               href={siteConfig.whatsapp.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 px-6 py-3.5 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 hover:text-emerald-700 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 px-6 py-3.5 rounded-full transition-colors"
             >
               <span>Quick WhatsApp DM</span>
             </a>

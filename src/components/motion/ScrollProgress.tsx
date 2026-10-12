@@ -32,7 +32,7 @@ export const ScrollProgress: React.FC = () => {
     <div
       ref={ref}
       aria-hidden="true"
-      className="fixed top-0 left-0 right-0 h-[2px] z-[60] origin-left bg-gradient-to-r from-brand-500 via-indigo-400 to-accent-cyan"
+      className="fixed top-0 left-0 right-0 h-[3px] z-[60] origin-left bg-gradient-to-r from-brand-600 via-violet-500 to-cyan-400"
       style={{ transform: "scaleX(0)" }}
     />
   );

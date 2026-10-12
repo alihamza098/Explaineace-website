@@ -28,14 +28,14 @@ export function PackageNoticeBanner() {
   return (
     <div className="p-4 sm:p-5 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
       <div className="flex items-center gap-3.5">
-        <div className="w-11 h-11 rounded-xl bg-brand-600/20 text-brand-300 flex items-center justify-center font-bold shrink-0">
+        <div className="w-11 h-11 rounded-xl bg-brand-600/20 text-brand-600 flex items-center justify-center font-bold shrink-0">
           <Sparkles className="w-5 h-5 text-accent-cyan" />
         </div>
         <div>
-          <span className="text-[11px] uppercase font-bold tracking-wider text-brand-400 block">
+          <span className="text-[11px] uppercase font-bold tracking-wider text-brand-600 block">
             Selected Package from Pricing
           </span>
-          <h4 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+          <h4 className="text-base sm:text-lg font-bold text-ink flex items-center gap-2">
             <span>{matchedTier.name}</span>
             <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-accent-cyan/15 text-accent-cyan border border-accent-cyan/30">
               {matchedTier.price}
@@ -45,7 +45,7 @@ export function PackageNoticeBanner() {
       </div>
       <Link
         href="/pricing"
-        className="text-xs text-slate-300 hover:text-white underline font-medium self-start sm:self-auto"
+        className="text-xs text-ink-soft hover:text-ink underline font-medium self-start sm:self-auto"
       >
         Change Package &rarr;
       </Link>
@@ -67,17 +67,17 @@ export function CopyEmailButton() {
       <button
         type="button"
         onClick={handleCopy}
-        className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white text-xs font-semibold border border-white/[0.1] transition-all"
+        className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-ink/[0.08] hover:bg-ink/[0.14] text-ink text-xs font-semibold border border-surface-border transition-all"
         aria-label="Copy email address"
       >
         {copied ? (
           <>
-            <Check className="w-4 h-4 text-emerald-400" />
-            <span className="text-emerald-400">Copied!</span>
+            <Check className="w-4 h-4 text-emerald-600" />
+            <span className="text-emerald-600">Copied!</span>
           </>
         ) : (
           <>
-            <Copy className="w-4 h-4 text-slate-300" />
+            <Copy className="w-4 h-4 text-ink-soft" />
             <span>Copy Email</span>
           </>
         )}

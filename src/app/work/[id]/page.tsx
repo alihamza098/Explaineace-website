@@ -195,16 +195,16 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
       <article className="pt-28 sm:pt-36 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs Navigation */}
-          <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs sm:text-sm text-slate-400">
-            <Link href="/" className="hover:text-white transition-colors">
+          <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs sm:text-sm text-ink-muted">
+            <Link href="/" className="hover:text-ink transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link href="/work" className="hover:text-white transition-colors">
+            <Link href="/work" className="hover:text-ink transition-colors">
               Work
             </Link>
             <span>/</span>
-            <span className="text-brand-300 font-medium truncate max-w-[200px] sm:max-w-none">
+            <span className="text-brand-600 font-medium truncate max-w-[200px] sm:max-w-none">
               {project.title}
             </span>
           </nav>
@@ -212,25 +212,25 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           {/* Project Header Meta */}
           <div className="max-w-4xl mb-8">
             <div className="flex flex-wrap items-center gap-2.5 mb-3">
-              <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30">
+              <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-brand-500/20 text-brand-600 border border-brand-500/30">
                 {project.category}
               </span>
-              <span className="text-xs text-slate-400 bg-white/[0.05] px-2.5 py-1 rounded-full border border-white/[0.05]">
+              <span className="text-xs text-ink-muted bg-ink/[0.05] px-2.5 py-1 rounded-full border border-surface-border">
                 {project.industry}
               </span>
               {project.duration && (
-                <span className="text-xs text-slate-400 flex items-center gap-1 bg-white/[0.05] px-2.5 py-1 rounded-full border border-white/[0.05]">
-                  <Clock className="w-3 h-3 text-slate-400" />
+                <span className="text-xs text-ink-muted flex items-center gap-1 bg-ink/[0.05] px-2.5 py-1 rounded-full border border-surface-border">
+                  <Clock className="w-3 h-3 text-ink-muted" />
                   <span>{project.duration}</span>
                 </span>
               )}
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-ink leading-tight">
               {project.title}
             </h1>
 
-            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
               {project.description}
             </p>
           </div>
@@ -252,40 +252,40 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             {/* Left Column: Detailed Case Study breakdown */}
             <div className="lg:col-span-8 space-y-10">
               {/* Overview */}
-              <section className="p-7 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.06] space-y-3">
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-brand-400" />
+              <section className="p-7 sm:p-8 rounded-2xl bg-surface-card border border-surface-border space-y-3">
+                <h2 className="text-xl font-bold text-ink flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-brand-600" />
                   <span>Project Overview & Core Mission</span>
                 </h2>
-                <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                <p className="text-ink-soft text-sm sm:text-base leading-relaxed">
                   {project.caseStudy.overview}
                 </p>
               </section>
 
               {/* Challenge & Approach */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <section className="p-7 rounded-2xl bg-surface-card border border-white/[0.06] space-y-2.5">
-                  <h3 className="text-base font-semibold text-amber-300">
+                <section className="p-7 rounded-2xl bg-surface-card border border-surface-border space-y-2.5">
+                  <h3 className="text-base font-semibold text-amber-600">
                     The Product Challenge
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-ink-muted text-sm leading-relaxed">
                     {project.caseStudy.challenge}
                   </p>
                 </section>
 
-                <section className="p-7 rounded-2xl bg-surface-card border border-white/[0.06] space-y-2.5">
-                  <h3 className="text-base font-semibold text-brand-300">
+                <section className="p-7 rounded-2xl bg-surface-card border border-surface-border space-y-2.5">
+                  <h3 className="text-base font-semibold text-brand-600">
                     The Production Approach
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-ink-muted text-sm leading-relaxed">
                     {project.caseStudy.approach}
                   </p>
                 </section>
               </div>
 
               {/* Production Techniques Applied */}
-              <section className="p-7 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.06]">
-                <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <section className="p-7 sm:p-8 rounded-2xl bg-surface-card border border-surface-border">
+                <h2 className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
                   <Video className="w-5 h-5 text-accent-cyan" />
                   <span>Production Craft & Technical Execution Details</span>
                 </h2>
@@ -293,9 +293,9 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                   {project.caseStudy.production.map((tech) => (
                     <li
                       key={tech}
-                      className="flex items-start gap-2.5 text-sm text-slate-300"
+                      className="flex items-start gap-2.5 text-sm text-ink-soft"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <span>{tech}</span>
                     </li>
                   ))}
@@ -303,16 +303,16 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               </section>
 
               {/* Client Outcome & User Experience */}
-              <section className="p-7 sm:p-8 rounded-2xl bg-gradient-to-br from-surface-card via-surface-card to-brand-950/40 border border-brand-500/20 space-y-3">
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-emerald-400" />
+              <section className="p-7 sm:p-8 rounded-2xl bg-gradient-to-br from-surface-card via-surface-card to-brand-50 border border-brand-500/20 space-y-3">
+                <h2 className="text-xl font-bold text-ink flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5 text-emerald-600" />
                   <span>Client Outcome & Conversion Lift</span>
                 </h2>
-                <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                <p className="text-ink-soft text-sm sm:text-base leading-relaxed">
                   {project.caseStudy.clientOutcome || project.caseStudy.finalResult}
                 </p>
                 {project.caseStudy.finalResult && project.caseStudy.clientOutcome && (
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed pt-1">
+                  <p className="text-ink-muted text-xs sm:text-sm leading-relaxed pt-1">
                     {project.caseStudy.finalResult}
                   </p>
                 )}
@@ -322,17 +322,17 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               {project.caseStudy.testimonial && (
                 <section className="p-7 sm:p-8 rounded-2xl bg-surface-card border border-emerald-500/20 space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 flex items-center gap-1.5">
                       <Star className="w-3.5 h-3.5 fill-emerald-400" />
                       <span>Verified Client Feedback ({project.caseStudy.testimonial.rating}★)</span>
                     </span>
                     <Quote className="w-5 h-5 text-emerald-400/40" />
                   </div>
-                  <blockquote className="text-sm sm:text-base text-slate-200 italic leading-relaxed">
+                  <blockquote className="text-sm sm:text-base text-ink italic leading-relaxed">
                     &ldquo;{project.caseStudy.testimonial.quote}&rdquo;
                   </blockquote>
-                  <div className="text-xs text-slate-400">
-                    <strong className="text-white block font-semibold">
+                  <div className="text-xs text-ink-muted">
+                    <strong className="text-ink block font-semibold">
                       {project.caseStudy.testimonial.author}
                     </strong>
                     <span>{project.caseStudy.testimonial.role}</span>
@@ -343,10 +343,10 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               {/* Service Mapping Internal Link */}
               <div className="p-6 rounded-2xl bg-brand-500/10 border border-brand-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-brand-300 block">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-brand-600 block">
                     Interested in this video format?
                   </span>
-                  <p className="text-sm font-semibold text-white mt-0.5">
+                  <p className="text-sm font-semibold text-ink mt-0.5">
                     Explore our dedicated {matchingService.label} with transparent pricing.
                   </p>
                 </div>
@@ -362,56 +362,56 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
             {/* Right Column: Project Sidebar Info & Video Specs */}
             <aside className="lg:col-span-4 space-y-6">
-              <div className="p-6 rounded-2xl bg-surface-card border border-white/[0.06] space-y-5">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              <div className="p-6 rounded-2xl bg-surface-card border border-surface-border space-y-5">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
                   Project Information
                 </h3>
 
                 <div>
-                  <p className="text-xs text-slate-500">Client / Product</p>
-                  <p className="text-sm font-semibold text-white mt-0.5">{project.client}</p>
+                  <p className="text-xs text-ink-muted">Client / Product</p>
+                  <p className="text-sm font-semibold text-ink mt-0.5">{project.client}</p>
                 </div>
 
                 <div>
-                  <p className="text-xs text-slate-500">Industry</p>
-                  <p className="text-sm font-semibold text-white mt-0.5">{project.industry}</p>
+                  <p className="text-xs text-ink-muted">Industry</p>
+                  <p className="text-sm font-semibold text-ink mt-0.5">{project.industry}</p>
                 </div>
 
                 {/* Technical Video Specifications */}
                 {project.caseStudy.videoSpecs && (
-                  <div className="pt-2 border-t border-white/[0.06] space-y-3">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                      <Sliders className="w-3.5 h-3.5 text-brand-300" />
+                  <div className="pt-2 border-t border-surface-border space-y-3">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted flex items-center gap-1.5">
+                      <Sliders className="w-3.5 h-3.5 text-brand-600" />
                       <span>Production Specs</span>
                     </p>
                     <div className="space-y-2 text-xs">
                       <div>
-                        <span className="text-slate-500 block">Resolution</span>
-                        <span className="text-slate-200 font-medium">{project.caseStudy.videoSpecs.resolution}</span>
+                        <span className="text-ink-muted block">Resolution</span>
+                        <span className="text-ink font-medium">{project.caseStudy.videoSpecs.resolution}</span>
                       </div>
                       <div>
-                        <span className="text-slate-500 block">Frame Rate</span>
-                        <span className="text-slate-200 font-medium">{project.caseStudy.videoSpecs.fps}</span>
+                        <span className="text-ink-muted block">Frame Rate</span>
+                        <span className="text-ink font-medium">{project.caseStudy.videoSpecs.fps}</span>
                       </div>
                       <div>
-                        <span className="text-slate-500 block">Audio Engineering</span>
-                        <span className="text-slate-200 font-medium">{project.caseStudy.videoSpecs.audio}</span>
+                        <span className="text-ink-muted block">Audio Engineering</span>
+                        <span className="text-ink font-medium">{project.caseStudy.videoSpecs.audio}</span>
                       </div>
                       <div>
-                        <span className="text-slate-500 block">Turnaround</span>
-                        <span className="text-emerald-400 font-medium">{project.caseStudy.videoSpecs.turnaround}</span>
+                        <span className="text-ink-muted block">Turnaround</span>
+                        <span className="text-emerald-600 font-medium">{project.caseStudy.videoSpecs.turnaround}</span>
                       </div>
                     </div>
                   </div>
                 )}
 
                 <div>
-                  <p className="text-xs text-slate-500">Services Delivered</p>
+                  <p className="text-xs text-ink-muted">Services Delivered</p>
                   <div className="flex flex-wrap gap-1.5 mt-1.5">
                     {project.services.map((s) => (
                       <span
                         key={s}
-                        className="text-xs text-brand-300 bg-brand-500/10 border border-brand-500/20 px-2.5 py-0.5 rounded-md"
+                        className="text-xs text-brand-600 bg-brand-500/10 border border-brand-500/20 px-2.5 py-0.5 rounded-md"
                       >
                         {s}
                       </span>
@@ -420,12 +420,12 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 </div>
 
                 <div>
-                  <p className="text-xs text-slate-500">Tags</p>
+                  <p className="text-xs text-ink-muted">Tags</p>
                   <div className="flex flex-wrap gap-1.5 mt-1.5">
                     {project.tags.map((t) => (
                       <span
                         key={t}
-                        className="text-xs text-slate-400 bg-white/[0.05] px-2 py-0.5 rounded-md"
+                        className="text-xs text-ink-muted bg-ink/[0.05] px-2 py-0.5 rounded-md"
                       >
                         #{t}
                       </span>
@@ -433,12 +433,12 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/[0.06] space-y-2.5">
+                <div className="pt-4 border-t border-surface-border space-y-2.5">
                   <a
                     href={project.videoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-2.5 px-4 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] text-xs font-medium text-slate-200 flex items-center justify-center gap-1.5 transition-colors"
+                    className="w-full py-2.5 px-4 rounded-xl bg-ink/[0.06] hover:bg-ink/[0.1] text-xs font-medium text-ink flex items-center justify-center gap-1.5 transition-colors"
                   >
                     <span>Open on YouTube</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -462,7 +462,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                         ? "/services/ai-ugc-ads"
                         : "/services/saas-walkthrough-video"
                     }
-                    className="w-full py-2.5 px-4 rounded-xl bg-brand-500/10 hover:bg-brand-500/20 text-xs font-semibold text-brand-300 flex items-center justify-center gap-1.5 border border-brand-500/30 transition-colors"
+                    className="w-full py-2.5 px-4 rounded-xl bg-brand-500/10 hover:bg-brand-500/20 text-xs font-semibold text-brand-600 flex items-center justify-center gap-1.5 border border-brand-500/30 transition-colors"
                   >
                     <span>
                       Explore {
@@ -480,7 +480,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
                   <Link
                     href="/pricing"
-                    className="w-full py-2.5 px-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-xs font-medium text-slate-300 flex items-center justify-center gap-1.5 transition-colors"
+                    className="w-full py-2.5 px-4 rounded-xl bg-ink/[0.04] hover:bg-ink/[0.08] text-xs font-medium text-ink-soft flex items-center justify-center gap-1.5 transition-colors"
                   >
                     <span>View Transparent Pricing</span>
                   </Link>
@@ -488,9 +488,9 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               </div>
 
               {/* Verified Seller Trust Box (Plain Text - No AggregateRating Schema) */}
-              <div className="p-5 rounded-2xl bg-surface-subtle/80 border border-white/[0.04] text-xs text-slate-400 space-y-2">
-                <div className="flex items-center gap-2 text-white font-medium">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <div className="p-5 rounded-2xl bg-surface-subtle/80 border border-surface-border text-xs text-ink-muted space-y-2">
+                <div className="flex items-center gap-2 text-ink font-medium">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
                   <span>Verified Fiverr Level 2 Seller</span>
                 </div>
                 <p className="leading-relaxed">
@@ -500,7 +500,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                   href={siteConfig.fiverr.profileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand-300 hover:text-white underline text-xs font-medium inline-block pt-1"
+                  className="text-brand-600 hover:text-ink underline text-xs font-medium inline-block pt-1"
                 >
                   Verify Reviews on Fiverr Profile &rarr;
                 </a>
@@ -509,19 +509,19 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Related Projects Section */}
-          <section className="mt-20 pt-16 border-t border-white/[0.08]">
+          <section className="mt-20 pt-16 border-t border-surface-border">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                <h2 className="text-2xl sm:text-3xl font-bold text-ink">
                   Related Software Walkthroughs
                 </h2>
-                <p className="text-sm text-slate-400 mt-1">
+                <p className="text-sm text-ink-muted mt-1">
                   More examples in {project.category} and related disciplines.
                 </p>
               </div>
               <Link
                 href="/work"
-                className="text-xs sm:text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors flex items-center gap-1"
+                className="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors flex items-center gap-1"
               >
                 <span>View All {projects.length}</span>
                 <span>&rarr;</span>
@@ -533,20 +533,20 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 <Link
                   key={rp.id}
                   href={`/work/${rp.id}`}
-                  className="group p-5 rounded-2xl bg-surface-card border border-white/[0.06] hover:border-brand-500/40 transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between"
+                  className="group p-5 rounded-2xl bg-surface-card border border-surface-border hover:border-brand-500/40 transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between"
                 >
                   <div>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-300">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-600">
                       {rp.category}
                     </span>
-                    <h3 className="font-semibold text-base text-white group-hover:text-brand-300 transition-colors mt-2.5 line-clamp-1">
+                    <h3 className="font-semibold text-base text-ink group-hover:text-brand-700 transition-colors mt-2.5 line-clamp-1">
                       {rp.title}
                     </h3>
-                    <p className="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-ink-muted mt-2 line-clamp-2 leading-relaxed">
                       {rp.description}
                     </p>
                   </div>
-                  <span className="mt-4 text-[11px] text-brand-400 font-medium inline-flex items-center gap-1">
+                  <span className="mt-4 text-[11px] text-brand-600 font-medium inline-flex items-center gap-1">
                     <span>View Case Study</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </span>

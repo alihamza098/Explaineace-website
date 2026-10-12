@@ -90,7 +90,7 @@ export const HeroTimelineScrubber: React.FC<HeroTimelineScrubberProps> = ({
           </button>
 
           {/* Timecode display */}
-          <div className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-black/60 border border-white/[0.08] font-mono text-[10px] sm:text-[11px] text-accent-cyan">
+          <div className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-black/60 border border-white/[0.08] font-mono text-[10px] sm:text-[11px] text-cyan-400">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span>{timecode}</span>
           </div>
@@ -147,7 +147,7 @@ export const HeroTimelineScrubber: React.FC<HeroTimelineScrubberProps> = ({
 
         {/* Filled Active Progress Bar */}
         <div
-          className="relative h-full bg-gradient-to-r from-brand-500 via-indigo-400 to-accent-cyan rounded-full transition-all duration-75"
+          className="relative h-full bg-gradient-to-r from-brand-500 via-indigo-400 to-cyan-400 rounded-full transition-all duration-75"
           style={{ width: `${progress}%` }}
         >
           {/* Glowing Playhead Head */}
@@ -172,7 +172,7 @@ export const HeroTimelineScrubber: React.FC<HeroTimelineScrubberProps> = ({
               <div
                 className={`w-2.5 h-2.5 rotate-45 transition-all duration-200 ${
                   isPassed
-                    ? "bg-accent-cyan ring-2 ring-accent-cyan/40 scale-110 shadow-[0_0_8px_rgba(56,189,248,0.8)]"
+                    ? "bg-cyan-400 ring-2 ring-cyan-400/40 scale-110 shadow-[0_0_8px_rgba(56,189,248,0.8)]"
                     : "bg-slate-400 hover:bg-white ring-1 ring-white/20"
                 }`}
               />
@@ -182,7 +182,7 @@ export const HeroTimelineScrubber: React.FC<HeroTimelineScrubberProps> = ({
                 <div
                   className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 pointer-events-none whitespace-nowrap bg-black/95 backdrop-blur-md border border-white/20 rounded-md px-2 py-1 text-[10px] text-white font-medium shadow-xl flex items-center gap-1.5 z-40 transition-all duration-150 animate-fade-in -translate-y-1"
                 >
-                  {kf.icon === "zoom" && <ZoomIn className="w-3 h-3 text-accent-cyan" />}
+                  {kf.icon === "zoom" && <ZoomIn className="w-3 h-3 text-cyan-400" />}
                   {kf.icon === "cursor" && <MousePointer2 className="w-3 h-3 text-brand-400" />}
                   {kf.icon === "sparkles" && <Sparkles className="w-3 h-3 text-amber-400" />}
                   {kf.icon === "play" && <Play className="w-2.5 h-2.5 fill-emerald-400 text-emerald-400" />}

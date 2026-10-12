@@ -58,27 +58,27 @@ export const VideoModal: React.FC<VideoModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-black/85 backdrop-blur-md animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-ink/70 backdrop-blur-xl animate-fade-in"
       role="dialog"
       aria-modal="true"
       aria-labelledby="video-modal-title"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-4xl bg-surface-card border border-white/[0.1] rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-full max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden animate-fade-in"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar */}
-        <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/[0.08] bg-surface/80">
+        <div className="flex items-center justify-between px-5 py-3.5 border-b border-surface-border bg-white">
           <div className="flex items-center gap-2.5 truncate mr-4">
             {category && (
-              <span className="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30">
+              <span className="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-100">
                 {category}
               </span>
             )}
             <h2
               id="video-modal-title"
-              className="text-sm sm:text-base font-semibold text-white truncate"
+              className="text-sm sm:text-base font-semibold text-ink truncate"
             >
               {title || "Portfolio Video"}
             </h2>
@@ -89,15 +89,15 @@ export const VideoModal: React.FC<VideoModalProps> = ({
               <Link
                 href={`/work/${projectId}`}
                 onClick={onClose}
-                className="hidden sm:inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white bg-white/[0.06] hover:bg-white/[0.1] px-3 py-1.5 rounded-lg transition-colors"
+                className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium text-ink-soft hover:text-white bg-surface-subtle hover:bg-ink px-3 py-1.5 rounded-full transition-colors"
               >
                 <span>Case Study</span>
-                <ExternalLink className="w-3 h-3 text-slate-400" />
+                <ExternalLink className="w-3 h-3" />
               </Link>
             )}
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.1] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+              className="p-1.5 rounded-full text-ink-muted hover:text-white hover:bg-ink transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
               aria-label="Close video dialog"
             >
               <X className="w-5 h-5" />
@@ -116,7 +116,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
               allowFullScreen
             />
           ) : (
-            <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 p-6 text-center">
+            <div className="w-full h-full flex flex-col items-center justify-center text-white/60 p-6 text-center">
               <Sparkles className="w-8 h-8 text-brand-400 mb-2" />
               <p className="text-sm">Video stream preview unavailable</p>
             </div>
@@ -124,7 +124,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
         </div>
 
         {/* Footer info in modal */}
-        <div className="px-5 py-3 bg-surface/50 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+        <div className="px-5 py-3 bg-white border-t border-surface-border flex items-center justify-between text-xs text-ink-muted">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>Recorded in native 1080p · Edited by Ali</span>
@@ -133,7 +133,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
             <Link
               href={`/work/${projectId}`}
               onClick={onClose}
-              className="text-brand-400 hover:text-brand-300 font-medium sm:hidden flex items-center gap-1"
+              className="text-brand-600 hover:text-brand-700 font-medium sm:hidden flex items-center gap-1"
             >
               <span>View Case Study</span>
               <ExternalLink className="w-3 h-3" />

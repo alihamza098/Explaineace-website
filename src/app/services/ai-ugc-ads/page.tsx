@@ -106,37 +106,37 @@ export default function AiUgcAdsPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs sm:text-sm text-slate-400">
-            <Link href="/" className="hover:text-white transition-colors">
+          <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs sm:text-sm text-ink-muted">
+            <Link href="/" className="hover:text-ink transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link href="/services" className="hover:text-white transition-colors">
+            <Link href="/services" className="hover:text-ink transition-colors">
               Services
             </Link>
             <span>/</span>
-            <span className="text-brand-300 font-medium">AI UGC & Product Ads</span>
+            <span className="text-brand-600 font-medium">AI UGC & Product Ads</span>
           </nav>
 
           {/* Hero Section */}
           <div className="max-w-4xl mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 text-xs font-semibold uppercase tracking-wider mb-4">
               <Bot className="w-3.5 h-3.5 text-accent-cyan" />
               <span>Paid Social Video Ad Production</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink leading-tight">
               AI UGC & Product Ads
             </h1>
-            <p className="mt-5 text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl">
+            <p className="mt-5 text-base sm:text-lg text-ink-soft leading-relaxed max-w-3xl">
               High-converting short-form video ads engineered for TikTok, Instagram Reels, and YouTube Shorts. We pair hyper-realistic AI creators with dynamic 3D software motion, viral 3-second hook angles, and native kinetic captions to scale your paid acquisition.
             </p>
           </div>
 
           {/* Deep Content: 500+ Words Human-First Copy */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
-            <div className="lg:col-span-8 space-y-8 text-slate-300 leading-relaxed text-sm sm:text-base">
+            <div className="lg:col-span-8 space-y-8 text-ink-soft leading-relaxed text-sm sm:text-base">
               <section className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-ink tracking-tight">
                   Stop Waiting Weeks on Flaky Creator Agencies for Tech UGC
                 </h2>
                 <p>
@@ -151,43 +151,43 @@ export default function AiUgcAdsPage() {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-ink tracking-tight">
                   The Anatomy of a High-Converting AI Product Video Ad
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div className="p-5 rounded-2xl bg-surface-card border border-white/[0.06] space-y-2">
-                    <h3 className="font-semibold text-white flex items-center gap-2">
+                  <div className="p-5 rounded-2xl bg-surface-card border border-surface-border space-y-2">
+                    <h3 className="font-semibold text-ink flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-accent-cyan" />
                       3-Second Viral Hook Testing
                     </h3>
-                    <p className="text-xs text-slate-300">
+                    <p className="text-xs text-ink-soft">
                       We script high-tension opening pattern interrupts and secret-tool reveals that halt thumb-scrolling instantly.
                     </p>
                   </div>
-                  <div className="p-5 rounded-2xl bg-surface-card border border-white/[0.06] space-y-2">
-                    <h3 className="font-semibold text-white flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-amber-400" />
+                  <div className="p-5 rounded-2xl bg-surface-card border border-surface-border space-y-2">
+                    <h3 className="font-semibold text-ink flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-amber-500" />
                       Dynamic 3D UI & Product Motion
                     </h3>
-                    <p className="text-xs text-slate-300">
+                    <p className="text-xs text-ink-soft">
                       We cut away from the presenter to showcase your actual interface solving the problem with sleek zooms and device tilts.
                     </p>
                   </div>
-                  <div className="p-5 rounded-2xl bg-surface-card border border-white/[0.06] space-y-2">
-                    <h3 className="font-semibold text-white flex items-center gap-2">
-                      <Layers className="w-4 h-4 text-brand-400" />
+                  <div className="p-5 rounded-2xl bg-surface-card border border-surface-border space-y-2">
+                    <h3 className="font-semibold text-ink flex items-center gap-2">
+                      <Layers className="w-4 h-4 text-brand-600" />
                       Social-Native Kinetic Captions
                     </h3>
-                    <p className="text-xs text-slate-300">
+                    <p className="text-xs text-ink-soft">
                       Word-by-word animated subtitles with color accents and sound effects keep mute viewers fully engaged.
                     </p>
                   </div>
-                  <div className="p-5 rounded-2xl bg-surface-card border border-white/[0.06] space-y-2">
-                    <h3 className="font-semibold text-white flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  <div className="p-5 rounded-2xl bg-surface-card border border-surface-border space-y-2">
+                    <h3 className="font-semibold text-ink flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-emerald-600" />
                       Full Commercial Whitelisting
                     </h3>
-                    <p className="text-xs text-slate-300">
+                    <p className="text-xs text-ink-soft">
                       No licensing expiration or talent royalty renegotiations. You own 100% perpetual commercial advertising rights.
                     </p>
                   </div>
@@ -202,32 +202,32 @@ export default function AiUgcAdsPage() {
                   AI Product & UGC Ad Rate
                 </span>
                 <div className="space-y-1">
-                  <div className="text-4xl font-extrabold text-white">$200 – $300</div>
-                  <div className="text-xs text-slate-400">per short ad video (30s – 60s)</div>
+                  <div className="text-4xl font-extrabold text-ink">$200 – $300</div>
+                  <div className="text-xs text-ink-muted">per short ad video (30s – 60s)</div>
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-ink-soft leading-relaxed">
                   Ready-to-run short social ad combining realistic AI presenter, dynamic UI screen motion, viral hook, and kinetic captions.
                 </p>
 
-                <div className="space-y-2 pt-2 border-t border-white/[0.06]">
-                  <div className="flex items-center gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                <div className="space-y-2 pt-2 border-t border-surface-border">
+                  <div className="flex items-center gap-2 text-xs text-ink-soft">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>Vertical 9:16 & 16:9 Landscape Exports</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <div className="flex items-center gap-2 text-xs text-ink-soft">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>Hyper-Realistic AI Presenter Avatar</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <div className="flex items-center gap-2 text-xs text-ink-soft">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>Dynamic UI Zooms & Screen Motion</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <div className="flex items-center gap-2 text-xs text-ink-soft">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>Word-by-Word Kinetic Subtitles & SFX</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <div className="flex items-center gap-2 text-xs text-ink-soft">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>Full Paid Ad Whitelisting Rights</span>
                   </div>
                 </div>
@@ -242,7 +242,7 @@ export default function AiUgcAdsPage() {
                   </Link>
                   <Link
                     href="/pricing"
-                    className="w-full py-2.5 px-4 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-xs font-medium text-slate-300 flex items-center justify-center transition-colors"
+                    className="w-full py-2.5 px-4 rounded-xl bg-ink/[0.05] hover:bg-ink/[0.1] text-xs font-medium text-ink-soft flex items-center justify-center transition-colors"
                   >
                     View All Pricing Tiers &rarr;
                   </Link>
@@ -250,10 +250,10 @@ export default function AiUgcAdsPage() {
               </div>
 
               {/* Hook Testing Notice */}
-              <div className="p-6 rounded-2xl bg-surface-card border border-white/[0.06] text-xs text-slate-300 space-y-2">
-                <div className="font-semibold text-white">Need multiple hook variations?</div>
+              <div className="p-6 rounded-2xl bg-surface-card border border-surface-border text-xs text-ink-soft space-y-2">
+                <div className="font-semibold text-ink">Need multiple hook variations?</div>
                 <p>We offer bundled discounts for 3x, 5x, or 10x creative split-testing batches.</p>
-                <Link href="/contact" className="text-brand-300 hover:text-white underline font-semibold block pt-1">
+                <Link href="/contact" className="text-brand-600 hover:text-ink underline font-semibold block pt-1">
                   Inquire for Batch Hook Pricing &rarr;
                 </Link>
               </div>
@@ -264,16 +264,16 @@ export default function AiUgcAdsPage() {
           <div className="mb-20">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-brand-600">
                   Ad & Promo Showcase
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
+                <h2 className="text-2xl sm:text-3xl font-bold text-ink mt-1">
                   Recent Product Ad & Promo Case Studies
                 </h2>
               </div>
               <Link
                 href="/work"
-                className="text-xs sm:text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors"
+                className="text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors"
               >
                 View all 27 portfolio videos &rarr;
               </Link>
@@ -284,20 +284,20 @@ export default function AiUgcAdsPage() {
                 <Link
                   key={p.id}
                   href={`/work/${p.id}`}
-                  className="group p-5 rounded-2xl bg-surface-card border border-white/[0.06] hover:border-brand-500/40 transition-all duration-200 flex flex-col justify-between"
+                  className="group p-5 rounded-2xl bg-surface-card border border-surface-border hover:border-brand-500/40 transition-all duration-200 flex flex-col justify-between"
                 >
                   <div>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-300">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-600">
                       {p.category}
                     </span>
-                    <h3 className="font-semibold text-base text-white group-hover:text-brand-300 transition-colors mt-2.5 line-clamp-1">
+                    <h3 className="font-semibold text-base text-ink group-hover:text-brand-700 transition-colors mt-2.5 line-clamp-1">
                       {p.title}
                     </h3>
-                    <p className="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-ink-muted mt-2 line-clamp-2 leading-relaxed">
                       {p.description}
                     </p>
                   </div>
-                  <span className="mt-4 text-[11px] text-brand-400 font-medium inline-flex items-center gap-1">
+                  <span className="mt-4 text-[11px] text-brand-600 font-medium inline-flex items-center gap-1">
                     <span>View Case Study</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </span>
@@ -309,10 +309,10 @@ export default function AiUgcAdsPage() {
           {/* FAQ Section */}
           <div className="max-w-4xl mx-auto mb-20">
             <div className="text-center mb-12">
-              <span className="text-xs font-semibold uppercase tracking-wider text-brand-400">
+              <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">
                 Frequently Asked Questions
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
+              <h2 className="text-2xl sm:text-3xl font-bold text-ink mt-1">
                 Questions About AI UGC & Product Ads
               </h2>
             </div>
@@ -321,13 +321,13 @@ export default function AiUgcAdsPage() {
               {faqs.map((f, i) => (
                 <div
                   key={i}
-                  className="p-6 rounded-2xl bg-surface-card border border-white/[0.06] space-y-2"
+                  className="p-6 rounded-2xl bg-surface-card border border-surface-border space-y-2"
                 >
-                  <h3 className="text-base font-semibold text-white flex items-start gap-2.5">
-                    <HelpCircle className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
+                  <h3 className="text-base font-semibold text-ink flex items-start gap-2.5">
+                    <HelpCircle className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
                     <span>{f.q}</span>
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-6.5">
+                  <p className="text-xs sm:text-sm text-ink-soft leading-relaxed pl-6.5">
                     {f.a}
                   </p>
                 </div>
@@ -336,16 +336,16 @@ export default function AiUgcAdsPage() {
           </div>
 
           {/* Cross Links */}
-          <div className="p-6 rounded-2xl bg-surface-card border border-white/[0.06] flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
+          <div className="p-6 rounded-2xl bg-surface-card border border-surface-border flex flex-wrap items-center justify-between gap-4 text-xs text-ink-muted">
             <span>Explore other specialized services:</span>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/saas-walkthrough-video" className="text-brand-300 hover:text-white underline">
+              <Link href="/services/saas-walkthrough-video" className="text-brand-600 hover:text-ink underline">
                 SaaS Walkthrough Video Service &rarr;
               </Link>
-              <Link href="/services/screencast-tutorials" className="text-brand-300 hover:text-white underline">
+              <Link href="/services/screencast-tutorials" className="text-brand-600 hover:text-ink underline">
                 Screencast Video Production Service &rarr;
               </Link>
-              <Link href="/services/app-demo-video" className="text-brand-300 hover:text-white underline">
+              <Link href="/services/app-demo-video" className="text-brand-600 hover:text-ink underline">
                 App Demo Video Service &rarr;
               </Link>
             </div>

@@ -5,17 +5,26 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        background: "#08090E",
+        background: "#FAFAF8",
+        // Text colors for the light theme
+        ink: {
+          DEFAULT: "#0B0D12",
+          soft: "#3A3F4E",
+          muted: "#686E80",
+          faint: "#9AA0AF",
+        },
         surface: {
-          DEFAULT: "#0F111A",
-          subtle: "#141724",
-          card: "#121520",
-          border: "rgba(255, 255, 255, 0.08)",
-          hover: "#181C2E",
+          DEFAULT: "#FFFFFF",
+          subtle: "#F4F4F1",
+          card: "#FFFFFF",
+          border: "rgba(11, 13, 18, 0.08)",
+          hover: "#F1F2F5",
+          dark: "#F4F4F1",
+          // A deep stage for video-heavy blocks
+          night: "#0B0D12",
         },
         brand: {
           50: "#EEF2FF",
@@ -28,11 +37,13 @@ module.exports = {
           700: "#4338CA",
           800: "#3730A3",
           900: "#312E81",
+          950: "#1E1B4B",
         },
         accent: {
-          cyan: "#38BDF8",
-          purple: "#A855F7",
-          emerald: "#10B981",
+          cyan: "#0891B2",
+          purple: "#9333EA",
+          emerald: "#059669",
+          coral: "#F97362",
         },
       },
       fontFamily: {
@@ -45,12 +56,15 @@ module.exports = {
           "Roboto",
           "sans-serif",
         ],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       boxShadow: {
-        glow: "0 0 40px -10px rgba(99, 102, 241, 0.25)",
-        "glow-lg": "0 0 60px -15px rgba(99, 102, 241, 0.35)",
-        "glow-cyan": "0 0 40px -10px rgba(56, 189, 248, 0.25)",
-        card: "0 4px 20px -2px rgba(0, 0, 0, 0.5)",
+        glow: "0 10px 30px -10px rgba(79, 70, 229, 0.45)",
+        "glow-lg": "0 18px 50px -12px rgba(79, 70, 229, 0.55)",
+        "glow-cyan": "0 10px 30px -10px rgba(8, 145, 178, 0.35)",
+        card: "0 1px 2px rgba(11, 13, 18, 0.04), 0 8px 24px -12px rgba(11, 13, 18, 0.12)",
+        lift: "0 2px 4px rgba(11, 13, 18, 0.04), 0 24px 48px -16px rgba(11, 13, 18, 0.18)",
+        stage: "0 2px 6px rgba(11, 13, 18, 0.06), 0 40px 80px -24px rgba(30, 27, 75, 0.35)",
       },
       animation: {
         "fade-in": "fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",

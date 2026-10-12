@@ -25,22 +25,22 @@ export default function PrivacyPage() {
     <div className="pt-28 sm:pt-36 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brand-600 flex items-center gap-1.5">
             <Lock className="w-3.5 h-3.5 text-accent-cyan" />
             <span>Legal & Data Security</span>
           </span>
-          <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold tracking-tight text-ink leading-tight">
             Privacy Policy & Client Data Security
           </h1>
-          <p className="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-ink-muted leading-relaxed">
             Last updated: October 2026. At EXPLAINERACE (operated by Ali), we treat your proprietary software, pre-release interfaces, and customer data with bank-grade discretion.
           </p>
         </div>
 
-        <div className="space-y-10 text-slate-300 text-sm sm:text-base leading-relaxed">
-          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.08] space-y-3">
-            <h2 className="text-xl font-bold text-white flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-emerald-400" />
+        <div className="space-y-10 text-ink-soft text-sm sm:text-base leading-relaxed">
+          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-surface-border space-y-3">
+            <h2 className="text-xl font-bold text-ink flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-emerald-600" />
               <span>1. Staging Credentials & Sandbox Environment Security</span>
             </h2>
             <p>
@@ -51,8 +51,8 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.08] space-y-3">
-            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-surface-border space-y-3">
+            <h2 className="text-xl font-bold text-ink flex items-center gap-2">
               <Lock className="w-5 h-5 text-accent-cyan" />
               <span>2. Non-Disclosure Agreements (NDAs) & Pre-Launch Confidentiality</span>
             </h2>
@@ -64,9 +64,9 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.08] space-y-3">
-            <h2 className="text-xl font-bold text-white flex items-center gap-2">
-              <Eye className="w-5 h-5 text-brand-400" />
+          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-surface-border space-y-3">
+            <h2 className="text-xl font-bold text-ink flex items-center gap-2">
+              <Eye className="w-5 h-5 text-brand-600" />
               <span>3. Post-Production Masking & Data Redaction</span>
             </h2>
             <p>
@@ -74,9 +74,9 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.08] space-y-3">
-            <h2 className="text-xl font-bold text-white flex items-center gap-2">
-              <FileText className="w-5 h-5 text-indigo-400" />
+          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-surface-border space-y-3">
+            <h2 className="text-xl font-bold text-ink flex items-center gap-2">
+              <FileText className="w-5 h-5 text-indigo-600" />
               <span>4. Direct Communications & Inquiries</span>
             </h2>
             <p>
@@ -84,23 +84,23 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-white/[0.08] space-y-3">
-            <h2 className="text-xl font-bold text-white">5. Contact Regarding Privacy Inquiries</h2>
+          <section className="p-6 sm:p-8 rounded-2xl bg-surface-card border border-surface-border space-y-3">
+            <h2 className="text-xl font-bold text-ink">5. Contact Regarding Privacy Inquiries</h2>
             <p>
               If you have specific data handling agreements, enterprise security questionnaires, or custom NDA requirements, please contact Ali directly at:
             </p>
-            <p className="font-mono text-white font-semibold">
-              <a href={`mailto:${siteConfig.contactEmail}`} className="text-brand-300 underline">
+            <p className="font-mono text-ink font-semibold">
+              <a href={`mailto:${siteConfig.contactEmail}`} className="text-brand-600 underline">
                 {siteConfig.contactEmail}
               </a>
             </p>
           </section>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/[0.08] flex items-center justify-between">
+        <div className="mt-12 pt-8 border-t border-surface-border flex items-center justify-between">
           <Link
             href="/"
-            className="text-sm font-semibold text-brand-300 hover:text-white transition-colors"
+            className="text-sm font-semibold text-brand-600 hover:text-ink transition-colors"
           >
             &larr; Back to Home
           </Link>

@@ -126,21 +126,21 @@ export const PricingCalculator: React.FC = () => {
       : activeService.turnaroundDays;
 
   return (
-    <div className="relative rounded-3xl bg-gradient-to-b from-[#121626] to-[#0A0D16] border border-brand-500/30 p-6 sm:p-10 shadow-glow-lg overflow-hidden">
+    <div className="relative rounded-3xl bg-gradient-to-b from-white to-white border border-brand-500/30 p-6 sm:p-10 shadow-glow-lg overflow-hidden">
       {/* Decorative ambient glow */}
       <div className="absolute -top-24 -right-24 w-80 h-80 bg-brand-500/15 blur-3xl rounded-full pointer-events-none" />
       <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-accent-cyan/15 blur-3xl rounded-full pointer-events-none" />
 
       {/* Header */}
       <div className="relative z-10 text-center max-w-2xl mx-auto mb-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 text-xs font-semibold uppercase tracking-wider mb-3">
           <Calculator className="w-3.5 h-3.5 text-accent-cyan" />
           <span>Interactive Price &amp; Timeline Estimator</span>
         </div>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink tracking-tight">
           Calculate Your Exact Video Investment
         </h2>
-        <p className="mt-2 text-sm text-slate-300">
+        <p className="mt-2 text-sm text-ink-soft">
           Pick your preferred video style, adjust the target duration, and see real-time pricing with bulk discounts.
         </p>
       </div>
@@ -150,7 +150,7 @@ export const PricingCalculator: React.FC = () => {
         <div className="lg:col-span-7 space-y-7">
           {/* Service Picker */}
           <div>
-            <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-3">
+            <label className="block text-xs font-bold text-ink-soft uppercase tracking-wider mb-3">
               1. Choose Video Style
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -163,8 +163,8 @@ export const PricingCalculator: React.FC = () => {
                     onClick={() => setSelectedServiceId(serv.id)}
                     className={`text-left p-3.5 rounded-2xl border transition-all duration-200 relative ${
                       isSelected
-                        ? "bg-brand-950/80 border-brand-500 ring-2 ring-brand-500/30 shadow-glow"
-                        : "bg-surface-card/60 hover:bg-surface-hover/80 border-white/[0.08]"
+                        ? "bg-brand-50 border-brand-500 ring-4 ring-brand-500/10"
+                        : "bg-surface-card/60 hover:bg-surface-hover/80 border-surface-border"
                     }`}
                   >
                     {serv.badge && (
@@ -172,16 +172,16 @@ export const PricingCalculator: React.FC = () => {
                         className={`text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider mb-1.5 inline-block ${
                           isSelected
                             ? "bg-brand-500 text-white"
-                            : "bg-white/[0.08] text-slate-400"
+                            : "bg-ink/[0.08] text-ink-muted"
                         }`}
                       >
                         {serv.badge}
                       </span>
                     )}
-                    <h3 className="text-sm font-bold text-white line-clamp-1">
+                    <h3 className="text-sm font-bold text-ink line-clamp-1">
                       {serv.name}
                     </h3>
-                    <p className="text-[11px] text-slate-400 mt-0.5">
+                    <p className="text-[11px] text-ink-muted mt-0.5">
                       Starting at ${serv.baseRatePerMin}/60s
                     </p>
                   </button>
@@ -193,7 +193,7 @@ export const PricingCalculator: React.FC = () => {
           {/* Target Duration Slider */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label htmlFor={sliderId} className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+              <label htmlFor={sliderId} className="text-xs font-bold text-ink-soft uppercase tracking-wider">
                 2. Target Runtime / Duration
               </label>
               <span className="text-xs font-mono font-bold text-accent-cyan bg-accent-cyan/10 px-2.5 py-0.5 rounded-md border border-accent-cyan/20">
@@ -213,7 +213,7 @@ export const PricingCalculator: React.FC = () => {
                     className={`py-2 rounded-xl text-xs font-semibold transition-all duration-150 ${
                       isActive
                         ? "bg-gradient-to-r from-brand-600 to-indigo-600 text-white shadow-glow"
-                        : "bg-surface-subtle/80 hover:bg-surface-hover text-slate-300 border border-white/[0.06]"
+                        : "bg-surface-subtle/80 hover:bg-surface-hover text-ink-soft border border-surface-border"
                     }`}
                   >
                     {step.label}
@@ -231,19 +231,19 @@ export const PricingCalculator: React.FC = () => {
               value={durationSec}
               onChange={(e) => setDurationSec(Number(e.target.value))}
               aria-label="Target runtime in seconds"
-              className="w-full h-2 bg-white/[0.1] rounded-lg appearance-none cursor-pointer accent-brand-500"
+              className="w-full h-2 bg-ink/[0.1] rounded-lg appearance-none cursor-pointer accent-brand-500"
             />
           </div>
 
           {/* Batch Volume / Number of Videos */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+              <label className="text-xs font-bold text-ink-soft uppercase tracking-wider">
                 3. Number of Videos
               </label>
               {discountRate > 0 && (
-                <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
-                  <Flame className="w-3 h-3 text-emerald-400" />
+                <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                  <Flame className="w-3 h-3 text-emerald-600" />
                   <span>{discountRate * 100}% Batch Discount Applied</span>
                 </span>
               )}
@@ -259,13 +259,13 @@ export const PricingCalculator: React.FC = () => {
                     onClick={() => setBatchCount(count)}
                     className={`flex-1 py-2 px-3 rounded-xl text-xs font-semibold transition-all duration-150 ${
                       isActive
-                        ? "bg-brand-600/30 border border-brand-500 text-white shadow-sm"
-                        : "bg-surface-subtle/80 hover:bg-surface-hover text-slate-300 border border-white/[0.06]"
+                        ? "bg-brand-50 border border-brand-500 text-brand-700 font-semibold ring-4 ring-brand-500/10"
+                        : "bg-surface-subtle/80 hover:bg-surface-hover text-ink-soft border border-surface-border"
                     }`}
                   >
                     {count} {count === 1 ? "Video" : "Videos"}
                     {count >= 3 && (
-                      <span className="block text-[9px] text-emerald-400 font-mono mt-0.5">
+                      <span className="block text-[9px] text-emerald-600 font-mono mt-0.5">
                         {count >= 5 ? "15% off" : "10% off"}
                       </span>
                     )}
@@ -278,58 +278,58 @@ export const PricingCalculator: React.FC = () => {
 
         {/* Calculation Result Card */}
         <div className="lg:col-span-5 relative">
-          <div className="rounded-2xl p-6 sm:p-7 bg-[#0E121E] border border-brand-500/40 shadow-2xl space-y-6">
+          <div className="rounded-2xl p-6 sm:p-7 bg-white border border-brand-500/40 shadow-2xl space-y-6">
             {/* Price Display */}
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-ink-muted block mb-1">
                 Estimated Project Total
               </span>
               <div className="flex items-baseline gap-2">
-                <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+                <span className="text-4xl sm:text-5xl font-extrabold text-ink tracking-tight">
                   ${finalPrice}
                 </span>
-                <span className="text-xs text-slate-400 font-medium">
+                <span className="text-xs text-ink-muted font-medium">
                   USD (Flat fee)
                 </span>
               </div>
 
               {savings > 0 && (
-                <p className="mt-1 text-xs text-emerald-400 font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <p className="mt-1 text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                   <span>You save ${savings} with batch pricing!</span>
                 </p>
               )}
             </div>
 
             {/* Scope Summary */}
-            <div className="p-3.5 rounded-xl bg-surface-subtle/80 border border-white/[0.06] space-y-2 text-xs">
-              <div className="flex justify-between text-slate-300">
-                <span className="text-slate-400">Selected Format:</span>
-                <span className="font-semibold text-white">{activeService.name}</span>
+            <div className="p-3.5 rounded-xl bg-surface-subtle/80 border border-surface-border space-y-2 text-xs">
+              <div className="flex justify-between text-ink-soft">
+                <span className="text-ink-muted">Selected Format:</span>
+                <span className="font-semibold text-ink">{activeService.name}</span>
               </div>
-              <div className="flex justify-between text-slate-300">
-                <span className="text-slate-400">Total Runtime:</span>
+              <div className="flex justify-between text-ink-soft">
+                <span className="text-ink-muted">Total Runtime:</span>
                 <span className="font-mono text-accent-cyan">
                   {batchCount > 1
                     ? `${batchCount} × ${activeDuration.label}`
                     : activeDuration.label}
                 </span>
               </div>
-              <div className="flex justify-between text-slate-300">
-                <span className="text-slate-400">Est. Delivery:</span>
-                <span className="font-medium text-emerald-400">{turnaroundText}</span>
+              <div className="flex justify-between text-ink-soft">
+                <span className="text-ink-muted">Est. Delivery:</span>
+                <span className="font-medium text-emerald-600">{turnaroundText}</span>
               </div>
             </div>
 
             {/* Included in this quote */}
             <div className="space-y-2 text-xs">
-              <span className="block font-bold text-white uppercase tracking-wider text-[11px]">
+              <span className="block font-bold text-ink uppercase tracking-wider text-[11px]">
                 Included with this estimate:
               </span>
-              <ul className="space-y-2 text-slate-300">
+              <ul className="space-y-2 text-ink-soft">
                 {activeService.features.map((feat, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </li>
                 ))}
@@ -352,21 +352,21 @@ export const PricingCalculator: React.FC = () => {
                 )}%20(${activeDuration.label},%20${batchCount}%20video)%20estimated%20at%20$${finalPrice}.%20Can%20we%20discuss?`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 rounded-full bg-emerald-500/10 hover:bg-emerald-500/15 border border-emerald-500/20 text-emerald-300 text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
+                className="w-full py-2.5 px-4 rounded-full bg-emerald-500/10 hover:bg-emerald-500/15 border border-emerald-500/20 text-emerald-700 text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
               >
-                <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
+                <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
                 <span>Discuss Immediately on WhatsApp</span>
               </a>
             </div>
 
-            <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-1">
+            <div className="flex items-center justify-center gap-4 text-[11px] text-ink-muted pt-1">
               <span className="flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                 <span>Escrow Protected</span>
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">
-                <RotateCcw className="w-3.5 h-3.5 text-brand-400" />
+                <RotateCcw className="w-3.5 h-3.5 text-brand-600" />
                 <span>2 Free Revisions</span>
               </span>
             </div>

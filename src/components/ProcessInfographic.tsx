@@ -115,7 +115,7 @@ export const ProcessInfographic: React.FC = () => {
   return (
     <div className="w-full">
       {/* Visual Infographic Lab Shell */}
-      <div className="rounded-3xl p-1 bg-gradient-to-b from-brand-500/30 via-white/[0.07] to-transparent shadow-2xl">
+      <div className="rounded-[28px] p-1.5 bg-white border border-surface-border shadow-stage">
         <div className="rounded-[22px] bg-[#0A0D16] border border-white/[0.08] overflow-hidden">
           {/* Top Bar / Production Dashboard Header */}
           <div className="h-12 bg-[#0E121F] px-4 sm:px-6 flex items-center justify-between border-b border-white/[0.08]">
@@ -151,7 +151,7 @@ export const ProcessInfographic: React.FC = () => {
                   </>
                 )}
               </button>
-              <span className="px-2.5 py-0.5 rounded-full bg-brand-500/20 border border-brand-500/30 text-[10px] font-bold text-brand-300 font-mono">
+              <span className="px-2.5 py-0.5 rounded-full bg-brand-500/20 border border-brand-500/30 text-[10px] font-bold text-brand-300 font-mono whitespace-nowrap">
                 STAGE {activeStep + 1} OF 5
               </span>
             </div>
@@ -204,7 +204,7 @@ export const ProcessInfographic: React.FC = () => {
                   {isActive && (
                     <div className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-brand-600">
                       <div
-                        className="h-full bg-accent-cyan transition-all ease-linear"
+                        className="h-full bg-cyan-400 transition-all ease-linear"
                         style={{ width: `${progress}%` }}
                       />
                     </div>
@@ -221,7 +221,7 @@ export const ProcessInfographic: React.FC = () => {
               <div className="space-y-6 animate-fade-in">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/[0.06]">
                   <div>
-                    <span className="text-[11px] font-bold text-accent-cyan tracking-wider uppercase">
+                    <span className="text-[11px] font-bold text-cyan-400 tracking-wider uppercase">
                       {currentStepData.category}
                     </span>
                     <h3 className="text-2xl font-bold text-white mt-0.5">
@@ -237,7 +237,7 @@ export const ProcessInfographic: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                   {/* Visual Infographic Diagram */}
                   <div className="md:col-span-7 space-y-3">
-                    <div className="p-4 rounded-2xl bg-surface-subtle border border-white/[0.06] space-y-2.5">
+                    <div className="p-4 rounded-2xl bg-[#141724] border border-white/[0.06] space-y-2.5">
                       <div className="flex items-center justify-between text-xs text-slate-400">
                         <span className="font-semibold text-white flex items-center gap-1.5">
                           <KeyRound className="w-3.5 h-3.5 text-brand-400" />
@@ -273,7 +273,7 @@ export const ProcessInfographic: React.FC = () => {
 
                   {/* Stat Callout */}
                   <div className="md:col-span-5 space-y-3">
-                    <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-950/40 to-surface-card border border-brand-500/30 space-y-2">
+                    <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-950/40 to-[#121520] border border-brand-500/30 space-y-2">
                       <span className="text-[10px] uppercase tracking-wider text-brand-400 font-bold">
                         Client Time Commitment
                       </span>
@@ -285,7 +285,7 @@ export const ProcessInfographic: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-surface-subtle border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+                    <div className="p-3.5 rounded-xl bg-[#141724] border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
                       <span>Timeline:</span>
                       <span className="text-white font-semibold">{currentStepData.timeline}</span>
                     </div>
@@ -299,7 +299,7 @@ export const ProcessInfographic: React.FC = () => {
               <div className="space-y-6 animate-fade-in">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/[0.06]">
                   <div>
-                    <span className="text-[11px] font-bold text-accent-cyan tracking-wider uppercase">
+                    <span className="text-[11px] font-bold text-cyan-400 tracking-wider uppercase">
                       {currentStepData.category}
                     </span>
                     <h3 className="text-2xl font-bold text-white mt-0.5">
@@ -315,7 +315,7 @@ export const ProcessInfographic: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                   {/* Script & Timeline Infographic */}
                   <div className="md:col-span-7 space-y-2.5">
-                    <div className="p-4 rounded-2xl bg-surface-subtle border border-white/[0.06] space-y-3">
+                    <div className="p-4 rounded-2xl bg-[#141724] border border-white/[0.06] space-y-3">
                       <div className="text-xs font-semibold text-slate-300 flex items-center justify-between">
                         <span>Paced Action Timeline</span>
                         <span className="text-brand-400 font-mono text-[11px]">135 WPM Voice Cadence</span>
@@ -323,8 +323,8 @@ export const ProcessInfographic: React.FC = () => {
 
                       {/* Visual Timeline Nodes */}
                       <div className="space-y-2">
-                        <div className="flex items-center gap-3 p-2.5 rounded-xl bg-[#0B0E18] border-l-2 border-l-accent-cyan border border-white/[0.04]">
-                          <span className="font-mono text-[11px] text-accent-cyan font-bold w-12">00:00</span>
+                        <div className="flex items-center gap-3 p-2.5 rounded-xl bg-[#0B0E18] border-l-2 border-l-cyan-400 border border-white/[0.04]">
+                          <span className="font-mono text-[11px] text-cyan-400 font-bold w-12">00:00</span>
                           <span className="text-xs text-white font-medium">Hook & Core Problem Statement</span>
                         </div>
                         <div className="flex items-center gap-3 p-2.5 rounded-xl bg-[#0B0E18] border-l-2 border-l-brand-400 border border-white/[0.04]">
@@ -345,7 +345,7 @@ export const ProcessInfographic: React.FC = () => {
 
                   {/* Teleprompter Script Snippet */}
                   <div className="md:col-span-5 space-y-3">
-                    <div className="p-4 rounded-2xl bg-surface-card border border-white/[0.08] space-y-2">
+                    <div className="p-4 rounded-2xl bg-[#121520] border border-white/[0.08] space-y-2">
                       <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                         Action-Oriented Narration Style
                       </span>
@@ -357,7 +357,7 @@ export const ProcessInfographic: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-surface-subtle border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+                    <div className="p-3.5 rounded-xl bg-[#141724] border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
                       <span>Key Output:</span>
                       <span className="text-white font-semibold">{currentStepData.deliverable}</span>
                     </div>
@@ -371,7 +371,7 @@ export const ProcessInfographic: React.FC = () => {
               <div className="space-y-6 animate-fade-in">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/[0.06]">
                   <div>
-                    <span className="text-[11px] font-bold text-accent-cyan tracking-wider uppercase">
+                    <span className="text-[11px] font-bold text-cyan-400 tracking-wider uppercase">
                       {currentStepData.category}
                     </span>
                     <h3 className="text-2xl font-bold text-white mt-0.5">
@@ -402,7 +402,7 @@ export const ProcessInfographic: React.FC = () => {
                           (height, i) => (
                             <div
                               key={i}
-                              className="flex-1 bg-gradient-to-t from-brand-600 to-accent-cyan rounded-sm transition-all duration-300"
+                              className="flex-1 bg-gradient-to-t from-brand-600 to-cyan-400 rounded-sm transition-all duration-300"
                               style={{
                                 height: isPlaying ? `${Math.max(20, (height + (i % 3) * 10) % 100)}%` : `${height}%`,
                               }}
@@ -420,7 +420,7 @@ export const ProcessInfographic: React.FC = () => {
 
                   {/* Audio Standards */}
                   <div className="md:col-span-5 space-y-3">
-                    <div className="p-4 rounded-2xl bg-surface-card border border-white/[0.08] space-y-2.5">
+                    <div className="p-4 rounded-2xl bg-[#121520] border border-white/[0.08] space-y-2.5">
                       <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                         Acoustic Specifications
                       </span>
@@ -440,7 +440,7 @@ export const ProcessInfographic: React.FC = () => {
                       </ul>
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-surface-subtle border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+                    <div className="p-3.5 rounded-xl bg-[#141724] border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
                       <span>Timeline:</span>
                       <span className="text-white font-semibold">{currentStepData.timeline}</span>
                     </div>
@@ -454,7 +454,7 @@ export const ProcessInfographic: React.FC = () => {
               <div className="space-y-6 animate-fade-in">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/[0.06]">
                   <div>
-                    <span className="text-[11px] font-bold text-accent-cyan tracking-wider uppercase">
+                    <span className="text-[11px] font-bold text-cyan-400 tracking-wider uppercase">
                       {currentStepData.category}
                     </span>
                     <h3 className="text-2xl font-bold text-white mt-0.5">
@@ -462,7 +462,7 @@ export const ProcessInfographic: React.FC = () => {
                     </h3>
                   </div>
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold shrink-0">
-                    <Sparkles className="w-4 h-4 text-accent-cyan" />
+                    <Sparkles className="w-4 h-4 text-cyan-400" />
                     <span>The Visual Signature</span>
                   </div>
                 </div>
@@ -475,8 +475,8 @@ export const ProcessInfographic: React.FC = () => {
                       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]" />
 
                       {/* Dynamic Zoom Bracket Box */}
-                      <div className="relative z-10 p-5 rounded-2xl border-2 border-dashed border-accent-cyan bg-accent-cyan/5 text-center space-y-2 shadow-glow-cyan max-w-xs">
-                        <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-accent-cyan/20 text-accent-cyan text-[10px] font-bold">
+                      <div className="relative z-10 p-5 rounded-2xl border-2 border-dashed border-cyan-400 bg-cyan-400/5 text-center space-y-2 shadow-glow-cyan max-w-xs">
+                        <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-cyan-400/20 text-cyan-400 text-[10px] font-bold">
                           <ZoomIn className="w-3 h-3" />
                           <span>Focal Zoom: 185%</span>
                         </div>
@@ -503,13 +503,13 @@ export const ProcessInfographic: React.FC = () => {
 
                   {/* Post-Production Capabilities */}
                   <div className="md:col-span-5 space-y-3">
-                    <div className="p-4 rounded-2xl bg-surface-card border border-white/[0.08] space-y-2.5">
+                    <div className="p-4 rounded-2xl bg-[#121520] border border-white/[0.08] space-y-2.5">
                       <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                         Advanced Editing Suite
                       </span>
                       <ul className="space-y-2 text-xs text-slate-300">
                         <li className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan mt-1.5 shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
                           <span><strong>Smoothed Cursor Physics:</strong> Removes jerky hand movements for clean visual paths.</span>
                         </li>
                         <li className="flex items-start gap-2">
@@ -523,7 +523,7 @@ export const ProcessInfographic: React.FC = () => {
                       </ul>
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-surface-subtle border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+                    <div className="p-3.5 rounded-xl bg-[#141724] border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
                       <span>Key Output:</span>
                       <span className="text-white font-semibold">{currentStepData.deliverable}</span>
                     </div>
@@ -553,7 +553,7 @@ export const ProcessInfographic: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                   {/* Delivery Manifest */}
                   <div className="md:col-span-7 space-y-3">
-                    <div className="p-4 rounded-2xl bg-surface-subtle border border-white/[0.06] space-y-2.5">
+                    <div className="p-4 rounded-2xl bg-[#141724] border border-white/[0.06] space-y-2.5">
                       <span className="text-xs font-semibold text-slate-300 block">
                         Final Delivery Manifest (Ready to Publish)
                       </span>
@@ -569,7 +569,7 @@ export const ProcessInfographic: React.FC = () => {
 
                         <div className="flex items-center justify-between p-2.5 rounded-xl bg-[#0B0E18] border border-white/[0.04] text-xs">
                           <span className="text-white font-medium flex items-center gap-2">
-                            <Layers className="w-3.5 h-3.5 text-accent-cyan" />
+                            <Layers className="w-3.5 h-3.5 text-cyan-400" />
                             <span>SRT Subtitles & YouTube Timestamps</span>
                           </span>
                           <span className="text-slate-400 font-mono text-[11px]">Included</span>
@@ -588,7 +588,7 @@ export const ProcessInfographic: React.FC = () => {
 
                   {/* Revisions & Guarantee */}
                   <div className="md:col-span-5 space-y-3">
-                    <div className="p-5 rounded-2xl bg-gradient-to-br from-emerald-950/30 to-surface-card border border-emerald-500/30 space-y-2">
+                    <div className="p-5 rounded-2xl bg-gradient-to-br from-emerald-950/30 to-[#121520] border border-emerald-500/30 space-y-2">
                       <span className="text-[10px] uppercase tracking-wider text-emerald-400 font-bold">
                         100% Satisfaction Guarantee
                       </span>
@@ -600,7 +600,7 @@ export const ProcessInfographic: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-surface-subtle border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+                    <div className="p-3.5 rounded-xl bg-[#141724] border border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
                       <span>Ready in:</span>
                       <span className="text-emerald-400 font-semibold font-mono">48h – 4 Days</span>
                     </div>
@@ -635,7 +635,7 @@ export const ProcessInfographic: React.FC = () => {
                       curr > 0 ? curr - 1 : PIPELINE_STEPS.length - 1
                     )
                   }
-                  className="px-3 py-1.5 rounded-xl bg-surface-subtle hover:bg-surface-hover border border-white/[0.08] text-xs font-semibold text-slate-300 hover:text-white transition-colors"
+                  className="px-3 py-1.5 rounded-xl bg-[#141724] hover:bg-[#181C2E] border border-white/[0.08] text-xs font-semibold text-slate-300 hover:text-white transition-colors"
                 >
                   Previous Stage
                 </button>

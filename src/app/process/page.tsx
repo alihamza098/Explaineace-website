@@ -74,14 +74,14 @@ export default function ProcessPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brand-600 flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5 text-accent-cyan" />
             <span>Production Framework</span>
           </span>
-          <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight text-ink leading-tight">
             From product to polished video.
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
             A battle-tested production sequence designed for speed, clarity, and zero hassle. Explore the interactive production pipeline below to see how your interface transforms from raw screen capture into a master video.
           </p>
         </div>
@@ -93,13 +93,13 @@ export default function ProcessPage() {
 
         {/* 2. Detailed Breakdown Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-400">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">
             Step-by-Step Breakdown
           </span>
-          <h2 className="mt-1 text-3xl font-bold tracking-tight text-white">
+          <h2 className="mt-1 text-3xl font-bold tracking-tight text-ink">
             What happens behind each stage
           </h2>
-          <p className="mt-2 text-slate-400 text-sm">
+          <p className="mt-2 text-ink-muted text-sm">
             Everything is structured so you get maximum quality with minimal time required from your product team.
           </p>
         </div>
@@ -111,15 +111,15 @@ export default function ProcessPage() {
             return (
               <div
                 key={step.number}
-                className="group relative p-8 sm:p-10 rounded-3xl bg-surface-card border border-white/[0.08] hover:border-brand-500/40 transition-all duration-300 shadow-card"
+                className="group relative p-8 sm:p-10 rounded-3xl bg-surface-card border border-surface-border hover:border-brand-500/40 transition-all duration-300 shadow-card"
               >
                 <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
                   {/* Step Badge */}
                   <div className="shrink-0 flex sm:flex-col items-center gap-3">
-                    <span className="font-mono text-4xl sm:text-5xl font-extrabold text-white/25 group-hover:text-brand-400 transition-colors">
+                    <span className="font-mono text-4xl sm:text-5xl font-extrabold text-ink/25 group-hover:text-brand-700 transition-colors">
                       {step.number}
                     </span>
-                    <div className="w-12 h-12 rounded-2xl bg-brand-600/10 border border-brand-500/20 text-brand-400 flex items-center justify-center group-hover:bg-brand-600/20 transition-all">
+                    <div className="w-12 h-12 rounded-2xl bg-brand-600/10 border border-brand-500/20 text-brand-600 flex items-center justify-center group-hover:bg-brand-600/20 transition-all">
                       <Icon className="w-6 h-6" />
                     </div>
                   </div>
@@ -127,22 +127,22 @@ export default function ProcessPage() {
                   {/* Body Content */}
                   <div className="flex-1 space-y-3">
                     <div className="flex items-center gap-3">
-                      <span className="text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-white/[0.05] text-slate-400 border border-white/[0.05]">
+                      <span className="text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-ink/[0.05] text-ink-muted border border-surface-border">
                         {step.step}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-white group-hover:text-brand-300 transition-colors">
+                    <h3 className="text-2xl font-bold text-ink group-hover:text-brand-700 transition-colors">
                       {step.title}
                     </h3>
 
-                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    <p className="text-ink-soft text-sm sm:text-base leading-relaxed">
                       {step.description}
                     </p>
 
-                    <div className="pt-3 flex items-center gap-2 text-xs font-medium text-slate-400">
+                    <div className="pt-3 flex items-center gap-2 text-xs font-medium text-ink-muted">
                       <span className="text-accent-cyan font-semibold">Key Deliverable:</span>
-                      <span className="text-slate-200">{step.deliverable}</span>
+                      <span className="text-ink">{step.deliverable}</span>
                     </div>
                   </div>
                 </div>
@@ -154,13 +154,13 @@ export default function ProcessPage() {
         {/* FAQs Section */}
         <div className="mb-20 max-w-4xl">
           <div className="mb-10">
-            <span className="text-xs font-semibold uppercase tracking-wider text-brand-400">
+            <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">
               Common Questions
             </span>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-white">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink">
               Frequently Asked Questions
             </h2>
-            <p className="mt-2 text-slate-400 text-sm">
+            <p className="mt-2 text-ink-muted text-sm">
               Answers regarding product access, revisions, voiceover, and platform ordering.
             </p>
           </div>
@@ -169,13 +169,13 @@ export default function ProcessPage() {
             {processFaqs.map((faq, i) => (
               <div
                 key={i}
-                className="p-6 rounded-2xl bg-surface-card border border-white/[0.06] space-y-2"
+                className="p-6 rounded-2xl bg-surface-card border border-surface-border space-y-2"
               >
-                <h3 className="text-base font-semibold text-white flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-brand-400 shrink-0" />
+                <h3 className="text-base font-semibold text-ink flex items-center gap-2">
+                  <HelpCircle className="w-4 h-4 text-brand-600 shrink-0" />
                   <span>{faq.question}</span>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pl-6">
+                <p className="text-xs sm:text-sm text-ink-muted leading-relaxed pl-6">
                   {faq.answer}
                 </p>
               </div>

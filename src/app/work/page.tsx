@@ -42,14 +42,14 @@ export default function WorkPage() {
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 text-xs font-semibold uppercase tracking-wider mb-4">
             <Layers className="w-3.5 h-3.5" />
             <span>27 Verified Portfolio Projects</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-ink">
             Software Tutorials, App Demos & SaaS Walkthroughs.
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
             Browse genuine screencast videos created for healthcare portals, fintech exchanges, AI automation tools, mobile applications, and B2B SaaS platforms.
           </p>
         </div>

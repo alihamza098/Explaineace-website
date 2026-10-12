@@ -26,8 +26,8 @@ export const BlogVideoEmbed: React.FC<BlogVideoProps> = ({
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="my-10 rounded-2xl p-1 bg-gradient-to-b from-brand-500/30 via-white/5 to-transparent shadow-card">
-      <div className="rounded-[15px] overflow-hidden bg-surface-card border border-white/[0.08]">
+    <div className="my-10 rounded-2xl p-1 bg-gradient-to-b from-brand-500/30 via-ink/5 to-transparent shadow-card">
+      <div className="rounded-[15px] overflow-hidden bg-surface-card border border-surface-border">
         {/* Video Thumbnail Screen */}
         <div
           className="relative aspect-video w-full bg-black cursor-pointer group overflow-hidden"
@@ -69,32 +69,32 @@ export const BlogVideoEmbed: React.FC<BlogVideoProps> = ({
           {/* Central Play Button */}
           <div className="absolute inset-0 flex items-center justify-center z-10">
             <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-full bg-brand-600/90 text-white flex items-center justify-center shadow-glow-lg group-hover:scale-110 group-hover:bg-brand-500 transition-all duration-300">
-              <Play className="w-7 h-7 fill-white translate-x-0.5" />
+              <Play className="w-7 h-7 fill-ink translate-x-0.5" />
             </div>
           </div>
 
           {/* Bottom Title bar on video */}
           <div className="absolute bottom-3 left-4 right-4 z-10">
-            <p className="text-white font-bold text-sm sm:text-base drop-shadow-md line-clamp-1">
+            <p className="text-ink font-bold text-sm sm:text-base drop-shadow-md line-clamp-1">
               {title}
             </p>
           </div>
         </div>
 
         {/* Video Caption Bar & Link */}
-        <div className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-surface-subtle/80 border-t border-white/[0.06]">
+        <div className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-surface-subtle/80 border-t border-surface-border">
           <div>
-            <span className="text-xs font-semibold text-slate-400 block">
+            <span className="text-xs font-semibold text-ink-muted block">
               {subtitle || "Watch the authentic video production sample:"}
             </span>
-            <p className="text-sm font-bold text-white mt-0.5">{title}</p>
+            <p className="text-sm font-bold text-ink mt-0.5">{title}</p>
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
             {projectId && (
               <Link
                 href={`/work/${projectId}`}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-300 hover:text-white bg-white/[0.06] hover:bg-white/[0.12] border border-white/[0.1] px-3.5 py-2 rounded-full transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 hover:text-ink bg-ink/[0.06] hover:bg-ink/[0.12] border border-surface-border px-3.5 py-2 rounded-full transition-colors"
               >
                 <span>View Case Study</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -104,7 +104,7 @@ export const BlogVideoEmbed: React.FC<BlogVideoProps> = ({
               onClick={() => setModalOpen(true)}
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-brand-600 hover:bg-brand-500 px-3.5 py-2 rounded-full shadow-glow transition-all active:scale-95"
             >
-              <Play className="w-3 h-3 fill-white" />
+              <Play className="w-3 h-3 fill-ink" />
               <span>Watch Video</span>
             </button>
           </div>

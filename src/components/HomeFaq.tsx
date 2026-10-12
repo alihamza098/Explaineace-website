@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { HelpCircle, ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
+import { Reveal } from "@/components/motion/Reveal";
+import { SplitText } from "@/components/motion/SplitText";
 
 export const homeFaqs = [
   {
@@ -40,87 +42,82 @@ export const HomeFaq: React.FC = () => {
   };
 
   return (
-    <section className="py-20 sm:py-24 relative overflow-hidden bg-surface-dark border-t border-white/[0.06]">
+    <section className="py-24 sm:py-32 relative overflow-hidden bg-surface-subtle">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-400">
-            Got Questions?
-          </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-            Frequently Asked Questions
-          </h2>
-          <p className="mt-3 text-slate-300 text-sm sm:text-base">
-            Everything you need to know about hiring a software video specialist, pricing, and turnaround times.
-          </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-4 lg:sticky lg:top-28 self-start">
+          <Reveal>
+            <span className="eyebrow mb-4">Got Questions?</span>
+          </Reveal>
+          <SplitText
+            text="Frequently Asked *Questions*"
+            className="text-4xl sm:text-5xl font-bold tracking-[-0.03em] text-ink leading-[1.05]"
+          />
+          <Reveal delay={150}>
+            <p className="mt-5 text-ink-muted text-sm sm:text-base leading-relaxed">
+              Everything you need to know about hiring a software video specialist, pricing, and turnaround times.
+            </p>
+            <Link
+              href="/pricing"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors group"
+            >
+              <span>View complete pricing breakdown &amp; FAQ</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Reveal>
         </div>
 
-        <div className="space-y-4">
+        <div className="lg:col-span-8 space-y-3">
           {homeFaqs.map((faq, i) => {
             const isOpen = openIndex === i;
-
             return (
-              <div
-                key={i}
-                className={`rounded-2xl transition-all duration-300 overflow-hidden border ${
-                  isOpen
-                    ? "bg-[#101422]/90 border-brand-500/40 shadow-glow/10"
-                    : "bg-surface-card border-white/[0.06] hover:border-white/20"
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFaq(i)}
-                  aria-expanded={isOpen}
-                  className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
-                >
-                  <div className="flex items-start gap-3.5">
-                    <HelpCircle
-                      className={`w-5 h-5 shrink-0 mt-0.5 transition-colors ${
-                        isOpen ? "text-accent-cyan" : "text-brand-400"
-                      }`}
-                    />
-                    <h3 className="text-base sm:text-lg font-bold text-white pr-2">
-                      {faq.q}
-                    </h3>
-                  </div>
-
-                  <div
-                    className={`shrink-0 p-1.5 rounded-full bg-white/[0.05] text-slate-300 hover:text-white transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-white bg-white/[0.1]" : "rotate-0"
-                    }`}
-                  >
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
-                </button>
-
+              <Reveal key={i} delay={i * 100}>
                 <div
-                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  className={`rounded-3xl transition-all duration-500 overflow-hidden border ${
+                    isOpen
+                      ? "bg-white border-brand-200 shadow-lift"
+                      : "bg-white/70 border-surface-border hover:bg-white hover:shadow-card"
                   }`}
                 >
-                  <div className="overflow-hidden">
-                    <div className="px-6 pb-6 sm:px-7 sm:pb-7 pt-0 text-slate-300 text-sm leading-relaxed pl-14 sm:pl-15 border-t border-white/[0.04]">
-                      <p className="pt-3">{faq.a}</p>
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(i)}
+                    aria-expanded={isOpen}
+                    className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-3xl"
+                  >
+                    <div className="flex items-start gap-4">
+                      <span className={`text-xs font-mono mt-1.5 transition-colors ${isOpen ? "text-brand-600" : "text-ink-faint"}`}>
+                        0{i + 1}
+                      </span>
+                      <h3 className="text-base sm:text-xl font-semibold tracking-tight text-ink pr-2">{faq.q}</h3>
+                    </div>
+                    <span
+                      className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                        isOpen ? "rotate-45 bg-ink text-white" : "rotate-0 bg-surface-subtle text-ink"
+                      }`}
+                    >
+                      <Plus className="w-4 h-4" />
+                    </span>
+                  </button>
+
+                  <div
+                    className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="px-6 pb-7 sm:px-7 sm:pl-[3.75rem] text-ink-muted text-sm sm:text-base leading-relaxed">
+                        {faq.a}
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             );
           })}
-        </div>
-
-        <div className="mt-10 text-center">
-          <Link
-            href="/pricing"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors group"
-          >
-            <span>View complete pricing breakdown &amp; FAQ</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </div>
       </div>
     </section>

@@ -1,15 +1,31 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/motion/ScrollProgress";
+import { CursorBubble } from "@/components/motion/CursorBubble";
 import { siteConfig } from "@/data/siteConfig";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-serif",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#08090E",
+  themeColor: "#FAFAF8",
 };
 
 export const metadata: Metadata = {
@@ -132,7 +148,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`} suppressHydrationWarning>
       <head>
         {/* Flag JS early so scroll-reveal styles never flash hidden content for no-JS/crawlers */}
         <script
@@ -143,8 +159,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#08090E] text-slate-100 antialiased selection:bg-brand-600 selection:text-white overflow-x-hidden">
+      <body className="grain min-h-screen flex flex-col bg-background text-ink antialiased selection:bg-brand-600 selection:text-white overflow-x-hidden">
         <ScrollProgress />
+        <CursorBubble />
         <Navbar />
         <main className="flex-1 overflow-x-hidden">{children}</main>
         <Footer />
