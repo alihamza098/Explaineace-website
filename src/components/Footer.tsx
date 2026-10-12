@@ -159,7 +159,7 @@ export const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            &copy; {currentYear} EXPLAINERACE by Ali. All rights reserved.
+            &copy; {currentYear} EXPLAINERACE by Ali · Software Video Production Studio. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link
