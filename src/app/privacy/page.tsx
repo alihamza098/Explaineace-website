@@ -5,7 +5,7 @@ import { ShieldCheck, Lock, Eye, FileText, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | EXPLAINERACE",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for EXPLAINERACE by Ali. How we protect client project data, demo sandbox credentials, NDA agreements, and website analytics.",
   alternates: {

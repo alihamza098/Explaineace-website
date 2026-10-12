@@ -35,12 +35,12 @@ export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
   const project = projects.find((p) => p.id === params.id);
-  if (!project) return { title: "Project Not Found | EXPLAINERACE" };
+  if (!project) return { title: "Project Not Found" };
 
   const canonicalUrl = `${siteConfig.siteUrl}/work/${project.id}`;
 
   return {
-    title: `${project.title} SaaS Walkthrough Video Case Study | EXPLAINERACE`,
+    title: `${project.title} SaaS Walkthrough Video Case Study`,
     description: `Watch the ${project.title} video case study produced by Ali. Specs, UI zooms, client outcome, and full production breakdown. Request your quote today.`,
     alternates: {
       canonical: canonicalUrl,

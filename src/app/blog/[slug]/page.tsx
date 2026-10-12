@@ -34,12 +34,12 @@ export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug);
-  if (!post) return { title: "Post Not Found | EXPLAINERACE" };
+  if (!post) return { title: "Post Not Found" };
 
   const canonicalUrl = `${siteConfig.siteUrl}/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | EXPLAINERACE`,
+    title: post.title,
     description: post.metaDescription,
     alternates: {
       canonical: canonicalUrl,
