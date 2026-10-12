@@ -17,7 +17,7 @@ import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Screencast Video Production Service | EXPLAINERACE",
+  title: "Screencast Video Production Service",
   description:
     "Professional screencast video production service for software tutorials, SOPs & help centers. Pure instructional clarity, studio audio from $120/60s.",
   alternates: {

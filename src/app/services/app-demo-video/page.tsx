@@ -17,7 +17,7 @@ import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/siteConfig";
 
 export const metadata: Metadata = {
-  title: "App Demo Video Service | EXPLAINERACE",
+  title: "App Demo Video Service",
   description:
     "Professional app demo video service & mobile app promo videos for iOS & Android. Touch gestures, 3D device frames, onboarding walkthroughs from $220.",
   alternates: {

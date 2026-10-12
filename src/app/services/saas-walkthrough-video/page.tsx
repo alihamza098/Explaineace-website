@@ -19,7 +19,7 @@ import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/siteConfig";
 
 export const metadata: Metadata = {
-  title: "SaaS Walkthrough Video Service | EXPLAINERACE",
+  title: "SaaS Walkthrough Video Service",
   description:
     "Expert SaaS walkthrough video service and product demo videos. 4K screen recording, 3D dynamic zooms, cursor smoothing & studio voiceover from $220/60s.",
   alternates: {
