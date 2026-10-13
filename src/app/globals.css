@@ -557,3 +557,30 @@ html:not(.js) .draw-path {
 .cv-bar { transform-origin: center; animation: cvBar 1.1s ease-in-out infinite; animation-delay: calc(var(--i) * -0.13s); }
 .cv-word { border-radius: 4px; padding: 0 4px; animation: cvWord 3.6s steps(1, end) infinite; animation-delay: calc(var(--i) * 0.6s); color: rgba(255,255,255,0.45); }
 .cv-layer { animation: cvLayer 4s ease-in-out infinite; animation-delay: calc(var(--i) * 0.15s); }
+
+/* ===== Pricing cards: lift on hover + rotating conic border on the featured tier ===== */
+@property --price-ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@keyframes priceSpin { to { --price-ang: 360deg; } }
+.price-card {
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease, border-color 0.3s ease;
+}
+.price-card:hover { transform: translate3d(0, -8px, 0); box-shadow: 0 30px 60px -28px rgba(11, 13, 18, 0.28); }
+.price-popular { border: 2px solid transparent; }
+.price-popular::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(from var(--price-ang), #6366f1, #22d3ee, #a78bfa, #6366f1);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: priceSpin 6s linear infinite;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .price-popular::before { animation: none; }
+  .price-card:hover { transform: none; }
+}

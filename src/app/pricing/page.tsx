@@ -16,6 +16,7 @@ import { pricingTiers, pricingFaqs } from "@/data/pricing";
 import { siteConfig } from "@/data/siteConfig";
 import { WhatsAppIcon, UpworkIcon } from "@/components/Icons";
 import { PricingCalculator } from "@/components/PricingCalculator";
+import { Reveal } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
   title: "SaaS Video Production Pricing & Rates | Screencasts & Demos",
@@ -114,15 +115,15 @@ export default function PricingPage() {
 
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 items-stretch">
-          {pricingTiers.map((tier) => {
+          {pricingTiers.map((tier, tierIdx) => {
             const isPopular = Boolean(tier.popular);
 
             return (
+              <Reveal key={tier.id} delay={tierIdx * 90} variant="up" className="h-full">
               <div
-                key={tier.id}
-                className={`relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 ${
+                className={`price-card relative h-full rounded-3xl p-6 sm:p-7 flex flex-col justify-between ${
                   isPopular
-                    ? "bg-gradient-to-b from-white to-surface-card border-2 border-brand-500 shadow-glow-lg -translate-y-1"
+                    ? "price-popular bg-gradient-to-b from-white to-surface-card shadow-glow-lg"
                     : "bg-surface-card border border-surface-border hover:border-ink/20 shadow-card"
                 }`}
               >
@@ -240,6 +241,7 @@ export default function PricingPage() {
                   </a>
                 </div>
               </div>
+              </Reveal>
             );
           })}
         </div>
