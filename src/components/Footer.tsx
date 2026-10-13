@@ -110,7 +110,7 @@ export const Footer: React.FC = () => {
                   className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors group"
                 >
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Order Fiverr Gig (4.8★)</span>
+                  <span>Order Fiverr Gig (5.0★)</span>
                   <ExternalLink className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100" />
                 </a>
               </li>

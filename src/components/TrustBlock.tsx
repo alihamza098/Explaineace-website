@@ -67,18 +67,18 @@ export const TrustBlock: React.FC = () => {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`w-5 h-5 ${i < 4 ? "fill-amber-400 text-amber-400" : "fill-amber-300/70 text-amber-300"}`}
+                        className="w-5 h-5 fill-amber-400 text-amber-400"
                       />
                     ))}
                   </div>
                   <div className="text-6xl font-bold text-ink tracking-[-0.04em]">
-                    <CountUp to={4.8} decimals={1} />
+                    <CountUp to={5} decimals={1} />
                     <span className="text-2xl text-ink-faint font-semibold"> / 5</span>
                   </div>
                 </div>
                 <div className="mt-6 pt-4 border-t border-amber-100">
                   <p className="text-xs font-semibold text-ink uppercase tracking-[0.14em]">Client Rating</p>
-                  <p className="text-xs text-ink-muted mt-1">Weighted average across both profiles</p>
+                  <p className="text-xs text-ink-muted mt-1">Average of all 18 buyer reviews</p>
                 </div>
               </div>
             </Reveal>
@@ -90,13 +90,12 @@ export const TrustBlock: React.FC = () => {
                     <Users className="w-5 h-5" />
                   </div>
                   <div className="text-6xl font-bold text-ink tracking-[-0.04em]">
-                    <CountUp to={175} />
-                    <span className="text-sky-500">+</span>
+                    <CountUp to={18} />
                   </div>
                 </div>
                 <div className="mt-6 pt-4 border-t border-sky-100">
                   <p className="text-xs font-semibold text-ink uppercase tracking-[0.14em]">Fiverr Reviews</p>
-                  <p className="text-xs text-ink-muted mt-1">Across 2 Fiverr profiles</p>
+                  <p className="text-xs text-ink-muted mt-1">On the ExplainerAce profile</p>
                 </div>
               </div>
             </Reveal>

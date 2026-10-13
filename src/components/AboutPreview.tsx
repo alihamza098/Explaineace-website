@@ -31,7 +31,7 @@ export const AboutPreview: React.FC = () => {
               </div>
               <div className="float-slow absolute top-1/2 -right-3 sm:right-4 bg-white px-3.5 py-2 rounded-full text-xs font-semibold text-emerald-700 shadow-lift flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                Level 2 Seller
+                Verified Seller
               </div>
             </div>
           </Reveal>

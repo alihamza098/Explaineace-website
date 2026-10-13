@@ -39,16 +39,16 @@ export const siteConfig = {
     },
   ],
   fiverr: {
-    username: "video_supermacy",
-    profileUrl: "https://www.fiverr.com/video_supermacy",
+    username: "explainerace",
+    profileUrl: "https://www.fiverr.com/explainerace",
     gigUrl: "https://www.fiverr.com/s/BbB9Ax7",
     portfolioUrl: "https://www.fiverr.com/s/vmwoBe",
     secondProfileUrl: "https://www.fiverr.com/explainerace",
-    // Combined across both Fiverr profiles: 157 (@video_supermacy, 4.8) + 18 (@explainerace, ~5.0) = 175, weighted avg ~4.8
-    rating: "4.8",
+    // Headline rating = the linked @explainerace profile: 18 reviews (17 x 5.0, 1 x 4.7). @video_supermacy (4.8, 157) is listed separately in fiverrProfiles.
+    rating: "5.0",
     maxRating: "5.0",
-    reviewsCount: "175",
-    sellerLevel: "Level 2 Seller",
+    reviewsCount: "18",
+    sellerLevel: "Verified Seller",
     statusText: "Top Rated Performance & Reliable Turnaround",
   },
   contracts: {
@@ -72,9 +72,9 @@ export const siteConfig = {
     secondaryFeaturedVideoId: "fQ7YXzamRvQ", // Nexus AI Platform Promo
   },
   stats: [
-    { value: "4.8 / 5", label: "Client Rating", sub: "Based on verified feedback" },
-    { value: "175+", label: "Fiverr Reviews", sub: "Across 2 Fiverr profiles" },
-    { value: "Level 2", label: "Fiverr Seller", sub: "Vetted platform ranking" },
+    { value: "5.0 / 5", label: "Client Rating", sub: "ExplainerAce Fiverr profile" },
+    { value: "18", label: "Fiverr Reviews", sub: "Verbatim buyer reviews" },
+    { value: "Level 2", label: "Fiverr Seller", sub: "On @video_supermacy" },
     { value: "0% Fee", label: "Upwork Direct", sub: "Zero fee on client contract" },
   ],
   navLinks: [

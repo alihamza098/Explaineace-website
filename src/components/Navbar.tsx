@@ -182,7 +182,7 @@ export const Navbar: React.FC = () => {
               tabIndex={mobileMenuOpen ? 0 : -1}
               className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-surface-subtle text-ink-soft text-xs font-medium"
             >
-              <span>Order via Fiverr Gig · Level 2 · 4.8★</span>
+              <span>Order via Fiverr Gig · 5.0★</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>

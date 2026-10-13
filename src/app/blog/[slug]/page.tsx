@@ -219,7 +219,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   {post.author.name}
                 </span>
                 <span className="block text-xs text-ink-muted">
-                  {post.author.role} · 175+ Reviews (4.8★)
+                  {post.author.role} · 18 Reviews (5.0★)
                 </span>
               </div>
             </div>
@@ -372,7 +372,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
                 <h4 className="text-lg font-bold text-ink">Written by Ali</h4>
                 <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 flex items-center gap-1">
-                  <Star className="w-3 h-3 fill-emerald-400" /> Level 2 Seller (4.8★)
+                  <Star className="w-3 h-3 fill-emerald-400" /> 5.0★ on Fiverr
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-ink-soft leading-relaxed">

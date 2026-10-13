@@ -65,7 +65,7 @@ export const CTA: React.FC = () => {
                   className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors group"
                 >
                   <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                  <span>Order via Fiverr Gig (Level 2 Seller · 4.8★)</span>
+                  <span>Order via Fiverr Gig (5.0★)</span>
                   <ExternalLink className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-opacity" />
                 </a>
                 <a
