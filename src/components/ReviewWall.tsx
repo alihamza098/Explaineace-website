@@ -11,9 +11,10 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => (
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          className={`w-4 h-4 ${i < review.rating ? "fill-amber-400 text-amber-400" : "text-ink-faint"}`}
+          className={`w-4 h-4 ${i < Math.round(review.rating) ? "fill-amber-400 text-amber-400" : "text-ink-faint"}`}
         />
       ))}
+      <span className="ml-1.5 text-xs font-semibold text-ink-soft">{review.rating.toFixed(1)}</span>
     </div>
     <p className="text-sm text-ink leading-relaxed">&ldquo;{review.quote}&rdquo;</p>
     <div className="mt-4 pt-4 border-t border-surface-border text-xs">
@@ -45,9 +46,9 @@ const Row: React.FC<{ items: Review[]; reverse?: boolean; duration: number }> = 
 
 export const ReviewWall: React.FC = () => {
   if (reviews.length === 0) return null;
-  const half = Math.ceil(reviews.length / 2);
-  const rowA = reviews.slice(0, half);
-  const rowB = reviews.slice(half).length ? reviews.slice(half) : reviews.slice().reverse();
+  // Interleave so both rows mix Fiverr and case-study reviews
+  const rowA = reviews.filter((_, i) => i % 2 === 0);
+  const rowB = reviews.filter((_, i) => i % 2 === 1);
 
   return (
     <section className="py-24 sm:py-32 relative overflow-hidden" aria-labelledby="reviews-title">
@@ -63,7 +64,7 @@ export const ReviewWall: React.FC = () => {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-4 text-ink-muted text-base sm:text-lg">
-              Rated 4.8 / 5 across 157+ reviews on Fiverr.
+              Verified buyer reviews from Fiverr, quoted word for word.
             </p>
           </Reveal>
         </div>
