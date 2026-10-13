@@ -31,6 +31,7 @@ export const Hero: React.FC = () => {
   const galleryVideos = projects.slice(0, 10);
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [lowRes, setLowRes] = useState<Record<string, boolean>>({});
 
   const activeProject = galleryVideos[currentIndex] || galleryVideos[0];
 
@@ -217,7 +218,8 @@ export const Hero: React.FC = () => {
                   <div className="relative aspect-video w-full bg-surface-night overflow-hidden">
                     <div key={activeProject.id} className="ken-burns absolute inset-0">
                       <Image
-                        src={`https://img.youtube.com/vi/${activeProject.videoId}/maxresdefault.jpg`}
+                        src={`https://img.youtube.com/vi/${activeProject.videoId}/${lowRes[activeProject.videoId] ? "hqdefault" : "maxresdefault"}.jpg`}
+                        onError={() => setLowRes((m) => ({ ...m, [activeProject.videoId]: true }))}
                         alt={activeProject.title}
                         fill
                         priority

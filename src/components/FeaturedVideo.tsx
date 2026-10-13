@@ -11,6 +11,7 @@ import { ScrollLinked } from "@/components/motion/ScrollLinked";
 
 export const FeaturedVideo: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [lowRes, setLowRes] = useState(false);
   const featuredId = "4E72rncOnBc"; // Green Medicine SaaS Tour
 
   return (
@@ -63,7 +64,8 @@ export const FeaturedVideo: React.FC = () => {
           >
             <div className="scroll-expand-media absolute inset-0">
               <Image
-                src={`https://img.youtube.com/vi/${featuredId}/maxresdefault.jpg`}
+                src={`https://img.youtube.com/vi/${featuredId}/${lowRes ? "hqdefault" : "maxresdefault"}.jpg`}
+                onError={() => setLowRes(true)}
                 alt="Green Medicine SaaS Walkthrough Featured Video"
                 fill
                 sizes="(max-width: 1400px) 100vw, 1400px"

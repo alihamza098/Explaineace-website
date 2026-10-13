@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { MobileCtaBar } from "@/components/MobileCtaBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/motion/ScrollProgress";
@@ -158,7 +160,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="grain min-h-screen flex flex-col bg-background text-ink antialiased selection:bg-brand-600 selection:text-white overflow-x-hidden">
+      <body className="grain min-h-screen flex flex-col pb-20 md:pb-0 bg-background text-ink antialiased selection:bg-brand-600 selection:text-white overflow-x-hidden">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[110] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-white"
@@ -169,6 +171,8 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content" tabIndex={-1} className="flex-1 overflow-x-hidden focus:outline-none">{children}</main>
         <Footer />
+        <MobileCtaBar />
+        <Analytics />
       </body>
     </html>
   );
