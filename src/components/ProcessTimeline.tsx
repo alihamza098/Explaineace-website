@@ -6,7 +6,6 @@ import { ArrowRight } from "lucide-react";
 import { ProcessInfographic } from "@/components/ProcessInfographic";
 import { Reveal } from "@/components/motion/Reveal";
 import { SplitText } from "@/components/motion/SplitText";
-import { ScrollLinked } from "@/components/motion/ScrollLinked";
 import { processSteps } from "@/data/process";
 
 export const ProcessTimeline: React.FC = () => {
@@ -32,25 +31,31 @@ export const ProcessTimeline: React.FC = () => {
           </Reveal>
         </div>
 
-        {/* Scroll-drawn step rail */}
-        <ScrollLinked end={0.45} className="relative max-w-5xl mx-auto mb-14">
-          <div className="hidden md:block absolute left-[12.5%] right-[12.5%] top-6 h-[2px] bg-ink/[0.08] rounded-full overflow-hidden">
-            <div className="scroll-draw h-full bg-gradient-to-r from-brand-600 via-violet-500 to-cyan-500" />
+        {/* Step rail: pins on desktop while the line draws and each step lights up (CSS scroll-driven) */}
+        <div className="pin-track relative max-w-5xl mx-auto mb-14">
+          <div className="pin-sticky">
+            <div className="hidden md:block absolute left-[12.5%] right-[12.5%] top-6 h-[2px] bg-ink/[0.08] rounded-full overflow-hidden">
+              <div className="pin-line h-full bg-gradient-to-r from-brand-600 via-violet-500 to-cyan-500" />
+            </div>
+            <ol className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
+              {processSteps.map((step, idx) => (
+                <li
+                  key={step.number}
+                  style={{ "--i": idx } as React.CSSProperties}
+                  className="pin-step relative text-left md:text-center flex md:block gap-4"
+                >
+                  <div className="pin-dot relative z-10 shrink-0 md:mx-auto w-12 h-12 rounded-full bg-white border border-surface-border shadow-card flex items-center justify-center text-sm font-bold text-ink">
+                    {step.number}
+                  </div>
+                  <div className="pin-text md:mt-5">
+                    <h3 className="text-base font-semibold text-ink tracking-tight">{step.title}</h3>
+                    <p className="mt-1.5 text-xs sm:text-sm text-ink-muted leading-relaxed md:px-2">{step.deliverable}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
-          <ol className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
-            {processSteps.map((step, idx) => (
-              <Reveal as="li" key={step.number} delay={idx * 140} className="relative text-left md:text-center flex md:block gap-4">
-                <div className="relative z-10 shrink-0 md:mx-auto w-12 h-12 rounded-full bg-white border border-surface-border shadow-card flex items-center justify-center text-sm font-bold text-ink">
-                  {step.number}
-                </div>
-                <div className="md:mt-5">
-                  <h3 className="text-base font-semibold text-ink tracking-tight">{step.title}</h3>
-                  <p className="mt-1.5 text-xs sm:text-sm text-ink-muted leading-relaxed md:px-2">{step.deliverable}</p>
-                </div>
-              </Reveal>
-            ))}
-          </ol>
-        </ScrollLinked>
+        </div>
 
         <Reveal variant="clip" delay={120} className="max-w-5xl mx-auto mb-12">
           <ProcessInfographic />

@@ -584,3 +584,32 @@ html:not(.js) .draw-path {
   .price-popular::before { animation: none; }
   .price-card:hover { transform: none; }
 }
+
+/* ===== Process rail: pinned, scroll-driven (desktop + supporting browsers only) ===== */
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    @keyframes pinLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes pinStep { from { opacity: 0.3; transform: translate3d(0, 10px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+    @keyframes pinDot {
+      from { transform: scale(0.85); background: #fff; color: #0B0D12; }
+      to { transform: scale(1.12); background: #0B0D12; color: #fff; }
+    }
+    .pin-track { height: 240vh; view-timeline-name: --pin; view-timeline-axis: block; }
+    .pin-sticky { position: sticky; top: 28vh; }
+    .pin-line {
+      transform-origin: left;
+      animation: pinLine linear both;
+      animation-timeline: --pin;
+      animation-range: cover 28% cover 62%;
+    }
+    .pin-step, .pin-dot { animation-timeline: --pin; animation-fill-mode: both; animation-timing-function: ease-out; }
+    .pin-step {
+      animation-name: pinStep;
+      animation-range: cover calc(26% + var(--i) * 9%) cover calc(34% + var(--i) * 9%);
+    }
+    .pin-dot {
+      animation-name: pinDot;
+      animation-range: cover calc(26% + var(--i) * 9%) cover calc(34% + var(--i) * 9%);
+    }
+  }
+}
