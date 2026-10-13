@@ -10,8 +10,6 @@ import { BrandLogo } from "@/components/BrandLogo";
 import { Magnetic } from "@/components/motion/Magnetic";
 
 export const Navbar: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [pill, setPill] = useState<{ left: number; width: number; visible: boolean }>({
     left: 0,
@@ -20,27 +18,6 @@ export const Navbar: React.FC = () => {
   });
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
-
-  // Condense after the first scroll, hide while scrolling down, reveal on scroll up
-  useEffect(() => {
-    let lastY = window.scrollY;
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const y = window.scrollY;
-      setScrolled(y > 20);
-      setHidden(y > 240 && y > lastY + 4);
-      if (Math.abs(y - lastY) > 4) lastY = y;
-    };
-    const onScroll = () => {
-      if (!frame) frame = requestAnimationFrame(update);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      cancelAnimationFrame(frame);
-    };
-  }, []);
 
   // Close mobile menu on page navigation
   useEffect(() => {
@@ -65,17 +42,11 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        hidden && !mobileMenuOpen ? "-translate-y-full" : "translate-y-0"
-      } ${scrolled ? "py-3" : "py-5"}`}
+      className="fixed top-0 left-0 right-0 z-50 py-3"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`flex items-center justify-between rounded-full transition-all duration-500 ${
-            scrolled
-              ? "bg-white/80 backdrop-blur-xl border border-surface-border shadow-card pl-4 pr-2 py-2"
-              : "bg-transparent border border-transparent px-0 py-0"
-          }`}
+          className="flex items-center justify-between rounded-full bg-white/95 border border-surface-border shadow-card pl-4 pr-2 py-2"
         >
           {/* Brand */}
           <Link
@@ -83,7 +54,7 @@ export const Navbar: React.FC = () => {
             className="focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg"
             aria-label="EXPLAINERACE Home"
           >
-            <BrandLogo size={scrolled ? "sm" : "md"} showSubtitle={!scrolled} />
+            <BrandLogo size="sm" showSubtitle={false} />
           </Link>
 
           {/* Desktop navigation with a pill that glides to the hovered link */}
