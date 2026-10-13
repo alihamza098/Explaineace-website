@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Play, Clock, ArrowUpRight } from "lucide-react";
@@ -16,6 +16,19 @@ export const VideoCard: React.FC<VideoCardProps> = ({ project, onPlay }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const cardRef = useRef<HTMLElement>(null);
+  const [frame, setFrame] = useState(0);
+  const [framesOk, setFramesOk] = useState(true);
+
+  // Hover preview: cycle through YouTube's auto-generated mid-video stills.
+  useEffect(() => {
+    if (!isHovered || !framesOk || !project.videoId) {
+      setFrame(0);
+      return;
+    }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = window.setInterval(() => setFrame((f) => (f % 3) + 1), 700);
+    return () => window.clearInterval(id);
+  }, [isHovered, framesOk, project.videoId]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     if (!cardRef.current) return;
@@ -91,6 +104,17 @@ export const VideoCard: React.FC<VideoCardProps> = ({ project, onPlay }) => {
             onError={() => setImgError(true)}
             loading="lazy"
           />
+
+          {frame > 0 && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={`https://img.youtube.com/vi/${project.videoId}/hq${frame}.jpg`}
+              alt=""
+              aria-hidden="true"
+              onError={() => setFramesOk(false)}
+              className="absolute inset-0 w-full h-full object-cover scale-110 z-[5]"
+            />
+          )}
 
           {/* Specular Diagonal Glass Sheen Sweep */}
           <div

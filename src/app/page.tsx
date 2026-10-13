@@ -5,6 +5,7 @@ import { WhatICreate } from "@/components/WhatICreate";
 import { FeaturedVideo } from "@/components/FeaturedVideo";
 import { HowIAddValue } from "@/components/HowIAddValue";
 import { TrustBlock } from "@/components/TrustBlock";
+import { ReviewWall } from "@/components/ReviewWall";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { AboutPreview } from "@/components/AboutPreview";
 import { HomeFaq } from "@/components/HomeFaq";
@@ -36,6 +37,8 @@ export default function HomePage() {
 
       {/* 6. Verified Trust Signals (Fiverr Level 2, 4.8★, 157 Reviews) */}
       <TrustBlock />
+
+      <ReviewWall />
 
       {/* 7. 4-Step Production Process */}
       <ProcessTimeline />
