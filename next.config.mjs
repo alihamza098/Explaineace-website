@@ -21,15 +21,6 @@ const nextConfig = {
       },
     ],
   },
-  async rewrites() {
-    // Serve the standalone landing page at /landing/ (static file lives in public/landing/)
-    return {
-      beforeFiles: [
-        { source: "/landing", destination: "/landing/index.html" },
-        { source: "/landing/", destination: "/landing/index.html" },
-      ],
-    };
-  },
   webpack: (config) => {
     config.resolve.alias["@"] = path.resolve(__dirname, "src");
     return config;
