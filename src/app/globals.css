@@ -473,25 +473,42 @@ html:not(.js) .draw-path {
     clip-path: none;
   }
   .scroll-tilt,
-  /* Overlay content tracks the opening frame so it is never clipped */
-.scroll-expand-content {
-  left: calc(var(--inset) + 1.25rem);
-  right: calc(var(--inset) + 1.25rem);
-}
-@media (min-width: 640px) {
-  .scroll-expand-content {
-    left: calc(var(--inset) + 2rem);
-    right: calc(var(--inset) + 2rem);
-  }
-}
-.scroll-expand-media {
+  .scroll-expand-media {
     transform: none;
+    animation: none !important;
   }
   .scroll-expand {
     clip-path: none;
   }
+  .hero-copy,
+  .hero-stage {
+    animation: none !important;
+  }
   .demo-cursor,
   .cursor-bubble { display: none; }
+}
+
+/* ===== Hero scroll choreography (CSS scroll-driven; compositor-only, no JS) ===== */
+@supports (animation-timeline: view()) {
+  @keyframes heroStageIn {
+    from { transform: perspective(1600px) rotateX(10deg) scale(0.9); opacity: 0.6; }
+    to { transform: perspective(1600px) rotateX(0deg) scale(1); opacity: 1; }
+  }
+  @keyframes heroCopyOut {
+    from { transform: translate3d(0, 0, 0); opacity: 1; }
+    to { transform: translate3d(0, -48px, 0); opacity: 0; }
+  }
+  .hero-stage {
+    transform-origin: 50% 100%;
+    animation: heroStageIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+  }
+  .hero-copy {
+    animation: heroCopyOut linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 70%;
+  }
 }
 
 /* ===== Production Craft: live mini motion-graphics (loops pause off-screen) ===== */

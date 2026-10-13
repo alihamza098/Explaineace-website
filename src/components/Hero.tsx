@@ -88,7 +88,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Headline */}
-        <div className="text-center max-w-5xl mx-auto">
+        <div className="hero-copy text-center max-w-5xl mx-auto">
           <h1 className="text-[2.6rem] leading-[1.02] sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold tracking-[-0.035em] text-ink break-words">
             <span className="line-mask">
               <span className="line-rise" style={{ "--d": "80ms" } as React.CSSProperties}>
@@ -158,6 +158,7 @@ export const Hero: React.FC = () => {
 
         {/* Hero stage */}
         <div className="stage-enter mt-14 sm:mt-20 max-w-5xl mx-auto w-full relative">
+          <div className="hero-stage">
           <ScrollLinked end={0.55} className="relative">
             {/* Floating badges */}
             <div className="hidden lg:flex items-center gap-2 absolute -top-6 -left-10 z-30 px-3.5 py-2 rounded-2xl bg-white border border-surface-border shadow-lift text-xs text-ink font-semibold float-slow">
@@ -299,6 +300,7 @@ export const Hero: React.FC = () => {
               </div>
             </div>
           </ScrollLinked>
+          </div>
 
           {/* Gallery strip */}
           <div className="mt-6 rounded-3xl p-4 sm:p-5 bg-white/80 backdrop-blur border border-surface-border shadow-card">
