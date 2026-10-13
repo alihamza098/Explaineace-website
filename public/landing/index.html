@@ -250,6 +250,7 @@
         #120F1C;
       animation: drift 14s ease-in-out infinite alternate; background-size: 140% 140%;
     }
+    img.reel__poster { width: 100%; height: 100%; object-fit: cover; animation: none; background-size: cover; }
     @keyframes drift { to { background-position: 30% 20%; filter: hue-rotate(25deg); } }
     .reel__meta { position: absolute; inset: auto 0 0 0; padding: clamp(20px, 3vw, 44px); display: flex; justify-content: space-between; align-items: flex-end; gap: 16px;
       background: linear-gradient(0deg, rgba(7,6,10,.7), transparent); }
@@ -496,27 +497,23 @@
     <section class="reel" id="work" aria-labelledby="reel-title">
       <div class="container reel__head">
         <div class="grid">
-          <h2 class="h2" id="reel-title" data-reveal>Two minutes. <em>Forty</em> films.</h2>
+          <h2 class="h2" id="reel-title" data-reveal>Watch it <em>move.</em></h2>
         </div>
       </div>
       <div class="reel__stage">
-        <!--
-          SHOWREEL: replace .reel__poster with a real video, e.g.
-          <video class="reel__poster" src="reel.mp4" poster="reel.jpg" muted loop playsinline autoplay></video>
-          and set data-src on the <dialog> below to your full-length embed URL.
-        -->
-        <button class="reel__card" id="reel-card" data-cursor="play" aria-label="Play the Explainerace showreel">
-          <div class="reel__poster" aria-hidden="true"></div>
+        <!-- Poster = the YouTube thumbnail of the featured video; clicking opens it in the dialog below. -->
+        <button class="reel__card" id="reel-card" data-cursor="play" aria-label="Play: Framer SaaS Motion Graphics Explainer">
+          <img class="reel__poster" src="https://img.youtube.com/vi/jzb-LpUo2i8/maxresdefault.jpg" alt="" width="1280" height="720"
+               onerror="this.onerror=null;this.src='https://img.youtube.com/vi/jzb-LpUo2i8/hqdefault.jpg'">
           <div class="reel__icon" aria-hidden="true"><span><svg viewBox="0 0 16 16"><path d="M4 2.5l10 5.5-10 5.5z"/></svg></span></div>
           <div class="reel__meta">
-            <span class="reel__title">Showreel ’25</span>
-            <span class="reel__time">02:04</span>
+            <span class="reel__title">Framer SaaS Motion Graphics Explainer</span>
+            <span class="reel__time">0:51</span>
           </div>
         </button>
       </div>
-      <dialog class="reel-modal" id="reel-modal" data-src="" aria-labelledby="reel-modal-title">
-        <h3 id="reel-modal-title" class="h2" style="font-size:36px">Showreel</h3>
-        <p class="lede" style="margin-top:12px">Drop your reel’s embed URL into this dialog’s <code>data-src</code> attribute and it will load here.</p>
+      <dialog class="reel-modal" id="reel-modal" data-src="https://www.youtube-nocookie.com/embed/jzb-LpUo2i8?autoplay=1&amp;rel=0&amp;modestbranding=1" aria-labelledby="reel-modal-title">
+        <h3 id="reel-modal-title" class="h2" style="font-size:32px">Framer SaaS Motion Graphics Explainer</h3>
         <form method="dialog"><button class="btn btn--solid" autofocus>Close</button></form>
       </dialog>
     </section>
@@ -891,12 +888,14 @@
       const src = reelModal.dataset.src;
       if (src && !$("iframe", reelModal)) {
         const f = document.createElement("iframe");
-        f.src = src; f.title = "Explainerace showreel"; f.allow = "autoplay; fullscreen"; f.style.cssText = "width:100%;aspect-ratio:16/9;border:0;border-radius:12px;margin-top:16px";
+        f.src = src; f.title = "Framer SaaS Motion Graphics Explainer"; f.allow = "autoplay; fullscreen"; f.style.cssText = "width:100%;aspect-ratio:16/9;border:0;border-radius:12px;margin-top:16px";
         reelModal.insertBefore(f, $("form", reelModal));
       }
       reelModal.showModal();
     });
     reelModal.addEventListener("click", e => { if (e.target === reelModal) reelModal.close(); });
+    // Remove the iframe on close so the video stops playing
+    reelModal.addEventListener("close", () => { const f = $("iframe", reelModal); if (f) f.remove(); });
 
     /* ----------------------------------------------------------------------
        Services: pinned horizontal scroll ≥768px; stacked on mobile / reduced motion
