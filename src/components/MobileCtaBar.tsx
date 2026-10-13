@@ -27,7 +27,7 @@ export const MobileCtaBar: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
-          className="shrink-0 inline-flex items-center justify-center gap-1.5 rounded-full bg-emerald-600 text-white text-sm font-semibold px-5 py-3"
+          className="shrink-0 inline-flex items-center justify-center gap-1.5 rounded-full bg-emerald-700 text-white text-sm font-semibold px-5 py-3"
         >
           <WhatsAppIcon className="w-4 h-4" />
           <span>WhatsApp</span>

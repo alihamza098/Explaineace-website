@@ -155,7 +155,7 @@ export const Footer: React.FC = () => {
         <Link
           href="/contact"
           className="group mt-16 flex items-end justify-between gap-4 border-t border-white/10 pt-10"
-          aria-label="Start a project with EXPLAINERACE"
+          aria-label="Let's talk. Start a project with EXPLAINERACE"
         >
           <span className="font-extrabold tracking-tighter leading-[0.85] text-[16vw] md:text-[11rem] text-transparent bg-clip-text bg-gradient-to-b from-white/90 to-white/10 select-none">
             Let&apos;s talk.
@@ -166,7 +166,7 @@ export const Footer: React.FC = () => {
         </Link>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
           <p>&copy; {currentYear} EXPLAINERACE by Ali · Software Video Production Studio. All rights reserved.</p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <Link href="/privacy" className="hover:text-white transition-colors underline underline-offset-4">

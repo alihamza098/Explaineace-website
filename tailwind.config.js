@@ -14,7 +14,7 @@ module.exports = {
           DEFAULT: "#0B0D12",
           soft: "#3A3F4E",
           muted: "#686E80",
-          faint: "#9AA0AF",
+          faint: "#6E7585",
         },
         surface: {
           DEFAULT: "#FFFFFF",

@@ -104,7 +104,7 @@ export default function ContactPage() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-[0.99] group/btn"
+                  className="inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-full bg-emerald-700 hover:bg-emerald-500 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-[0.99] group/btn"
                 >
                   <WhatsAppIcon className="w-5 h-5 text-ink" />
                   <span>Open WhatsApp Chat ({siteConfig.whatsapp.display})</span>

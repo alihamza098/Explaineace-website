@@ -372,7 +372,7 @@ export const Hero: React.FC = () => {
                     <div className="space-y-0.5 px-0.5">
                       <div className="flex items-center justify-between gap-1">
                         <span className="text-[10px] font-semibold text-brand-600 truncate">{project.category}</span>
-                        <span className="text-[10px] text-ink-faint truncate">{project.client}</span>
+                        <span className="text-[10px] text-ink-muted truncate">{project.client}</span>
                       </div>
                       <p className={`text-xs font-semibold line-clamp-1 ${isSelected ? "text-ink" : "text-ink-soft"}`}>
                         {project.title}

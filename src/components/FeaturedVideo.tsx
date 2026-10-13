@@ -52,7 +52,7 @@ export const FeaturedVideo: React.FC = () => {
             data-cursor="play"
             role="button"
             tabIndex={0}
-            aria-label="Play the Green Medicine SaaS walkthrough"
+            aria-label="Watch the walkthrough · 3:15"
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
                 e.preventDefault();

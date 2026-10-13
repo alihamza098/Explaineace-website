@@ -32,7 +32,7 @@ export const TrustBlock: React.FC = () => {
                 href={siteConfig.fiverr.gigUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-sheen inline-flex items-center gap-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 px-5 py-3 rounded-full transition-colors shadow-[0_10px_30px_-10px_rgba(5,150,105,0.6)]"
+                className="btn-sheen inline-flex items-center gap-2 text-sm font-semibold text-white bg-emerald-700 hover:bg-emerald-800 px-5 py-3 rounded-full transition-colors shadow-[0_10px_30px_-10px_rgba(5,150,105,0.6)]"
               >
                 <span>Order on Fiverr Gig</span>
                 <ExternalLink className="w-3.5 h-3.5" />

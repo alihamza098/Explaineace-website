@@ -50,4 +50,5 @@ const projectReviews: Review[] = projects.flatMap((p) => {
   ];
 });
 
-export const reviews: Review[] = [...fiverrReviews, ...projectReviews];
+// Cap case-study testimonials so the marquee stays light (each card is rendered twice for the loop)
+export const reviews: Review[] = [...fiverrReviews, ...projectReviews.slice(0, 6)];

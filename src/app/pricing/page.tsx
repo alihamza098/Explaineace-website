@@ -376,7 +376,7 @@ export default function PricingPage() {
               href={siteConfig.whatsapp.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 hover:bg-emerald-500 text-white text-xs font-semibold transition-all"
             >
               <WhatsAppIcon className="w-4 h-4" />
               <span>Chat on WhatsApp</span>

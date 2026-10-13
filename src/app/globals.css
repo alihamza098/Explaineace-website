@@ -176,12 +176,12 @@ html.js .reveal[data-reveal="words"].is-visible .split-word > span {
 }
 .line-rise {
   display: inline-block;
-  animation: lineRise 1.1s var(--ease-out-expo) both;
+  animation: lineRise 0.7s var(--ease-out-expo) both;
   animation-delay: var(--d, 0ms);
 }
 @keyframes lineRise {
-  from { transform: translate3d(0, 105%, 0); opacity: 0; }
-  to { transform: none; opacity: 1; }
+  from { transform: translate3d(0, 105%, 0); }
+  to { transform: none; }
 }
 
 .fade-up {
