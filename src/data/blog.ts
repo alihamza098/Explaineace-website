@@ -1198,4 +1198,736 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   },
+  {
+    "slug": "60-second-product-demo-script-template",
+    "title": "The 60-Second Product Demo Script Template (Shot-by-Shot, With Timings)",
+    "headline": "A repeatable structure for a one-minute software demo that gets watched to the end.",
+    "excerpt": "One minute is about 140 spoken words. Here is how to spend them: hook, problem, three actions, proof and call to action, with a timing table you can copy.",
+    "metaDescription": "Copy this 60-second product demo script template: second-by-second timings, word counts, on-screen actions and a call to action for SaaS demo videos.",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06",
+    "readingTime": "6 min read",
+    "category": "Production Guides",
+    "featuredImage": "https://img.youtube.com/vi/p0v9DLSzjOU/maxresdefault.jpg",
+    "author": {
+      "name": "Ali",
+      "role": "Software Video Specialist & Founder of EXPLAINERACE",
+      "avatar": "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg"
+    },
+    "tags": [
+      "Demo Video Script",
+      "60 Second Demo",
+      "SaaS Video",
+      "Scriptwriting"
+    ],
+    "content": {
+      "intro": [
+        "A 60-second demo leaves no room for wandering. At a natural narration pace you get roughly 130 to 150 spoken words, which is about six short sentences per ten seconds of video.",
+        "Most weak demos fail the same way: they open with the logo and a feature tour instead of the viewer's problem. The template below fixes the order of the beats so you only have to fill in your own product details."
+      ],
+      "summaryBox": {
+        "headline": "The 60-second structure at a glance",
+        "points": [
+          "0-5s: Hook that names the problem or outcome",
+          "5-15s: The pain, in the viewer's own words",
+          "15-45s: Three actions on screen, one idea each",
+          "45-55s: One proof point (result, customer or number you can verify)",
+          "55-60s: A single call to action"
+        ]
+      },
+      "sections": [
+        {
+          "id": "timing-table",
+          "heading": "Second-by-second timing table",
+          "body": [
+            "Use this table as a skeleton. Keep every spoken line short enough to finish before the next screen change."
+          ],
+          "table": {
+            "headers": [
+              "Time",
+              "Beat",
+              "On screen",
+              "Words (approx.)"
+            ],
+            "rows": [
+              [
+                "0-5s",
+                "Hook",
+                "Finished result or dashboard, zoomed in",
+                "10-15"
+              ],
+              [
+                "5-15s",
+                "Problem",
+                "Messy before state, cursor hovering the pain point",
+                "20-25"
+              ],
+              [
+                "15-25s",
+                "Action 1",
+                "Zoom on the first click, ripple on the button",
+                "25-30"
+              ],
+              [
+                "25-35s",
+                "Action 2",
+                "Pan to the next screen, highlight the key field",
+                "25-30"
+              ],
+              [
+                "35-45s",
+                "Action 3",
+                "Show the result appearing",
+                "20-25"
+              ],
+              [
+                "45-55s",
+                "Proof",
+                "Real customer logo or outcome you can back up",
+                "15-20"
+              ],
+              [
+                "55-60s",
+                "Call to action",
+                "Link or button, nothing else on screen",
+                "8-12"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "write-the-hook",
+          "heading": "Write the hook last, but place it first",
+          "body": [
+            "The hook is the one sentence that earns the next ten seconds. Good hooks state the outcome ('Send a client report in two clicks') or the cost of the problem ('Still copying data between tabs?').",
+            "Draft the three actions first, then write the hook from the strongest outcome you found. Avoid openings like 'Welcome to our product', which spend your best seconds on nothing."
+          ]
+        },
+        {
+          "id": "three-actions",
+          "heading": "Three actions, not ten features",
+          "body": [
+            "A minute supports three actions. Pick the path a new user takes to reach their first win, and cut everything else, including settings pages and admin screens.",
+            "For each action, decide the single thing the viewer's eye should do: follow the cursor, read the highlighted field, or watch a result appear. Focal zooms and a smoothed cursor path do that work for you."
+          ],
+          "callout": {
+            "type": "tip",
+            "title": "Test the script out loud",
+            "text": "Read it with a stopwatch before recording. If it runs past 150 words you will be rushing, and rushed narration is the first thing viewers notice."
+          },
+          "listItems": [
+            "Choose actions in the order a real user performs them",
+            "Say what the viewer gets, not what the button is called",
+            "Leave half a second of silence after each click so the screen change registers"
+          ]
+        },
+        {
+          "id": "real-example",
+          "heading": "What a tight demo looks like in practice",
+          "body": [
+            "The Spec SaaS explainer is a good reference for how focus and pacing carry a product story. Notice how each screen change lands on a single idea before moving on."
+          ],
+          "video": {
+            "videoId": "p0v9DLSzjOU",
+            "title": "Spec SaaS Explainer",
+            "subtitle": "Watch how pacing and focal zooms keep one idea per scene:",
+            "category": "SaaS Explainer",
+            "projectId": "spec-saas-explainer"
+          }
+        },
+        {
+          "id": "next-steps",
+          "heading": "Turn the script into a finished video",
+          "body": [
+            "If you would rather hand the script to a specialist, see the [SaaS walkthrough video service](/services/saas-walkthrough-video) and the [pricing page](/pricing). For longer scripts and structure beyond 60 seconds, read our guide on [how to write a SaaS demo video script](/blog/how-to-write-saas-demo-video-script)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How many words is a 60-second video script?",
+          "a": "Roughly 130 to 150 words at a natural pace. Aim for the lower end if the screen carries a lot of action."
+        },
+        {
+          "q": "Should the demo start with the logo?",
+          "a": "No. A short logo sting at the end works better. Spend the opening seconds on the viewer's problem or the outcome."
+        },
+        {
+          "q": "Can I do this in 30 seconds?",
+          "a": "Yes, but you need to cut to one action and one proof point. The structure scales down by dropping the second and third actions."
+        },
+        {
+          "q": "Who should record the voiceover?",
+          "a": "Whoever can deliver the script clearly and consistently. A studio-quality recording makes the same words sound more trustworthy."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "screencast-vs-animated-explainer-help-center",
+    "title": "Screencast vs Animated Explainer: What to Use in Your Help Center",
+    "headline": "Match the video format to the question your customer is asking.",
+    "excerpt": "Help center videos answer 'how do I do this?'. Marketing videos answer 'why should I care?'. Here is how to choose between a screencast and an animated explainer for each.",
+    "metaDescription": "Screencast or animated explainer for your help center? Compare format, cost, maintenance and when each one works best for SaaS support content.",
+    "publishedAt": "2026-10-07",
+    "updatedAt": "2026-10-07",
+    "readingTime": "5 min read",
+    "category": "Strategy",
+    "featuredImage": "https://img.youtube.com/vi/fO7m1m7hpNA/maxresdefault.jpg",
+    "author": {
+      "name": "Ali",
+      "role": "Software Video Specialist & Founder of EXPLAINERACE",
+      "avatar": "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg"
+    },
+    "tags": [
+      "Help Center Video",
+      "Screencast",
+      "Animated Explainer",
+      "Customer Support"
+    ],
+    "content": {
+      "intro": [
+        "Support videos have a different job from marketing videos. A customer who opens your help center already owns the product and has a specific task. They want the steps, not a story.",
+        "That one difference decides the format. Screencasts show the real interface step by step. Animated explainers simplify an idea or a concept. Most help centers need both, in different places."
+      ],
+      "summaryBox": {
+        "headline": "Rule of thumb",
+        "points": [
+          "Task questions ('How do I invite a teammate?') get a screencast",
+          "Concept questions ('How do permissions work?') get an animated explainer",
+          "Anything that changes often should be a screencast you can re-record cheaply",
+          "Concepts that stay stable are worth the higher cost of animation"
+        ]
+      },
+      "sections": [
+        {
+          "id": "comparison",
+          "heading": "Side-by-side comparison",
+          "body": [
+            "Here is how the two formats compare for support content:"
+          ],
+          "table": {
+            "headers": [
+              "Factor",
+              "Screencast tutorial",
+              "Animated explainer"
+            ],
+            "rows": [
+              [
+                "Best question type",
+                "How do I do X?",
+                "What is X and why does it work this way?"
+              ],
+              [
+                "Shows",
+                "Your real interface",
+                "Simplified or abstract visuals"
+              ],
+              [
+                "Update effort",
+                "Re-record or patch the changed steps",
+                "Often a re-edit of illustrations and timing"
+              ],
+              [
+                "Typical length",
+                "1 to 4 minutes",
+                "60 to 120 seconds"
+              ],
+              [
+                "Risk",
+                "Gets stale after a UI change",
+                "Can feel disconnected from the real product"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "screencast-wins",
+          "heading": "When a screencast wins",
+          "body": [
+            "Use a screencast whenever the customer has to find a button. Seeing the real interface removes the translation step between a diagram and the screen in front of them.",
+            "Add zooms on the controls that matter, a smooth cursor and short captions so the video still works muted. Keep each video to one task so it can be linked directly from an article."
+          ],
+          "listItems": [
+            "Setup and onboarding steps",
+            "Integration walkthroughs",
+            "Account, billing and permission tasks",
+            "Anything referenced repeatedly by support agents"
+          ]
+        },
+        {
+          "id": "explainer-wins",
+          "heading": "When an animated explainer wins",
+          "body": [
+            "Use an explainer for ideas that are hard to show on a screen: how data flows between systems, what a security model protects, or why a workflow is built the way it is.",
+            "Because the visuals are not tied to your interface, an explainer ages better across redesigns, which can justify the extra production cost for stable concepts."
+          ]
+        },
+        {
+          "id": "reference",
+          "heading": "A screencast done well",
+          "body": [
+            "This screencast production showcase demonstrates the techniques mentioned above: focused zooms, a calm cursor and clear pacing."
+          ],
+          "video": {
+            "videoId": "fO7m1m7hpNA",
+            "title": "Screencast Production Showcase",
+            "subtitle": "See the focal zooms and cursor work that make tutorials easy to follow:",
+            "category": "Screencast Tutorial",
+            "projectId": "screencast-production-showcase"
+          }
+        },
+        {
+          "id": "next",
+          "heading": "Where to go from here",
+          "body": [
+            "Our [screencast tutorial service](/services/screencast-tutorials) is built for help centers and SOPs, starting from the rates on the [pricing page](/pricing). For a broader comparison including motion graphics, see [Screencast Tutorials vs SaaS Walkthroughs vs Motion Explainers](/blog/screencast-tutorial-vs-saas-walkthrough-guide)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should help center videos have voiceover?",
+          "a": "Voiceover helps, but always add captions. Many people watch support videos without sound."
+        },
+        {
+          "q": "How long should a help center video be?",
+          "a": "Aim for one task per video, usually one to four minutes. Split longer processes into a series."
+        },
+        {
+          "q": "Can I reuse marketing videos in the help center?",
+          "a": "Sometimes for concepts, rarely for tasks. Customers need the exact steps, which marketing cuts usually skip."
+        },
+        {
+          "q": "How often will I need to update screencasts?",
+          "a": "Whenever the interface of the recorded steps changes. Keep the recording project files so a single step can be re-recorded."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "app-store-preview-video-guide",
+    "title": "What to Put in an App Store Preview Video (And What to Leave Out)",
+    "headline": "You have about 30 seconds and a muted autoplay. Here is how to spend them.",
+    "excerpt": "App preview videos autoplay silently in the store. Learn what to show in the first seconds, how to caption it, and which specs matter before you upload.",
+    "metaDescription": "App Store and Google Play preview video guide: what to show, how to structure 30 seconds, captions for muted autoplay, and common mistakes to avoid.",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-08",
+    "readingTime": "6 min read",
+    "category": "Production Guides",
+    "featuredImage": "https://img.youtube.com/vi/kqmPTZOBv9k/maxresdefault.jpg",
+    "author": {
+      "name": "Ali",
+      "role": "Software Video Specialist & Founder of EXPLAINERACE",
+      "avatar": "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg"
+    },
+    "tags": [
+      "App Preview Video",
+      "App Store",
+      "Mobile App Marketing",
+      "App Promo"
+    ],
+    "content": {
+      "intro": [
+        "Store previews usually start playing without sound, so the video has to communicate on visuals and captions alone. Viewers decide quickly whether to keep watching or scroll to the screenshots.",
+        "This guide covers the structure that works for most apps, plus the practical checks to run before you submit. Always confirm current resolution, length and content rules in the official App Store Connect and Google Play Console documentation, because they change."
+      ],
+      "summaryBox": {
+        "headline": "What a strong app preview does",
+        "points": [
+          "Shows the app being used, not marketing slides",
+          "Puts the main benefit in the first few seconds",
+          "Uses on-screen text because audio may be off",
+          "Ends with a clear reason to install"
+        ]
+      },
+      "sections": [
+        {
+          "id": "structure",
+          "heading": "A simple 30-second structure",
+          "body": [
+            "Think in three beats: the benefit, the proof, the finish."
+          ],
+          "table": {
+            "headers": [
+              "Seconds",
+              "What to show",
+              "On-screen text"
+            ],
+            "rows": [
+              [
+                "0-5",
+                "The core screen or result",
+                "One-line benefit"
+              ],
+              [
+                "5-20",
+                "Two or three key flows, real taps",
+                "Short step labels"
+              ],
+              [
+                "20-27",
+                "The most impressive moment",
+                "Outcome or social proof you can verify"
+              ],
+              [
+                "27-30",
+                "App icon and name",
+                "Download prompt"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "first-seconds",
+          "heading": "Win the first five seconds",
+          "body": [
+            "Open on the screen that proves the benefit, not on a splash screen or logo. If the app tracks workouts, start on a finished workout summary, then show how it got there.",
+            "Keep text large enough to read on a phone in a crowded store listing, and keep it to a few words."
+          ]
+        },
+        {
+          "id": "avoid",
+          "heading": "What to leave out",
+          "body": [
+            "Skip long intros, device mockups that shrink the screen, and features that need explaining. Anything that requires audio to make sense will fail during muted autoplay."
+          ],
+          "callout": {
+            "type": "warning",
+            "title": "Check platform rules first",
+            "text": "Both stores have rules about what a preview may contain and which formats are accepted. Review the current guidelines before producing the video so you do not re-edit later."
+          },
+          "listItems": [
+            "Splash screens and slow loading states",
+            "Tiny text and dense screens",
+            "Claims you cannot prove in the video",
+            "Unreleased features that are not in the shipped build"
+          ]
+        },
+        {
+          "id": "example",
+          "heading": "An app promo for reference",
+          "body": [
+            "The Bloom 3D app promo shows a mobile product with layered motion and clear focus on the interface, a style that works well as a short promo cut."
+          ],
+          "video": {
+            "videoId": "kqmPTZOBv9k",
+            "title": "Bloom 3D App Promo",
+            "subtitle": "See layered UI motion applied to a mobile product:",
+            "category": "App Promo",
+            "projectId": "bloom-3d-app-promo"
+          }
+        },
+        {
+          "id": "next",
+          "heading": "Getting yours made",
+          "body": [
+            "See the [app demo video service](/services/app-demo-video) for deliverables and the [pricing page](/pricing) for rates. You can also browse the [Bloom case study](/work/bloom-3d-app-promo) to see the production approach."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do app preview videos need audio?",
+          "a": "Audio is optional and often muted on autoplay, so design the video to work without sound."
+        },
+        {
+          "q": "How long should an app preview be?",
+          "a": "Store limits vary by platform and change over time, so check current guidelines. Within them, 20 to 30 seconds is a common target."
+        },
+        {
+          "q": "Should I show real app footage?",
+          "a": "Yes. Stores generally expect the preview to represent the actual app experience."
+        },
+        {
+          "q": "Can the same video be used on both stores?",
+          "a": "Often the content can be reused, but the required sizes and rules differ, so export a version for each."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "how-long-should-saas-onboarding-video-be",
+    "title": "How Long Should a SaaS Onboarding Video Be? A Length Guide by Use Case",
+    "headline": "There is no single magic number. There is a right length for each job.",
+    "excerpt": "Welcome video, feature tour, setup tutorial or admin training: each has a different ideal length. Use this guide to pick one and to know when to split a video.",
+    "metaDescription": "How long should a SaaS onboarding video be? Recommended lengths for welcome videos, feature tours, setup tutorials and admin training, plus when to split.",
+    "publishedAt": "2026-10-09",
+    "updatedAt": "2026-10-09",
+    "readingTime": "5 min read",
+    "category": "Strategy",
+    "featuredImage": "https://img.youtube.com/vi/fJmaVOtGzC8/maxresdefault.jpg",
+    "author": {
+      "name": "Ali",
+      "role": "Software Video Specialist & Founder of EXPLAINERACE",
+      "avatar": "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg"
+    },
+    "tags": [
+      "Onboarding Video",
+      "SaaS Onboarding",
+      "Video Length",
+      "Product Education"
+    ],
+    "content": {
+      "intro": [
+        "Onboarding videos fail in two opposite ways: too short to teach anything, or so long that new users abandon them before the first win.",
+        "The practical fix is to set the length by purpose. These are working ranges based on production experience, not hard rules. Your own analytics should have the final say once you publish."
+      ],
+      "summaryBox": {
+        "headline": "Working length ranges",
+        "points": [
+          "Welcome video: 45 to 90 seconds",
+          "Single feature tour: 60 to 120 seconds",
+          "Setup or integration tutorial: 2 to 4 minutes",
+          "Admin or advanced training: split into chapters of 3 to 5 minutes"
+        ]
+      },
+      "sections": [
+        {
+          "id": "by-use-case",
+          "heading": "Recommended length by use case",
+          "body": [
+            "Start from the job the video has to do:"
+          ],
+          "table": {
+            "headers": [
+              "Use case",
+              "Working length",
+              "Goal",
+              "Format"
+            ],
+            "rows": [
+              [
+                "Welcome video",
+                "45-90s",
+                "Set expectations, point to first step",
+                "Short walkthrough with voiceover"
+              ],
+              [
+                "Feature tour",
+                "60-120s",
+                "Show one capability and its payoff",
+                "Walkthrough with focal zooms"
+              ],
+              [
+                "Setup tutorial",
+                "2-4 min",
+                "Get the user to a working state",
+                "Screencast with captions"
+              ],
+              [
+                "Admin training",
+                "3-5 min per chapter",
+                "Teach a full workflow",
+                "Chaptered screencast series"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "split",
+          "heading": "When to split a video instead of trimming it",
+          "body": [
+            "If a video covers more than one outcome, split it. A new user should be able to finish a video, do the thing, and come back for the next one.",
+            "Use chapters or separate links so each video answers one question and can be linked from the right place in the product."
+          ],
+          "listItems": [
+            "More than one user goal in the same video",
+            "A natural pause where the user has to do something in the product",
+            "Different audiences, such as admins versus end users"
+          ]
+        },
+        {
+          "id": "measure",
+          "heading": "Let your analytics decide",
+          "body": [
+            "Once the video is live, check where viewers drop off. A steep drop at a specific moment usually points to a slow intro or a confusing step, not a length problem.",
+            "Trim or re-record the section at the drop-off, then compare completion again."
+          ],
+          "callout": {
+            "type": "tip",
+            "title": "Cut the intro first",
+            "text": "If viewers leave in the first ten seconds, shorten the introduction before changing anything else."
+          }
+        },
+        {
+          "id": "example",
+          "heading": "An onboarding flow example",
+          "body": [
+            "The Fitamps onboarding and login walkthrough shows a focused, task-based length: one flow, one outcome, then done."
+          ],
+          "video": {
+            "videoId": "fJmaVOtGzC8",
+            "title": "Fitamps Onboarding & Login",
+            "subtitle": "See a single-task onboarding walkthrough:",
+            "category": "Onboarding Tutorial",
+            "projectId": "fitamps-onboarding-login"
+          }
+        },
+        {
+          "id": "next",
+          "heading": "Related reading",
+          "body": [
+            "For structure and scripting, read our [onboarding video best practices](/blog/saas-onboarding-video-best-practices). To have one produced, see the [SaaS walkthrough service](/services/saas-walkthrough-video) and the [pricing page](/pricing)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is shorter always better for onboarding?",
+          "a": "No. The video should be as long as the task needs and no longer. A setup tutorial legitimately takes a few minutes."
+        },
+        {
+          "q": "Should I add chapters to long videos?",
+          "a": "Yes. Chapters let viewers jump to the step they need and make it easier to update one part later."
+        },
+        {
+          "q": "Do onboarding videos need captions?",
+          "a": "Yes. Many people watch without sound, and captions also help accessibility."
+        },
+        {
+          "q": "How do I know my video is the right length?",
+          "a": "Look at completion and drop-off in your video analytics and adjust the section where viewers leave."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "ai-ugc-ad-hooks-first-3-seconds",
+    "title": "AI UGC Ad Hooks: How to Test the First 3 Seconds",
+    "headline": "Most of the performance difference in a short ad is decided before second four.",
+    "excerpt": "A practical framework for writing, producing and testing multiple hooks for the same AI UGC ad, without changing the rest of the creative.",
+    "metaDescription": "AI UGC ad hook testing guide: hook formulas, how to produce variants, how to run a clean test and what to measure in the first 3 seconds.",
+    "publishedAt": "2026-10-10",
+    "updatedAt": "2026-10-10",
+    "readingTime": "6 min read",
+    "category": "AI Video & Ads",
+    "featuredImage": "https://img.youtube.com/vi/fQ7YXzamRvQ/maxresdefault.jpg",
+    "author": {
+      "name": "Ali",
+      "role": "Software Video Specialist & Founder of EXPLAINERACE",
+      "avatar": "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg"
+    },
+    "tags": [
+      "AI UGC",
+      "Ad Hooks",
+      "Creative Testing",
+      "Paid Social"
+    ],
+    "content": {
+      "intro": [
+        "On TikTok, Reels and Shorts the opening moments decide whether anyone sees the rest of your ad. That is why a hook is worth testing on its own, with the body of the ad held constant.",
+        "The approach below works for any short-form ad. Results will vary by product, audience and platform, so treat every number you see in your own account, not generic benchmarks, as the real answer."
+      ],
+      "summaryBox": {
+        "headline": "The hook testing loop",
+        "points": [
+          "Keep the offer, body and call to action fixed",
+          "Change only the first three seconds",
+          "Run each variant against the same audience and budget",
+          "Judge on hold rate first, then cost per result"
+        ]
+      },
+      "sections": [
+        {
+          "id": "formulas",
+          "heading": "Five hook formulas worth testing",
+          "body": [
+            "Write one variant for each formula and see which framing your audience responds to."
+          ],
+          "listItems": [
+            "Problem call-out: name the frustration directly",
+            "Result first: open on the finished outcome",
+            "Curiosity gap: a surprising statement the ad then explains",
+            "Social proof: a specific customer result you can verify",
+            "Pattern interrupt: an unexpected visual or movement in the first frame"
+          ]
+        },
+        {
+          "id": "produce",
+          "heading": "Produce variants without remaking the ad",
+          "body": [
+            "Record or generate several openings, then attach each to the same body. With AI UGC creators this is faster, because a new opening line is a new generated clip, not a new shoot.",
+            "Match lighting, framing and voice so the only variable the audience sees is the opening message.",
+            "Add native-style captions to every variant, since many viewers watch muted."
+          ]
+        },
+        {
+          "id": "test",
+          "heading": "Run a clean test",
+          "body": [
+            "Use the same audience, placement and budget for each variant, and let the test run long enough to compare results fairly. Changing several things at once makes the result impossible to interpret."
+          ],
+          "table": {
+            "headers": [
+              "Metric",
+              "What it tells you",
+              "Look at it when"
+            ],
+            "rows": [
+              [
+                "Hold rate (3-second views)",
+                "Did the hook stop the scroll?",
+                "First, before spending more"
+              ],
+              [
+                "Click-through rate",
+                "Did the message earn interest?",
+                "After the hook holds attention"
+              ],
+              [
+                "Cost per result",
+                "Does it pay back?",
+                "Final decision metric"
+              ]
+            ]
+          },
+          "callout": {
+            "type": "warning",
+            "title": "Disclose AI where required",
+            "text": "Platforms and advertising rules increasingly expect disclosure of AI-generated content. Check the current policies for each channel you advertise on."
+          }
+        },
+        {
+          "id": "example",
+          "heading": "Dynamic product motion example",
+          "body": [
+            "The Nexus AI promo shows the kind of product-focused motion that can sit behind a hook, giving viewers a visual reason to keep watching."
+          ],
+          "video": {
+            "videoId": "fQ7YXzamRvQ",
+            "title": "Nexus AI Platform Promo",
+            "subtitle": "See product-led motion graphics for a short promo:",
+            "category": "Promo",
+            "projectId": "nexus-ai-promo"
+          }
+        },
+        {
+          "id": "next",
+          "heading": "Get hook variants produced",
+          "body": [
+            "Our [AI UGC and product ads service](/services/ai-ugc-ads) includes hook iterations for split testing, with rates on the [pricing page](/pricing). For a cost comparison, read our [AI UGC vs traditional creators guide](/blog/ai-ugc-video-ads-cost-roi-guide)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How many hooks should I test per ad?",
+          "a": "Three to five distinct angles is a practical range. Fewer misses opportunities, more splits your budget too thin."
+        },
+        {
+          "q": "Do I need to reshoot the whole ad for each hook?",
+          "a": "No. Keep the body fixed and change only the opening, which is the point of a clean hook test."
+        },
+        {
+          "q": "What is a good hold rate?",
+          "a": "It depends on platform and audience, so compare your own variants against each other rather than against generic benchmarks."
+        },
+        {
+          "q": "Should AI UGC ads be labeled?",
+          "a": "Check each platform's current policy. Many require disclosure of AI-generated or altered content."
+        }
+      ]
+    }
+  },
 ];
