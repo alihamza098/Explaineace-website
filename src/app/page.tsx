@@ -26,14 +26,14 @@ export default function HomePage() {
         subtitle="A selection of software tutorials, app demos, walkthroughs and training videos."
       />
 
+      {/* 3. Production Craft (More than screen recording) */}
+      <HowIAddValue />
+
       {/* 3. What I Create (6 Service Categories) */}
       <WhatICreate />
 
       {/* 4. Featured Video (Immersive Cinematic Showcase) */}
       <FeaturedVideo />
-
-      {/* 5. How I Add Value (More than screen recording) */}
-      <HowIAddValue />
 
       {/* 6. Verified Trust Signals (Fiverr Level 2, 4.8★, 157 Reviews) */}
       <TrustBlock />
