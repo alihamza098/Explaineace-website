@@ -11,6 +11,11 @@ import { AboutPreview } from "@/components/AboutPreview";
 import { HomeFaq } from "@/components/HomeFaq";
 import { CTA } from "@/components/CTA";
 import { projects } from "@/data/projects";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://explainerace.com/" },
+};
 
 export default function HomePage() {
   return (

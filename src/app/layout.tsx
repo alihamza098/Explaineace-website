@@ -159,9 +159,15 @@ export default function RootLayout({
         />
       </head>
       <body className="grain min-h-screen flex flex-col bg-background text-ink antialiased selection:bg-brand-600 selection:text-white overflow-x-hidden">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[110] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-white"
+        >
+          Skip to main content
+        </a>
         <ScrollProgress />
         <Navbar />
-        <main className="flex-1 overflow-x-hidden">{children}</main>
+        <main id="main-content" tabIndex={-1} className="flex-1 overflow-x-hidden focus:outline-none">{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { X, ExternalLink, Sparkles } from "lucide-react";
 import Link from "next/link";
@@ -25,7 +25,37 @@ export const VideoModal: React.FC<VideoModalProps> = ({
   projectId,
 }) => {
   const [mounted, setMounted] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
   useEffect(() => setMounted(true), []);
+
+  // Move focus into the dialog on open, keep Tab inside it, and restore focus on close
+  useEffect(() => {
+    if (!isOpen || !mounted) return;
+    const opener = document.activeElement as HTMLElement | null;
+    closeRef.current?.focus();
+    const trap = (e: KeyboardEvent) => {
+      if (e.key !== "Tab" || !dialogRef.current) return;
+      const items = dialogRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", trap);
+    return () => {
+      document.removeEventListener("keydown", trap);
+      opener?.focus?.();
+    };
+  }, [isOpen, mounted]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -69,6 +99,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
       onClick={onClose}
     >
       <div
+        ref={dialogRef}
         className="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
@@ -100,6 +131,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
               </Link>
             )}
             <button
+              ref={closeRef}
               onClick={onClose}
               className="p-1.5 rounded-full text-ink-muted hover:text-white hover:bg-ink transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
               aria-label="Close video dialog"
