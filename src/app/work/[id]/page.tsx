@@ -494,7 +494,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                   <span>Verified Fiverr Level 2 Seller</span>
                 </div>
                 <p className="leading-relaxed">
-                  All production was created directly by Ali. 4.8/5 average rating across 157+ verified client engagements.
+                  All production was created directly by Ali. 4.8/5 average rating across 175+ verified client engagements.
                 </p>
                 <a
                   href={siteConfig.fiverr.profileUrl}

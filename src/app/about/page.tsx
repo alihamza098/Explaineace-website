@@ -22,14 +22,14 @@ import { CTA } from "@/components/CTA";
 export const metadata: Metadata = {
   title: "About Ali | SaaS Video Specialist & Founder of EXPLAINERACE",
   description:
-    "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 157+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
+    "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 175+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
   alternates: {
     canonical: "https://explainerace.com/about",
   },
   openGraph: {
     title: "About Ali | SaaS Video Specialist & Founder of EXPLAINERACE",
     description:
-      "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 157+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
+      "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 175+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
     url: "https://explainerace.com/about",
     type: "profile",
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Ali | SaaS Video Specialist & Founder of EXPLAINERACE",
     description:
-      "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 157+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
+      "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 175+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
     images: ["https://explainerace.com/avatar.png"],
   },
 };
@@ -122,7 +122,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center justify-between text-xs">
                 <span className="text-ink-muted">Verified Client Reviews</span>
-                <span className="text-ink font-medium">157+ Reviews</span>
+                <span className="text-ink font-medium">175+ Reviews</span>
               </div>
               <div className="flex items-center justify-between text-xs">
                 <span className="text-ink-muted">Upwork Escrow</span>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                 Unlike generalist video editors who cut social vlogs, travel reels, or wedding videos on the side, my entire career is dedicated exclusively to digital interfaces. I have spent thousands of hours analyzing SaaS dashboards, iOS/Android user journeys, responsive viewports, and onboarding activation funnels.
               </p>
               <p>
-                Over the course of 157+ verified client engagements on Fiverr and international direct contracts, I have built a battle-tested post-production workflow. Every project combines native 1080p/4K calibrated screen capture, dynamic 3D focal zooms that eliminate mobile squinting, stabilized bezier cursor physics, professional studio audio narration, and synchronized subtitles.
+                Over the course of 175+ verified client engagements on Fiverr and international direct contracts, I have built a battle-tested post-production workflow. Every project combines native 1080p/4K calibrated screen capture, dynamic 3D focal zooms that eliminate mobile squinting, stabilized bezier cursor physics, professional studio audio narration, and synchronized subtitles.
               </p>
               <p>
                 Whether you need a clean 60-second simple screencast tutorial for your documentation academy, an energetic product launch explainer with custom UI motion graphics, or high-retention AI UGC video ads for paid social, I collaborate directly with your team with zero agency middlemen, transparent rates, and fast turnarounds.

@@ -40,7 +40,7 @@ export default function HomePage() {
       {/* 4. Featured Video (Immersive Cinematic Showcase) */}
       <FeaturedVideo />
 
-      {/* 6. Verified Trust Signals (Fiverr Level 2, 4.8★, 157 Reviews) */}
+      {/* 6. Verified Trust Signals (Fiverr Level 2, 4.8★, 175 Reviews) */}
       <TrustBlock />
 
       <ReviewWall />

@@ -16,7 +16,7 @@ This file provides Claude (Claude Code, Claude Projects, or web interface) with 
   - Email: `ali@explainerace.com` (do NOT use old gmail)
   - WhatsApp: `+92 313 9110721` (`wa.me/923139110721`)
   - YouTube: `https://www.youtube.com/@Explainerace` (@Explainerace)
-  - Fiverr: Level 2 Seller (@video_supermacy, @explainerace) · 4.8★ / 157+ reviews
+  - Fiverr: two profiles, @video_supermacy (Level 2, 4.8★, 157 reviews) and @explainerace (5.0★, 18 reviews) · combined 4.8★ / 175+ reviews
   - Upwork: Direct Contract (0% client marketplace fee escrow)
 
 ---
@@ -85,7 +85,7 @@ Whenever making changes, always:
 
 ## 5. Strict SEO & Content Rules (DO NOT BREAK)
 1. **Never Add `AggregateRating` Schema**:
-   - The user explicitly requested: keep the 4.8/5 (157 reviews) as plain text linking to Fiverr.
+   - The user explicitly requested: keep the combined 4.8/5 (175 reviews across 2 profiles) as plain text linking to Fiverr. Update these numbers when profile counts change (see siteConfig.ts).
    - Do NOT mark up reviews with Google schema to prevent rich-snippet review penalties.
 2. **Contact Email Sitewide**:
    - Always use `ali@explainerace.com`. Never re-introduce `explaineracepro@gmail.com`.

@@ -78,7 +78,7 @@ export const TrustBlock: React.FC = () => {
                 </div>
                 <div className="mt-6 pt-4 border-t border-amber-100">
                   <p className="text-xs font-semibold text-ink uppercase tracking-[0.14em]">Client Rating</p>
-                  <p className="text-xs text-ink-muted mt-1">Verified average buyer satisfaction</p>
+                  <p className="text-xs text-ink-muted mt-1">Weighted average across both profiles</p>
                 </div>
               </div>
             </Reveal>
@@ -90,13 +90,13 @@ export const TrustBlock: React.FC = () => {
                     <Users className="w-5 h-5" />
                   </div>
                   <div className="text-6xl font-bold text-ink tracking-[-0.04em]">
-                    <CountUp to={157} />
+                    <CountUp to={175} />
                     <span className="text-sky-500">+</span>
                   </div>
                 </div>
                 <div className="mt-6 pt-4 border-t border-sky-100">
                   <p className="text-xs font-semibold text-ink uppercase tracking-[0.14em]">Fiverr Reviews</p>
-                  <p className="text-xs text-ink-muted mt-1">100% authentic international clients</p>
+                  <p className="text-xs text-ink-muted mt-1">Across 2 Fiverr profiles</p>
                 </div>
               </div>
             </Reveal>

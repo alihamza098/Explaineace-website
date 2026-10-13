@@ -236,7 +236,7 @@ export default function ContactPage() {
             <div className="p-6 sm:p-7 rounded-3xl bg-surface-card border border-surface-border shadow-card space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
-                  4.8 ★ · 157+ Reviews
+                  4.8 ★ · 175+ Reviews
                 </span>
                 <ShieldCheck className="w-5 h-5 text-emerald-600" />
               </div>

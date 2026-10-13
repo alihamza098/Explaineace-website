@@ -219,7 +219,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   {post.author.name}
                 </span>
                 <span className="block text-xs text-ink-muted">
-                  {post.author.role} · 157+ Reviews (4.8★)
+                  {post.author.role} · 175+ Reviews (4.8★)
                 </span>
               </div>
             </div>
@@ -376,7 +376,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-ink-soft leading-relaxed">
-                Founder of EXPLAINERACE and dedicated software video specialist with over 157+ verified client engagements on Fiverr. Specializing in UI zooms, screen recording physics, and instructional SaaS tours.
+                Founder of EXPLAINERACE and dedicated software video specialist with over 175+ verified client engagements on Fiverr. Specializing in UI zooms, screen recording physics, and instructional SaaS tours.
               </p>
               <div className="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-semibold">
                 <Link href="/about" className="text-brand-600 hover:text-ink underline">

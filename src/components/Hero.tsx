@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
             </span>
             <span className="text-xs font-semibold text-ink">4.8</span>
             <span className="text-xs text-ink-faint">·</span>
-            <span className="text-xs text-ink-soft font-medium whitespace-nowrap">157 Fiverr reviews</span>
+            <span className="text-xs text-ink-soft font-medium whitespace-nowrap">175 Fiverr reviews</span>
             <span className="hidden sm:inline text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 whitespace-nowrap">
               Level 2
             </span>
@@ -390,7 +390,7 @@ export const Hero: React.FC = () => {
               { k: "Featured Tool", v: activeProject.client },
               { k: "Post-Production", v: "Zooms & Cursors" },
               { k: "Audio Quality", v: "Studio Voiceover" },
-              { k: "Platform Proof", v: "157 Reviews (4.8★)", accent: true },
+              { k: "Platform Proof", v: "175 Reviews (4.8★)", accent: true },
             ].map((item) => (
               <div key={item.k} className="p-3 rounded-2xl bg-white/70 border border-surface-border">
                 <p className="text-[11px] text-ink-muted">{item.k}</p>
