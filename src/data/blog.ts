@@ -804,4 +804,398 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: "how-to-write-saas-demo-video-script",
+    title: "How to Write a SaaS Demo Video Script (Template + 60-Second Structure)",
+    headline: "A practical scripting framework for product demos, walkthroughs, and onboarding videos that people actually finish.",
+    excerpt:
+      "Most weak software videos fail at the script, not the editing. Use this hook-problem-demo-proof-CTA structure, word-count rules, and a fill-in template to script a clear 60-second SaaS demo.",
+    metaDescription:
+      "Learn how to write a SaaS demo video script: the 5-part 60-second structure, narration word counts, a copy-paste template, common mistakes, and when to hire a specialist.",
+    publishedAt: "2026-10-13",
+    updatedAt: "2026-10-13",
+    readingTime: "7 min read",
+    category: "Production Guides",
+    featuredImage: "https://img.youtube.com/vi/4E72rncOnBc/maxresdefault.jpg",
+    author: {
+      name: "Ali",
+      role: "Software Video Specialist & Founder of EXPLAINERACE",
+      avatar: "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg",
+    },
+    tags: ["SaaS Demo Script", "Product Demo Video", "Video Scriptwriting", "SaaS Walkthroughs", "Software Marketing"],
+    content: {
+      intro: [
+        "When a SaaS demo video underperforms, the instinct is to blame the visuals. In practice, the script is almost always the real problem: it opens with a logo animation, lists features in the order the menu is laid out, and never says why the viewer should care.",
+        "A good demo script is not a feature tour. It is a short argument: here is a problem you have, here is how the product removes it, here is proof, here is what to do next. This guide gives you a repeatable structure, narration pacing rules, and a template you can fill in today.",
+      ],
+      summaryBox: {
+        headline: "The 60-Second Script at a Glance",
+        points: [
+          "Hook (0-5s): state the viewer's problem or outcome, never your company name.",
+          "Problem to workflow (5-20s): show the painful manual process, then the product replacing it.",
+          "Demo (20-45s): one primary workflow, shown end to end with focal zooms on the key clicks.",
+          "Proof (45-55s): a result, a number you can substantiate, or a customer context.",
+          "CTA (55-60s): one specific next step, such as starting a free trial or booking a demo.",
+        ],
+      },
+      sections: [
+        {
+          id: "start-with-one-viewer-one-goal",
+          heading: "Step 1: Pick One Viewer and One Goal",
+          body: [
+            "Before writing a word, answer two questions in one sentence each: who is watching, and what should they do after the video ends? A homepage hero video for cold visitors needs a different script from an onboarding video for a user who already signed up.",
+            "If you cannot name a single viewer and a single action, the script will try to serve everyone and persuade no one. Cut scope until the answer is obvious.",
+          ],
+          listItems: [
+            "Homepage hero: cold visitor, goal is to start a trial or book a demo.",
+            "Activation video: new user, goal is to complete the first key action.",
+            "Help-center tutorial: existing user, goal is to finish a specific task without contacting support.",
+          ],
+        },
+        {
+          id: "the-five-part-structure",
+          heading: "Step 2: Use the Hook, Workflow, Demo, Proof, CTA Structure",
+          body: [
+            "Short product videos work best when each beat has one job. The hook earns the next ten seconds. The workflow beat frames the before and after. The demo proves it is real. The proof beat removes doubt. The call to action tells the viewer exactly what to do.",
+            "Resist the urge to add a second demo workflow in a 60-second video. If there are three workflows worth showing, make three videos and link them together.",
+          ],
+          table: {
+            headers: ["Beat", "Time (60s video)", "Job", "Common mistake"],
+            rows: [
+              ["Hook", "0-5s", "Name the problem or outcome", "Opening with a logo or company history"],
+              ["Workflow", "5-20s", "Show the before and after", "Listing features in menu order"],
+              ["Demo", "20-45s", "Show one workflow end to end", "Rushing through five workflows"],
+              ["Proof", "45-55s", "Remove doubt", "Unsupported superlatives"],
+              ["CTA", "55-60s", "One clear next step", "Three competing calls to action"],
+            ],
+          },
+        },
+        {
+          id: "narration-word-count",
+          heading: "Step 3: Write to the Clock (Narration Word Counts)",
+          body: [
+            "Natural professional narration runs at roughly 140 to 160 words per minute, and screen demos need pauses where the viewer reads the interface. As a working rule, plan about 110 to 140 spoken words for a 60-second demo, leaving room for UI actions and zooms to breathe.",
+            "Write the narration first, read it out loud with a timer, then cut. If a sentence needs a screen to make sense, make sure that screen is actually on screen at that moment.",
+          ],
+          callout: {
+            type: "tip",
+            title: "Say what the viewer sees, then why it matters",
+            text: "Pair each action with its benefit: 'Drag a lead into Qualified, and the follow-up email schedules itself.' Describing clicks without outcomes turns a demo into a manual.",
+          },
+        },
+        {
+          id: "copy-paste-template",
+          heading: "Step 4: Copy-and-Fill Script Template",
+          body: [
+            "Use this skeleton for a 60-second walkthrough and replace the brackets with your product details.",
+            "HOOK: 'Still [painful manual task] every [time period]?'",
+            "WORKFLOW: 'Most teams [old way]. With [Product], you [new way] in [number] steps.'",
+            "DEMO: 'Start in [screen]. Click [action]. [Product] automatically [result]. Then [second action] to [benefit].'",
+            "PROOF: '[Customer type] use it to [measurable outcome you can verify].'",
+            "CTA: '[Start your free trial / Book a 15-minute demo] at [url].'",
+          ],
+          video: {
+            videoId: "4E72rncOnBc",
+            title: "Green Medicine SaaS Platform Tour",
+            subtitle: "See a structured SaaS walkthrough in action:",
+            category: "SaaS Walkthrough",
+            duration: "3:15",
+            projectId: "green-medicine",
+          },
+        },
+        {
+          id: "mistakes-to-avoid",
+          heading: "Five Script Mistakes That Quietly Kill Demo Videos",
+          body: [
+            "These problems show up again and again when we review existing demo videos for software teams.",
+          ],
+          listItems: [
+            "Opening with the company logo, history, or mission statement.",
+            "Narrating every menu and setting instead of one valuable workflow.",
+            "Using internal jargon the viewer has never heard.",
+            "Making claims you cannot back up with a real number or customer context.",
+            "Ending without a single, specific next step.",
+          ],
+        },
+        {
+          id: "when-to-hire",
+          heading: "When to Script In-House and When to Hire a Specialist",
+          body: [
+            "If you know the product deeply and the video is a simple help-center tutorial, writing the script yourself is usually fine. For homepage and launch videos, an outside specialist adds a fresh viewer's perspective, which is exactly what catches the jargon and missing context an internal team no longer sees.",
+            "At EXPLAINERACE we can polish a rough outline or write the script from a feature list. See our [SaaS Walkthrough Video Service](/services/saas-walkthrough-video) and [Screencast Tutorial Service](/services/screencast-tutorials), review current [pricing](/pricing), or browse [real project examples](/work).",
+          ],
+        },
+      ],
+      faqs: [
+        {
+          q: "How long should a SaaS demo video script be?",
+          a: "For a 60-second video, plan roughly 110 to 140 spoken words. That leaves room for interface actions, zooms, and short pauses so the viewer can follow what is on screen.",
+        },
+        {
+          q: "Should a demo video start with the company introduction?",
+          a: "Generally no. Open with the viewer's problem or desired outcome. Company details can appear in the end card or on the page around the video.",
+        },
+        {
+          q: "How many features should a 60-second demo cover?",
+          a: "One primary workflow, shown end to end. If you have several important workflows, produce a short series of videos instead of compressing them into one.",
+        },
+        {
+          q: "Can you write the script for my product demo?",
+          a: "Yes. Send a feature list or a rough outline and we will structure and polish the script as part of the production. Contact ali@explainerace.com to discuss your project.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "saas-onboarding-video-best-practices",
+    title: "SaaS Onboarding Videos: 9 Best Practices That Reduce Support Tickets",
+    headline: "How software teams use short, task-focused videos to get new users to their first success faster.",
+    excerpt:
+      "Onboarding videos work when they are short, specific, and placed where users get stuck. Here are nine practices for planning, scripting, and placing them inside your app and help center.",
+    metaDescription:
+      "SaaS onboarding video best practices: keep videos task-focused, place them in context, add captions, and build a help-center library. A practical guide for product and support teams.",
+    publishedAt: "2026-10-13",
+    updatedAt: "2026-10-13",
+    readingTime: "6 min read",
+    category: "Strategy",
+    featuredImage: "https://img.youtube.com/vi/CQi50pGdXfo/maxresdefault.jpg",
+    author: {
+      name: "Ali",
+      role: "Software Video Specialist & Founder of EXPLAINERACE",
+      avatar: "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg",
+    },
+    tags: ["SaaS Onboarding", "Onboarding Videos", "Help Center Videos", "Customer Success", "Product Tutorials"],
+    content: {
+      intro: [
+        "New users decide quickly whether a product is worth learning. A short, well-placed video can show the first valuable action faster than a page of documentation, and it is available at the exact moment a user would otherwise open a support ticket.",
+        "This guide covers nine practices for onboarding and tutorial videos, focused on clarity, placement, and maintainability rather than cinematic polish.",
+      ],
+      summaryBox: {
+        headline: "Quick Takeaways",
+        points: [
+          "One video, one task: each video should help a user complete a single outcome.",
+          "Place videos in context: inside the onboarding checklist, empty states, and help articles.",
+          "Always add captions and a written summary so videos are accessible and searchable.",
+          "Start with a simple, consistent screencast format and scale the library over time.",
+        ],
+      },
+      sections: [
+        {
+          id: "one-video-one-task",
+          heading: "1. Make Each Video Solve One Task",
+          body: [
+            "A video titled 'Getting Started' tends to wander. A video titled 'Connect your first data source' has an obvious start, finish, and success condition. Task-based titles also read better in search results and help-center navigation.",
+          ],
+        },
+        {
+          id: "place-in-context",
+          heading: "2. Put Videos Where Users Get Stuck",
+          body: [
+            "Find the screens with the most drop-off or support questions, then place a short video right there: the empty state of a dashboard, the integration setup step, the permissions page. A great video hidden three clicks deep helps very few people.",
+          ],
+          listItems: [
+            "Onboarding checklist items",
+            "Empty states and first-run screens",
+            "Integration and settings pages",
+            "Help-center articles and in-app tooltips",
+          ],
+        },
+        {
+          id: "keep-it-short",
+          heading: "3. Keep Them Short and Skimmable",
+          body: [
+            "Short videos are easier to produce, easier to update, and easier to finish. Aim for the shortest length that still completes the task, and use chapters or separate videos for longer processes.",
+          ],
+        },
+        {
+          id: "focus-the-eye",
+          heading: "4. Use Zooms and Highlights to Guide the Eye",
+          body: [
+            "Software interfaces are dense. Calibrated zooms, smoothed cursor movement, and click highlights show viewers exactly where to look so they never squint at small text. These small production touches are the difference between a recording and a tutorial.",
+          ],
+          video: {
+            videoId: "CQi50pGdXfo",
+            title: "Bottronic AI Bot Setup & Configuration",
+            subtitle: "A task-focused setup tutorial:",
+            category: "Software Tutorial",
+            duration: "3:05",
+            projectId: "bottronic-signup-tutorial",
+          },
+        },
+        {
+          id: "captions-and-text",
+          heading: "5. Add Captions and a Written Summary",
+          body: [
+            "Many people watch with sound off, and some rely on captions for accessibility. A written summary or step list beneath the video also helps search engines understand the page. Treat the video as one part of the help article, not a replacement for it.",
+          ],
+        },
+        {
+          id: "consistent-format",
+          heading: "6. Standardize Your Format",
+          body: [
+            "Use one voice style, one intro length, and one visual treatment across the library. A consistent format builds trust and makes new videos faster and cheaper to add.",
+          ],
+        },
+        {
+          id: "plan-for-updates",
+          heading: "7. Plan for Product Updates",
+          body: [
+            "Interfaces change. Keep source files organized and keep videos modular so a changed screen means re-recording one short segment, not rebuilding a ten-minute tutorial.",
+          ],
+          callout: {
+            type: "tip",
+            title: "Version your videos",
+            text: "Add the product version or recording date to your internal tracking sheet. When a release changes a screen, you will know exactly which videos need a refresh.",
+          },
+        },
+        {
+          id: "measure-what-matters",
+          heading: "8. Measure Completion and Support Impact",
+          body: [
+            "Watch completion rate, the share of users who finish the task after watching, and the change in related support tickets. Use these signals to decide which videos to improve and which topics to produce next.",
+          ],
+        },
+        {
+          id: "start-small",
+          heading: "9. Start Small, Then Build a Library",
+          body: [
+            "Begin with the five tasks that generate the most support questions. Once those perform, expand into a full help academy. A simple [screencast tutorial](/services/screencast-tutorials) format keeps cost and turnaround low; see [pricing](/pricing) for current rates, or browse our [tutorial work](/work) for examples.",
+          ],
+        },
+      ],
+      faqs: [
+        {
+          q: "How long should an onboarding video be?",
+          a: "As short as it can be while still completing one task. Split longer processes into several focused videos so users can jump to the step they need.",
+        },
+        {
+          q: "Do onboarding videos replace written documentation?",
+          a: "No. They work best alongside it. Pair each video with a short written summary so users can scan, search, and watch only when they need to.",
+        },
+        {
+          q: "Should onboarding videos have voiceover?",
+          a: "Voiceover helps explain why each step matters, and captions keep the video usable with sound off. Many teams use both.",
+        },
+        {
+          q: "Can you produce a whole library of tutorial videos?",
+          a: "Yes. If you need several videos, contact ali@explainerace.com or WhatsApp +92 313 9110721 to discuss batch scheduling and pricing.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "product-demo-video-vs-explainer-video",
+    title: "Product Demo Video vs. Explainer Video: What's the Difference and Which Do You Need?",
+    headline: "A plain-English comparison for SaaS and app teams deciding where to invest their video budget.",
+    excerpt:
+      "Product demos show the real software; explainer videos teach a concept, often with animation. Learn the differences in purpose, cost, and placement, and how to choose the right one.",
+    metaDescription:
+      "Product demo video vs explainer video: compare purpose, format, funnel stage, and cost for SaaS and apps, plus a simple framework for choosing the right video for your goal.",
+    publishedAt: "2026-10-13",
+    updatedAt: "2026-10-13",
+    readingTime: "6 min read",
+    category: "Strategy",
+    featuredImage: "https://img.youtube.com/vi/jzb-LpUo2i8/maxresdefault.jpg",
+    author: {
+      name: "Ali",
+      role: "Software Video Specialist & Founder of EXPLAINERACE",
+      avatar: "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg",
+    },
+    tags: ["Product Demo Video", "Explainer Video", "SaaS Video Strategy", "Video Marketing", "App Demo"],
+    content: {
+      intro: [
+        "People use 'demo video' and 'explainer video' interchangeably, but they do different jobs. Ordering the wrong one is a common and expensive mismatch: a stylish animation that never shows the product, or a raw screen recording used where a story was needed.",
+        "This guide defines both formats, compares them side by side, and gives you a simple way to choose.",
+      ],
+      summaryBox: {
+        headline: "The Short Answer",
+        points: [
+          "Product demo video: shows the real interface performing real workflows. Best when viewers need to see how the software works.",
+          "Explainer video: explains a concept, problem, or idea, often with animation. Best when the idea needs to land before the product makes sense.",
+          "Many teams use both: an explainer to frame the problem, a demo to prove the solution.",
+        ],
+      },
+      sections: [
+        {
+          id: "what-is-a-demo-video",
+          heading: "What Is a Product Demo Video?",
+          body: [
+            "A product demo video shows your actual software in use. The viewer watches real screens, real clicks, and real results, often with zooms, cursor guidance, and voiceover that explain each step. It answers the question: how does this work?",
+            "Demos suit homepage walkthroughs, sales follow-ups, feature launches, and onboarding. See our [SaaS Walkthrough Video Service](/services/saas-walkthrough-video) and [App Demo Video Service](/services/app-demo-video).",
+          ],
+        },
+        {
+          id: "what-is-an-explainer-video",
+          heading: "What Is an Explainer Video?",
+          body: [
+            "An explainer video makes an idea or problem easy to grasp, frequently using animation, motion graphics, and storytelling. It answers the question: why does this matter?",
+            "Explainers suit launches, investor and pitch contexts, category-creating products, and abstract offerings where the product UI alone would not communicate the value.",
+          ],
+          video: {
+            videoId: "jzb-LpUo2i8",
+            title: "Framer SaaS Motion Graphics Explainer",
+            subtitle: "An example of a motion graphics explainer:",
+            category: "Motion Explainer",
+            duration: "0:51",
+            projectId: "framer-saas-explainer",
+          },
+        },
+        {
+          id: "side-by-side",
+          heading: "Demo vs. Explainer: Side-by-Side Comparison",
+          body: ["Use this table as a quick reference."],
+          table: {
+            headers: ["Factor", "Product demo", "Explainer"],
+            rows: [
+              ["Main question answered", "How does it work?", "Why does it matter?"],
+              ["Visual style", "Real interface, zooms, cursor guidance", "Animation, motion graphics, storytelling"],
+              ["Best funnel stage", "Evaluation, onboarding, sales follow-up", "Awareness, launch, pitch"],
+              ["Typical cost at EXPLAINERACE", "From $120-$220 per 60 seconds", "Custom UI motion from $800-$1,200"],
+              ["Ideal for", "Concrete software and workflows", "Abstract ideas and brand stories"],
+            ],
+          },
+        },
+        {
+          id: "how-to-choose",
+          heading: "How to Choose",
+          body: ["Ask three questions:"],
+          listItems: [
+            "Do viewers need to see the product to trust it? Choose a demo.",
+            "Does the idea need explaining before the product makes sense? Choose an explainer.",
+            "Is this for existing users learning a task? Choose a simple screencast tutorial.",
+          ],
+        },
+        {
+          id: "using-both",
+          heading: "Using Both in One Funnel",
+          body: [
+            "A common pattern is a short explainer or ad at the top of the funnel, a demo walkthrough on the homepage, and screencast tutorials inside the product. For a deeper comparison of the three formats and their pricing, read our [decision framework guide](/blog/screencast-tutorial-vs-saas-walkthrough-guide) and review [current pricing](/pricing).",
+          ],
+          callout: {
+            type: "tip",
+            title: "Start with the format closest to the sale",
+            text: "If budget is limited, start with the single video nearest the decision: usually a homepage demo or walkthrough. Add the rest as you see results.",
+          },
+        },
+      ],
+      faqs: [
+        {
+          q: "Is a product demo video the same as an explainer video?",
+          a: "No. A product demo shows the real software in use, while an explainer explains an idea or problem, often with animation. Many teams use both at different funnel stages.",
+        },
+        {
+          q: "Which converts better, a demo or an explainer?",
+          a: "It depends on the audience and offer. Demos tend to help viewers evaluate a concrete product; explainers help when the concept needs framing first. Test against your own funnel rather than relying on generic claims.",
+        },
+        {
+          q: "How much does each format cost?",
+          a: "At EXPLAINERACE, screencast tutorials start at $120 per 60 seconds, SaaS walkthroughs at $220 per 60 seconds, and custom UI motion explainers range from $800 to $1,200. See the pricing page for details.",
+        },
+        {
+          q: "Can I get both from one provider?",
+          a: "Yes. We produce screencasts, walkthroughs, AI UGC ads, and custom UI motion explainers, so your branding and audio stay consistent. Contact ali@explainerace.com to get started.",
+        },
+      ],
+    },
+  },
 ];
