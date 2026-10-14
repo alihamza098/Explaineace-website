@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "https://explainerace.com/contact",
   },
   openGraph: {
-    title: "Contact Ali — SaaS Video Specialist | EXPLAINERACE",
+    title: "Contact Ali — SaaS Video Specialist",
     description:
       "Get in touch with Ali for SaaS walkthroughs, screencast tutorials, and video pricing. Reach out directly on WhatsApp (+92 313 9110721) or email for a fast quote.",
     url: "https://explainerace.com/contact",

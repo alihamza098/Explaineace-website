@@ -17,7 +17,7 @@ import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/siteConfig";
 
 export const metadata: Metadata = {
-  title: "AI UGC & Product Ads | EXPLAINERACE",
+  title: "AI UGC & Product Ads",
   description:
     "High-converting AI UGC video ads and AI product videos for SaaS, apps, and digital brands. Hyper-realistic presenters & dynamic product motion from $200/ad.",
   alternates: {

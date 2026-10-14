@@ -14,7 +14,7 @@ export const siteConfig = {
     "I create clear, high-converting video walkthroughs and AI product ads that help users understand and buy software and digital products.",
   aboutBio:
     "I'm Ali, founder of EXPLAINERACE and a video specialist focused on SaaS walkthroughs, AI UGC & product ads, and instructional content. I help software companies, startups, and digital brands turn complex products into high-converting, crystal-clear video assets.",
-  contactEmail: "ali@explainerace.com",
+  contactEmail: "hello@explainerace.com",
   whatsapp: {
     number: "+923139110721",
     display: "+92 313 9110721",

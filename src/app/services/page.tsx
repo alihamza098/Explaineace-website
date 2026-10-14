@@ -16,7 +16,7 @@ import { valueAddItems } from "@/data/services";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Video Services for SaaS & Software Teams | EXPLAINERACE",
+  title: "Video Services for SaaS & Software Teams",
   description:
     "Explore specialized software video production: SaaS walkthroughs, screencast tutorials, mobile app demos, and AI UGC product ads. Transparent pricing from $120/60s.",
   alternates: {

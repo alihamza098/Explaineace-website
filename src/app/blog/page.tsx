@@ -7,7 +7,7 @@ import { blogPosts } from "@/data/blog";
 import { siteConfig } from "@/data/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Blog & Video Strategy Insights | EXPLAINERACE",
+  title: "Blog & Video Strategy Insights",
   description:
     "Expert guides, pricing breakdowns, and production strategies for SaaS explainer videos, software walkthroughs, and app demos by Ali.",
   alternates: {

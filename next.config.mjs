@@ -8,6 +8,9 @@ const __dirname = path.dirname(__filename);
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    // Cap generated srcset widths at 1920 — the default deviceSizes go up to
+    // 3840, which shipped oversized variants for every thumbnail (SEO/perf).
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     remotePatterns: [
       {
         protocol: "https",
