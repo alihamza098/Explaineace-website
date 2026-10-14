@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
           q: "How can I get an exact quote for my SaaS platform?",
-          a: "Simply send a direct message on WhatsApp (+92 313 9110721) or email hello@explainerace.com with your website URL and target video length for an immediate, transparent estimate.",
+          a: "Simply send a direct message on WhatsApp (+92 313 9110721) or email ali@explainerace.com with your website URL and target video length for an immediate, transparent estimate.",
         },
       ],
     },
@@ -496,7 +496,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
           q: "Can I get a discount for a batch of multiple AI ad variations?",
-          a: "Yes! We offer bundled discounts for creative testing batches (such as 3x, 5x, or 10x hook variations). Simply reach out on WhatsApp (+92 313 9110721) or email hello@explainerace.com for custom volume rates.",
+          a: "Yes! We offer bundled discounts for creative testing batches (such as 3x, 5x, or 10x hook variations). Simply reach out on WhatsApp (+92 313 9110721) or email ali@explainerace.com for custom volume rates.",
         },
       ],
     },
@@ -642,7 +642,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
           q: "Are bulk discounts available if I order multiple screencasts at once?",
-          a: "Yes! If you are building out a complete help academy or need 5+ screencast videos, message us directly on WhatsApp (+92 313 9110721) or email hello@explainerace.com for custom batch pricing.",
+          a: "Yes! If you are building out a complete help academy or need 5+ screencast videos, message us directly on WhatsApp (+92 313 9110721) or email ali@explainerace.com for custom batch pricing.",
         },
         {
           q: "Who does the voiceover for these videos?",
@@ -779,7 +779,7 @@ export const blogPosts: BlogPost[] = [
             "2. Visual Styleframes & Storyboard: We construct key vector scenes to establish the exact color palette, typography, and 3D device framing.",
             "3. Animation & Choreography: We animate all components, camera moves, and kinetic typography in 4K 60FPS.",
             "4. Audio Design & Final Master: Studio voiceover narration is paired with bespoke sound effects and mixed to broadcast standards.",
-            "Transparent pricing ranges from $800 to $1,200 per project. Reach out via WhatsApp (+92 313 9110721) or email hello@explainerace.com to discuss your upcoming launch.",
+            "Transparent pricing ranges from $800 to $1,200 per project. Reach out via WhatsApp (+92 313 9110721) or email ali@explainerace.com to discuss your upcoming launch.",
             "Explore our full [SaaS Walkthrough Video Service](/services/saas-walkthrough-video), view all tiers on our [Pricing Page](/pricing), or inspect the [Framer SaaS Case Study](/work/framer-saas-explainer) and [Spec SaaS Explainer](/work/spec-saas-explainer).",
           ],
         },
