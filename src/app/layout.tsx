@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -173,6 +174,7 @@ export default function RootLayout({
         <Footer />
         <MobileCtaBar />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
