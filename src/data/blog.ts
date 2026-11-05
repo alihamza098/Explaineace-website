@@ -1107,7 +1107,7 @@ export const blogPosts: BlogPost[] = [
         },
       ],
     },
-  },,
+  },
 {
     slug: "animated-explainer-video-styles",
     title: "Animated Explainer Video Styles: 7 Styles Compared for SaaS and Apps",
@@ -1234,7 +1234,7 @@ export const blogPosts: BlogPost[] = [
         },
       ],
     },
-  },,
+  },
 {
     slug: "motion-graphics-vs-animation-saas",
     title: "Motion Graphics vs Animation: What Is the Difference, and Which Does Your SaaS Video Need?",
@@ -1354,5 +1354,5 @@ export const blogPosts: BlogPost[] = [
         },
       ],
     },
-  },,
+  },
 ];
