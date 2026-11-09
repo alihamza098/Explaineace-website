@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { VideoGrid } from "@/components/VideoGrid";
 import { WhatICreate } from "@/components/WhatICreate";
@@ -10,6 +11,10 @@ import { AboutPreview } from "@/components/AboutPreview";
 import { HomeFaq } from "@/components/HomeFaq";
 import { CTA } from "@/components/CTA";
 import { projects } from "@/data/projects";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (
