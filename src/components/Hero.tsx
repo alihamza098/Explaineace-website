@@ -64,32 +64,8 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Central Headline & Copy with Native Background Motion Graphics */}
+        {/* Central Headline & Copy */}
         <div className="relative text-center max-w-4xl mx-auto py-4 sm:py-6">
-          {/* Native Ambient Motion Graphics Video (Seamless, non-embedded) */}
-          <div
-            className="absolute inset-0 -inset-x-8 sm:-inset-x-24 -inset-y-6 sm:-inset-y-12 -z-10 overflow-hidden pointer-events-none rounded-3xl opacity-35 sm:opacity-45"
-            style={{
-              WebkitMaskImage: "radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%)",
-              maskImage: "radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%)",
-            }}
-          >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              className="w-full h-full object-cover scale-105 filter saturate-125"
-            >
-              <source src="/hero-motion.webm" type="video/webm" />
-              <source src="/hero-motion.mp4" type="video/mp4" />
-            </video>
-            {/* Dark vignette blending so text remains 100% crisp and readable */}
-            <div className="absolute inset-0 bg-gradient-to-t from-surface-bg via-transparent to-surface-bg pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-r from-surface-bg/70 via-transparent to-surface-bg/70 pointer-events-none" />
-          </div>
-
           <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.1] break-words">
             <span className="line-mask">
               <span className="line-rise" style={{ "--d": "80ms" } as React.CSSProperties}>

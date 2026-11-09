@@ -15,6 +15,7 @@ import {
 import { YoutubeIcon, WhatsAppIcon, UpworkIcon } from "@/components/Icons";
 import { siteConfig } from "@/data/siteConfig";
 import { PackageNoticeBanner, CopyEmailButton } from "@/components/ContactClientInteractive";
+import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Ali — SaaS Video Specialist",
@@ -64,7 +65,7 @@ export default function ContactPage() {
             Direct access. Zero waiting.
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
-            Skip long intake forms. Reach out directly through WhatsApp for instant replies, email for briefs and proposals, or hire safely through Upwork and Fiverr.
+            Reach out directly through WhatsApp for instant replies, send the quick form below, email for briefs and proposals, or hire safely through Upwork and Fiverr.
           </p>
         </div>
 
@@ -77,6 +78,9 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Primary Direct Channels (WhatsApp & Email) */}
           <div className="lg:col-span-7 space-y-6">
+            {/* Quick Project Inquiry Form */}
+            <ContactForm />
+
             {/* Primary Channel 1: WhatsApp (Instant) */}
             <div className="relative p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-emerald-950/40 via-surface-card to-surface-card border-2 border-emerald-500/40 shadow-glow-lg overflow-hidden group">
               <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full pointer-events-none" />
