@@ -64,7 +64,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-09-28",
     readingTime: "6 min read",
     category: "Pricing & ROI",
-    featuredImage: "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+    featuredImage: "https://img.youtube.com/vi/p0v9DLSzjOU/maxresdefault.jpg",
     author: {
       name: "Ali",
       role: "Software Video Specialist & Founder of EXPLAINERACE",
@@ -328,7 +328,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-09-29",
     readingTime: "8 min read",
     category: "AI Video & Ads",
-    featuredImage: "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+    featuredImage: "https://img.youtube.com/vi/kqmPTZOBv9k/maxresdefault.jpg",
     author: {
       name: "Ali",
       role: "Software Video Specialist & Founder of EXPLAINERACE",
@@ -457,7 +457,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-09-29",
     readingTime: "7 min read",
     category: "Production Guides",
-    featuredImage: "https://img.youtube.com/vi/2ZtQX_lXHOs/maxresdefault.jpg",
+    featuredImage: "https://img.youtube.com/vi/0QOVOmNEFME/maxresdefault.jpg",
     author: {
       name: "Ali",
       role: "Software Video Specialist & Founder of EXPLAINERACE",
@@ -728,7 +728,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-11-05",
     readingTime: "6 min read",
     category: "Strategy",
-    featuredImage: "https://img.youtube.com/vi/jzb-LpUo2i8/maxresdefault.jpg",
+    featuredImage: "https://img.youtube.com/vi/ruSnnvafJdc/maxresdefault.jpg",
     author: {
       name: "Ali",
       role: "Software Video Specialist & Founder of EXPLAINERACE",
@@ -985,7 +985,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-11-05",
     readingTime: "7 min read",
     category: "Production Guides",
-    featuredImage: "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+    featuredImage: "https://img.youtube.com/vi/fQ7YXzamRvQ/maxresdefault.jpg",
     author: {
       name: "Ali",
       role: "Software Video Specialist & Founder of EXPLAINERACE",
@@ -1120,7 +1120,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-11-05",
     readingTime: "6 min read",
     category: "Strategy",
-    featuredImage: "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+    featuredImage: "https://img.youtube.com/vi/4E72rncOnBc/maxresdefault.jpg",
     author: {
       name: "Ali",
       role: "Software Video Specialist & Founder of EXPLAINERACE",
@@ -1247,7 +1247,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-11-05",
     readingTime: "6 min read",
     category: "Production Guides",
-    featuredImage: "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+    featuredImage: "https://img.youtube.com/vi/P8ceM6b5eDc/maxresdefault.jpg",
     author: {
       name: "Ali",
       role: "Software Video Specialist & Founder of EXPLAINERACE",

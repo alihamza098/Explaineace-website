@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+        url: "https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg",
         width: 1280,
         height: 720,
         alt: "Video Services for SaaS & Software Teams - EXPLAINERACE",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Video Services for SaaS & Software Teams | EXPLAINERACE",
     description:
       "Explore specialized software video production: SaaS walkthroughs, screencast tutorials, mobile app demos, and AI UGC product ads. Transparent pricing from $120/60s.",
-    images: ["https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg"],
+    images: ["https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg"],
   },
 };
 

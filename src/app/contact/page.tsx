@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://img.youtube.com/vi/W6-glP7Ct5o/hqdefault.jpg",
+        url: "https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg",
         width: 1280,
         height: 720,
         alt: "Contact Ali - EXPLAINERACE",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Contact Ali — SaaS Video Specialist | EXPLAINERACE",
     description:
       "Get in touch with Ali for SaaS walkthroughs, screencast tutorials, and video pricing. Reach out directly on WhatsApp (+92 313 9110721) or email for a fast quote.",
-    images: ["https://img.youtube.com/vi/W6-glP7Ct5o/hqdefault.jpg"],
+    images: ["https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg"],
   },
 };
 

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+        url: "https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg",
         width: 1280,
         height: 720,
         alt: "SaaS Walkthrough Video Service - EXPLAINERACE",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "SaaS Walkthrough Video Service | EXPLAINERACE",
     description:
       "Expert SaaS walkthrough video service and product demo videos. 4K screen recording, 3D dynamic zooms, cursor smoothing & studio voiceover from $220/60s.",
-    images: ["https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg"],
+    images: ["https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg"],
   },
 };
 

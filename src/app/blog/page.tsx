@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://img.youtube.com/vi/W6-glP7Ct5o/hqdefault.jpg",
+        url: "https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg",
         width: 1280,
         height: 720,
         alt: "EXPLAINERACE Blog & Strategy Guides",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Blog & Video Strategy Insights | EXPLAINERACE",
     description:
       "Expert guides, pricing breakdowns, and production strategies for SaaS explainer videos, software walkthroughs, and app demos by Ali.",
-    images: ["https://img.youtube.com/vi/W6-glP7Ct5o/hqdefault.jpg"],
+    images: ["https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg"],
   },
 };
 

@@ -64,7 +64,7 @@ export const siteConfig = {
     channelName: "ExplainerAce",
     channelUrl: "https://www.youtube.com/@Explainerace",
     playlistUrl:
-      "https://www.youtube.com/watch?v=W6-glP7Ct5o&list=PLoKiP4P61SFx80H6XDpHN7gd0QJJ4TgYM",
+      "https://www.youtube.com/playlist?list=PLoKiP4P61SFx80H6XDpHN7gd0QJJ4TgYM",
     featuredVideoId: "jzb-LpUo2i8", // Framer SaaS Motion Graphics Explainer
     secondaryFeaturedVideoId: "fQ7YXzamRvQ", // Nexus AI Platform Promo
   },

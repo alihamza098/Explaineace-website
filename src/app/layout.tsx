@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description: siteConfig.subheadline,
     images: [
       {
-        url: "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+        url: "https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg",
         width: 1280,
         height: 720,
         alt: "EXPLAINERACE - Software & SaaS Video Specialist Portfolio",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EXPLAINERACE | Software Tutorials & SaaS Walkthroughs",
     description: siteConfig.subheadline,
-    images: ["https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg"],
+    images: ["https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg"],
   },
   verification: {
     google: "wg_6qxRwz-Q9S7_d3SPwA7j6vmlHrxuZEX8v_fQuBMk",
@@ -82,7 +82,7 @@ const jsonLd = {
   "description":
     "Professional software tutorial videos, SaaS product walkthroughs, app demos, and training content for software companies, startups, and product teams.",
   "url": siteConfig.siteUrl,
-  "image": "https://img.youtube.com/vi/W6-glP7Ct5o/maxresdefault.jpg",
+  "image": "https://img.youtube.com/vi/M5CJdH4k8wU/maxresdefault.jpg",
   "telephone": siteConfig.whatsapp.number,
   "email": siteConfig.contactEmail,
   "priceRange": "$$$",
