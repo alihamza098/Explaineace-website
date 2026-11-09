@@ -110,12 +110,12 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Hero Visual: Native 3D UI Motion Graphics Showcase (Seamless, non-embedded) */}
+        {/* Hero Visual: Featured Project Showcase */}
         <div className="stage-enter mt-10 sm:mt-14 max-w-5xl mx-auto w-full space-y-6 relative">
           {/* Floating Pro Badges */}
           <div className="hidden lg:flex items-center gap-2 absolute -top-4 -left-4 z-30 px-3.5 py-1.5 rounded-full bg-[#0A0D14]/90 border border-brand-500/30 backdrop-blur-md shadow-glow text-xs text-brand-300 font-semibold float-slow">
             <span className="w-2 h-2 rounded-full bg-accent-cyan animate-pulse" />
-            <span>✦ 3D UI Motion Graphics</span>
+            <span>✦ Featured Walkthrough</span>
           </div>
 
           <div
@@ -123,10 +123,10 @@ export const Hero: React.FC = () => {
             className="hidden lg:flex items-center gap-2 absolute -top-4 -right-4 z-30 px-3.5 py-1.5 rounded-full bg-[#0A0D14]/90 border border-emerald-500/30 backdrop-blur-md shadow-glow text-xs text-emerald-400 font-semibold float-slow"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
-            <span>⚡ 60 FPS Native Playback</span>
+            <span>Zestbrief · AI Meeting SaaS</span>
           </div>
 
-          {/* Main Native Motion Graphics Video Container */}
+          {/* Main Showcase Video Container */}
           <div className="relative w-full">
             {/* Dynamic Ambient Motion Aura Glow */}
             <div className="absolute -inset-1.5 sm:-inset-3 bg-gradient-to-r from-brand-600/30 via-accent-cyan/25 to-accent-purple/30 rounded-3xl blur-2xl opacity-75 pointer-events-none -z-10" />
@@ -134,19 +134,15 @@ export const Hero: React.FC = () => {
             <div className="relative rounded-2xl sm:rounded-3xl p-1 sm:p-1.5 bg-gradient-to-b from-white/20 via-white/5 to-white/10 shadow-2xl w-full">
               {/* Seamless Video Frame */}
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-[#0A0D14] border border-white/[0.1] w-full">
-                {/* 60 FPS Motion Graphics Video Stream */}
+                {/* Featured Project Video Stream (YouTube, seamless muted loop) */}
                 <div className="relative aspect-video w-full bg-[#0A0D14] overflow-hidden">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="auto"
-                    className="w-full h-full object-cover"
-                  >
-                    <source src="/hero-motion.webm" type="video/webm" />
-                    <source src="/hero-motion.mp4" type="video/mp4" />
-                  </video>
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/M5CJdH4k8wU?autoplay=1&mute=1&loop=1&playlist=M5CJdH4k8wU&controls=0&playsinline=1&rel=0&modestbranding=1&disablekb=1"
+                    title="Zestbrief — AI Meeting Summaries & Action Items SaaS Walkthrough"
+                    className="absolute inset-0 w-full h-full pointer-events-none"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    loading="eager"
+                  />
 
                   {/* Subtle edge vignette for polished SaaS contrast */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
