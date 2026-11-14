@@ -1355,4 +1355,469 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   },
+{
+    slug: "ai-ugc-ad-hooks-first-3-seconds",
+    title: "AI UGC Ad Hooks: How to Test the First 3 Seconds",
+    headline: "The opening hook decides whether your AI UGC ad gets watched or skipped. Here is a practical system for writing and testing hooks before you scale spend.",
+    excerpt:
+      "AI makes it cheap to produce UGC-style ads, which means the bottleneck is no longer production — it is the first three seconds. This guide breaks down the hook types that stop the scroll, and a simple testing system for finding your winners.",
+    metaDescription:
+      "AI UGC ad hooks decide whether viewers stay or skip. Learn the hook types that work, how to produce variations fast, and how to test the first 3 seconds before scaling ad spend.",
+    publishedAt: "2026-11-11",
+    updatedAt: "2026-11-11",
+    readingTime: "6 min read",
+    category: "AI Video & Ads",
+    featuredImage: "https://img.youtube.com/vi/AF_MrFEaAMU/maxresdefault.jpg",
+    author: {
+      name: "Ali",
+      role: "Software Video Specialist & Founder of EXPLAINERACE",
+      avatar: "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg",
+    },
+    tags: [
+      "AI UGC Ads",
+      "UGC Hooks",
+      "Ad Testing",
+      "AI Video Ads",
+      "SaaS Marketing",
+    ],
+    content: {
+      intro: [
+        "Every AI UGC ad lives or dies in its first three seconds. The viewer is scrolling fast, the sound is often off, and your video is one thumb-flick away from disappearing. If the opening line does not create a reason to stay, nothing after it matters — not the demo, not the offer, not the call to action.",
+        "AI production has made the rest of the ad easy. You can generate a presenter, a voice, and a finished video in hours instead of weeks. That flips the old bottleneck: production is no longer the scarce resource, attention is. The teams getting results from AI UGC are not making one perfect ad — they are making many openings and letting the audience pick the winner.",
+        "This guide covers what a hook actually is, the five hook types that consistently stop the scroll for software and app ads, and a simple testing workflow for finding your best first three seconds before you put real budget behind them.",
+      ],
+      summaryBox: {
+        headline: "Quick Summary: Testing AI UGC Hooks",
+        points: [
+          "The hook is the first 1–3 seconds: the opening line, the first visual, and the on-screen text — judged as one unit",
+          "Test 3–5 hooks per ad concept, changing only the opening so results are readable",
+          "Judge hooks against your own account's baseline, not published industry benchmarks",
+          "Keep the body of the ad identical during hook tests; scale the winner, then test bodies",
+          "Production cost per variation is low with AI — spend your effort on writing openings, not polishing losers",
+        ],
+      },
+      sections: [
+        {
+          id: "why-three-seconds",
+          heading: "Why the First Three Seconds Decide the Ad",
+          body: [
+            "Feed-based ads are not watched the way videos on a landing page are watched. There is no commitment and no context — the viewer did not choose your video, it interrupted them. In that environment the opening has one job: interrupt the scroll with something that feels personally relevant.",
+            "This is why two AI UGC ads with identical demos can perform completely differently. The body of the ad earns the click, but the hook earns the watch. A weak opening means the strongest product demo in the world gets seen by almost nobody.",
+            "The practical consequence: budget and effort should be allocated in the same ratio as importance. If the hook decides whether the ad gets a chance, then producing five openings for one concept is a better investment than producing one opening five times more polished.",
+          ],
+        },
+        {
+          id: "hook-types",
+          heading: "Five Hook Types That Work for Apps and SaaS",
+          body: [
+            "Most winning UGC openings for software fall into five patterns. None of them require hype or fake claims — they work because they name something the viewer already feels.",
+          ],
+          listItems: [
+            "The call-out: name the exact viewer — 'If you run a small agency and still chase invoices in spreadsheets…' — specificity makes the right people stop",
+            "The problem-first open: state the painful moment before the product — 'I used to spend every Sunday night reconciling payments by hand'",
+            "The myth-bust: challenge a default assumption — 'You don't need a bigger team to handle support. You need to stop answering the same question twice'",
+            "The result-first open: lead with the outcome, then explain — 'This app turned my 40-minute reporting task into about four minutes'",
+            "The curiosity gap: open a loop the viewer wants closed — 'The setting nobody turns on is the one that doubled our trial conversions'",
+          ],
+        },
+        {
+          id: "how-to-test",
+          heading: "A Simple Hook Testing System",
+          body: [
+            "Testing hooks is not complicated, but it does need discipline. Write one ad concept with a body you are happy with — the demo, the proof, the call to action. Then write three to five different openings for that same body and produce each version. Everything after second three stays identical, so any difference in performance is the hook's doing.",
+            "Run the variations with equal, modest budgets and the same audience. Watch two things: how many people stay past the opening (the earliest retention signal your platform shows you) and how many take the next step — a click, a trial start, an install. Compare each hook against your own account's running baseline for similar ads. Published 'good hook rate' numbers from other industries and other accounts will mislead you; your baseline is the only honest yardstick.",
+            "Kill clearly losing hooks early and let close calls run longer. When one opening clearly beats the rest, it becomes the control: scale it, and start the next test round against it — new hooks first, then new bodies behind the winning hook.",
+          ],
+          callout: {
+            type: "tip",
+            title: "One variable at a time",
+            text: "If you change the hook, the presenter, and the offer in the same test, you will learn which ad won but not why. Hook tests change only the opening — everything else stays frozen.",
+          },
+        },
+        {
+          id: "production-workflow",
+          heading: "Producing Hook Variations With AI",
+          body: [
+            "This is where AI production earns its keep. Recording five openings with a human creator means five briefs, five deliveries, and five invoices. With an AI presenter workflow, the marginal cost of each extra opening is a few lines of script and a short render — so the testing system above becomes affordable for small teams, not just big advertisers.",
+            "Two production details matter more than the rest. First, captions: a large share of feed viewing happens muted, so the hook must work as on-screen text, not just as spoken words. Burn the opening line into the frame in large, readable text. Second, the first frame itself: the face, the setting, and the text overlay in frame one are part of the hook. A presenter mid-blink over a cluttered background wastes the most valuable frame you own.",
+            "Keep a hook library as you test. Every opening you write — winners and losers — goes into a document with its result next to it. After a few rounds, patterns emerge about what your specific audience responds to, and those patterns are worth more than any generic hook list, including the one in this article.",
+          ],
+        },
+        {
+          id: "mistakes",
+          heading: "Hook Mistakes That Waste Good Ads",
+          body: [
+            "The most common mistake is the slow build: logo animations, 'Hey guys, welcome back,' or a presenter introducing themselves. Your name and brand earn attention later; the opening must spend its three seconds entirely on the viewer. A close second is the vague promise — 'This app will change your life' says nothing, while 'This app reconciles your invoices while you sleep' says something testable.",
+            "Also avoid hooks the ad cannot pay off. A curiosity gap that the body never closes, or a result the product cannot actually deliver, may win the watch and lose the trust — and platforms notice the difference between clicks and satisfied clicks. Every hook in this guide's list works with honest claims; if a hook only works when exaggerated, it is the wrong hook.",
+            "Ready to put this into practice? Our [AI UGC & Product Ad Service](/services/ai-ugc-ads) produces hook-tested ad sets for apps and SaaS, and our breakdown of [AI UGC Video Ads: Cost and ROI](/blog/ai-ugc-video-ads-cost-roi-guide) covers what a testing programme should budget. Compare tiers on the [Pricing Page](/pricing) when you are ready to brief a batch.",
+          ],
+        },
+      ],
+      faqs: [
+        {
+          q: "How many hooks should I test for one ad concept?",
+          a: "Three to five is the practical range. Fewer than three gives you little signal about what your audience responds to; more than five usually spreads a small budget too thin to read results clearly. As budgets grow, test in rounds — five hooks, keep the winner, write five more against it.",
+        },
+        {
+          q: "How long should a hook test run before I decide?",
+          a: "Long enough for each variation to gather a meaningful number of impressions on your account — for most small advertisers that means a few days per round rather than a few hours. Decide on retention past the opening plus clicks or installs combined, not on either metric alone, and judge against your own baseline results.",
+        },
+        {
+          q: "Do AI presenter hooks perform differently from real creator hooks?",
+          a: "The hook mechanics are identical — the opening line, first frame, and captions do the same work in both. What changes is production economics: AI makes each additional variation cheap, so you can test more openings. Authenticity of delivery still matters, which is why scripts should be written like a person talking, not like ad copy.",
+        },
+        {
+          q: "Should the hook mention my product's name?",
+          a: "Usually not in the first line. The opening should name the viewer's problem, situation, or desired result. Introduce the product once the viewer has a reason to care — typically right after the hook, at the start of the body. Brand-first openings are one of the most common reasons good ads get skipped.",
+        },
+      ],
+    },
+  },
+{
+    slug: "app-store-preview-video-guide",
+    title: "What to Put in an App Store Preview Video (And What to Leave Out)",
+    headline: "An app preview video sits in the first slot of your store listing and plays before a single review is read. Here is how to plan one that shows the app at its best — honestly.",
+    excerpt:
+      "Your app preview video is the first thing most visitors see on your store page, and it has about five seconds to justify the install. This guide covers what to include, what gets previews rejected or ignored, and a simple structure that works in 30 seconds.",
+    metaDescription:
+      "Planning an App Store preview video? Learn what to include in 30 seconds, what to leave out, the content rules that get previews rejected, and a structure that earns installs.",
+    publishedAt: "2026-11-11",
+    updatedAt: "2026-11-11",
+    readingTime: "6 min read",
+    category: "Production Guides",
+    featuredImage: "https://img.youtube.com/vi/Ro9uMMmXLmo/maxresdefault.jpg",
+    author: {
+      name: "Ali",
+      role: "Software Video Specialist & Founder of EXPLAINERACE",
+      avatar: "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg",
+    },
+    tags: [
+      "App Store Preview",
+      "App Marketing",
+      "App Promo Video",
+      "Mobile Apps",
+      "ASO",
+    ],
+    content: {
+      intro: [
+        "On your app's store page, the preview video sits ahead of everything else. It autoplays silently as visitors scroll, and for many of them it is the entire pitch — they will decide to install or move on before reading a single line of your description. That makes the preview the highest-leverage 30 seconds in your app's marketing.",
+        "It is also the most constrained video you will ever make. Store previews must be built primarily from real captures of your app, they must not promise anything the app does not do, and they compete against the visitor's thumb the whole time. Many previews fail not because they look bad, but because they show the wrong things: login screens, loading spinners, and feature tours that start with the least interesting screen in the app.",
+        "This guide covers what a preview video should contain, what to deliberately leave out, the platform rules that matter, and a shot structure you can plan on one page before any production starts.",
+      ],
+      summaryBox: {
+        headline: "Quick Summary: App Store Preview Videos",
+        points: [
+          "Length: up to 30 seconds on the App Store — plan for 25–30 and put the core experience in the first 5",
+          "Content: real in-app capture is mandatory in spirit and in review — the preview must show the actual app in use",
+          "Structure: core loop first, then 3–4 key flows, one outcome statement, app name to close",
+          "Sound: previews autoplay muted — captions and large text overlays carry the message",
+          "Leave out: login walls, settings, long logo intros, and any feature the current build cannot do",
+        ],
+      },
+      sections: [
+        {
+          id: "what-it-is",
+          heading: "What a Preview Video Actually Has to Do",
+          body: [
+            "A preview is not a trailer and it is not an ad, even though it borrows from both. Its job is narrower: show a prospective user what using the app actually feels like, fast enough that they understand the core value before their attention expires. Store listings allow multiple previews per localization, and the first one does almost all of the work — most visitors never swipe to the second.",
+            "Because previews autoplay in the listing, the opening frame matters as much as the opening second. A static splash screen or a logo wastes the autoplay entirely. The first frame should already be the app doing the thing it is known for.",
+          ],
+        },
+        {
+          id: "the-rules",
+          heading: "The Rules That Get Previews Rejected",
+          body: [
+            "Apple's review of preview videos focuses on honesty and source material. The preview must be captured from the app itself — footage of people using devices, hands tapping screens, or scenes the app cannot produce are not acceptable substitutes for in-app capture. Minor framing, device bezels, and text overlays are fine; the core footage has to be your real interface doing real tasks.",
+            "Accuracy rules are just as strict. Do not show features that are not in the current build, do not imply results the app cannot deliver, and avoid pricing claims and time-sensitive offers in the video itself. If your app changes significantly, the preview is expected to change with it — a preview showing a removed feature is a rejection and a user-trust problem at the same time.",
+          ],
+          callout: {
+            type: "warning",
+            title: "Plan around review, not around it",
+            text: "A preview is reviewed with your app submission. A rejected preview can hold up a release, so build the video from the shipping build's real screens and keep every claim provable inside the app.",
+          },
+        },
+        {
+          id: "what-to-include",
+          heading: "What to Put In: A 30-Second Structure",
+          body: [
+            "The structure that works for most apps is a compressed version of the user's best session. Start with the core loop — the single action the app exists for — completed once, quickly, in the first five to ten seconds. Then show three or four supporting flows, each in a few seconds, chosen by how often real users do them rather than how impressive they look. Close with the outcome the app delivers, stated in one short line of text, and the app's name.",
+          ],
+          listItems: [
+            "Seconds 0–5: the core action, started immediately — no intro, no logo, no sign-in screen",
+            "Seconds 5–20: three or four key flows, one idea each, cut on the action so the pace never stalls",
+            "Seconds 20–27: the result or payoff screen — the dashboard, the finished creation, the booked thing",
+            "Seconds 27–30: app name and one-line promise as a clean end card",
+            "Throughout: short text overlays written for muted autoplay — verbs first, five words or fewer per overlay",
+          ],
+        },
+        {
+          id: "what-to-leave-out",
+          heading: "What to Leave Out",
+          body: [
+            "The leave-out list saves more previews than the include list. Sign-in and onboarding screens are the biggest offenders: they are necessary in the product and deadly in the preview, because they show friction instead of value. Settings pages, profile screens, and empty states have the same problem — they are real parts of the app that sell nothing.",
+            "Also cut anything slow. Loading spinners, long transitions, typing out full forms, and scrolling through feeds all burn seconds that the structure above cannot spare. Where a real flow is slow, show its start and its result and cut the middle — that is editing, not deception, as long as the result shown is the result the user actually gets.",
+            "Finally, leave out other brands. Notifications from other apps, competitor comparisons, and store badges inside the video all create review risk and date the video quickly.",
+          ],
+        },
+        {
+          id: "production-notes",
+          heading: "Production Notes That Make or Break the Preview",
+          body: [
+            "Capture at the highest resolution your target devices use, and record a clean demo account: realistic data, no personal information, no test gibberish in text fields. Reviewers and users both notice placeholder content. Add a subtle zoom or highlight on the exact element being tapped — store visitors are watching on small screens, often without sound, and need to be shown where to look.",
+            "Treat the preview as a living asset. Budget for a refresh whenever a major redesign ships, and watch your listing's conversion after each change the same way you would watch an ad test.",
+            "If you want the production handled end to end, our [SaaS Walkthrough Video Service](/services/saas-walkthrough-video) covers store previews and app demos, with tiers on the [Pricing Page](/pricing). For examples of finished app work, the walkthrough case studies on this site — including the Bloom app promo — show the standard to aim for.",
+          ],
+        },
+      ],
+      faqs: [
+        {
+          q: "How long can an App Store preview video be?",
+          a: "Up to 30 seconds per preview on Apple's App Store. In practice, plan the full structure to land in 25–30 seconds and make sure the core value lands in the first five, because the autoplay preview is often watched for only a few seconds before the visitor decides.",
+        },
+        {
+          q: "Can a preview video use animation instead of real app footage?",
+          a: "Only around the edges. The substance of the preview must be real capture of your app in use — animated scenes, device lifestyle shots, or rendered interfaces that do not exist in the app risk rejection. Stylized framing, zooms, and text overlays on top of real captures are the accepted way to polish a preview.",
+        },
+        {
+          q: "How many preview videos should a listing have?",
+          a: "Listings can carry multiple previews per localization, but the first one does nearly all the work. One strong preview beats three average ones. Add a second only when you have a genuinely different audience or use case to show, such as a separate flow for a different user type.",
+        },
+        {
+          q: "What does an app preview video cost to produce?",
+          a: "Because previews are short and built from your own app's capture, they sit at the affordable end of product video. At EXPLAINERACE, app demos and previews fall inside the same range as our walkthrough work — solo-specialist rates of $200–$800 per video depending on length and polish, versus agency quotes that commonly run into the thousands. Current tiers are listed on the pricing page.",
+        },
+      ],
+    },
+  },
+{
+    slug: "how-to-write-saas-demo-video-script",
+    title: "How to Write a SaaS Demo Video Script (Template + 60-Second Structure)",
+    headline: "A 60-second demo script is roughly 140 words arranged in the right order. This template shows the order, the timing, and the lines to write in each block.",
+    excerpt:
+      "Most SaaS demo scripts fail before production starts: they open with the company, tour features in menu order, and end without asking for anything. This template gives you the 60-second structure, a timing table, and a fill-in script skeleton that works for walkthroughs, homepage demos, and sales follow-ups.",
+    metaDescription:
+      "Learn how to write a SaaS demo video script with a proven 60-second structure: hook, problem, demo beats, proof, and call to action — plus a timing table and template you can copy.",
+    publishedAt: "2026-11-11",
+    updatedAt: "2026-11-11",
+    readingTime: "7 min read",
+    category: "Production Guides",
+    featuredImage: "https://img.youtube.com/vi/dYvGjP_Bi60/maxresdefault.jpg",
+    author: {
+      name: "Ali",
+      role: "Software Video Specialist & Founder of EXPLAINERACE",
+      avatar: "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg",
+    },
+    tags: [
+      "Demo Video Script",
+      "SaaS Walkthrough",
+      "Video Script Template",
+      "Product Demo",
+      "Screencast",
+    ],
+    content: {
+      intro: [
+        "A demo video is made or lost at the script stage. Expensive animation cannot rescue a script that opens with your company history, and a great script makes even a simple screencast persuasive. The good news is that a working demo script is not an act of creativity — it is a structure, and the structure can be copied.",
+        "The constraint that shapes everything is arithmetic. A natural speaking pace runs at roughly 130–150 words per minute, so a 60-second demo gives you about 140 words total. That is not much. Every sentence has to earn its place, which is exactly why the order of those sentences matters more than their polish.",
+        "Below is the five-block structure used for 60-second SaaS demos, with timings, the word budget for each block, what each block must accomplish, and a fill-in template at the end you can write your own script into today.",
+      ],
+      summaryBox: {
+        headline: "Quick Summary: The 60-Second Demo Script",
+        points: [
+          "Total budget: about 130–150 words for 60 seconds at a natural pace — write to the budget, then cut",
+          "Five blocks: hook (0–5s), problem (5–15s), demo beats (15–40s), proof (40–50s), call to action (50–60s)",
+          "One video, one job: pick a single viewer and a single action the video should produce",
+          "Show outcomes before steps — the viewer must see the result before you show the clicks that create it",
+          "Write for the ear: short sentences, spoken aloud, no feature names the viewer has not been given a reason to want",
+        ],
+      },
+      sections: [
+        {
+          id: "before-you-write",
+          heading: "Before You Write: One Viewer, One Job",
+          body: [
+            "Scripts go wrong when they try to speak to everyone. A demo for a founder evaluating your tool and a demo for a new user learning it are different videos with different scripts — mixing them produces a video that is too shallow for one audience and too salesy for the other. Before writing a line, answer two questions in writing: who exactly is watching, and what single action should they take when it ends — start a trial, book a call, or complete a setup step.",
+            "Then list the three product moments that prove your promise. Not features — moments: the screen where the viewer sees the outcome they want. These three moments become your demo beats, and everything else in the product, however proud you are of it, stays out of this video.",
+          ],
+        },
+        {
+          id: "the-structure",
+          heading: "The 60-Second Structure, Block by Block",
+          body: [
+            "Each block below has one job. If a sentence does not do its block's job, it belongs in a different video.",
+          ],
+          table: {
+            headers: ["Block", "Timing", "Words", "Job"],
+            rows: [
+              ["Hook", "0–5s", "~12", "Name the viewer's situation or pain so precisely they keep watching"],
+              ["Problem", "5–15s", "~25", "Show the cost of the current way — time, errors, or money"],
+              ["Demo beats", "15–40s", "~60", "Show the three proof moments, outcome first, then the action that creates it"],
+              ["Proof", "40–50s", "~25", "One credibility element: a result, a customer type, or a number you can stand behind"],
+              ["Call to action", "50–60s", "~20", "One clear next step, repeated visually on the end card"],
+            ],
+          },
+        },
+        {
+          id: "writing-each-block",
+          heading: "Writing Each Block Well",
+          body: [
+            "The hook is a sentence about the viewer, never about you. 'Meet the platform that…' is about you. 'Still exporting reports by hand every Friday?' is about the viewer, and it is the difference between a video that gets watched and one that gets skipped. Write five candidate hooks and pick the most specific one — specificity is what makes the right viewer feel named.",
+            "In the demo beats, reverse the instinct to narrate clicks. Say the outcome first ('Your invoice is already reconciled'), then show the one or two actions that produced it. Viewers remember results and forget steps; the steps are only there to make the result believable. The proof block then answers the viewer's silent question — 'does this work for anyone like me?' — with the strongest honest evidence you have. Finish with exactly one call to action. Two options ('start a trial or book a demo') halve the response to each.",
+          ],
+          listItems: [
+            "Read every draft aloud — lines that look fine on paper often trip when spoken",
+            "Cut adjectives before you cut content: 'powerful, seamless, robust' spend words and say nothing",
+            "Name screens as you write ('CUT TO: dashboard') so the script doubles as a shot list for production",
+            "Keep sentences under fifteen words; the voiceover artist and the viewer will both thank you",
+          ],
+        },
+        {
+          id: "template",
+          heading: "The Fill-In Template",
+          body: [
+            "Copy this skeleton and replace the brackets. It is deliberately plain — the polish comes from the specifics of your product, not from clever wording.",
+            "HOOK: 'If you [specific situation], you already know [specific pain].' PROBLEM: 'Doing it the usual way means [cost in time, errors, or money] — every [day/week/month].' DEMO: 'With [product], you [action] — and [outcome appears]. Then [second action], and [second outcome]. Finally, [third outcome], without [old painful step].' PROOF: 'Teams like [customer type] use it to [result].' CTA: 'Start your free trial at [domain] — [one low-friction detail, e.g. no card required].'",
+            "Written out at natural length, that skeleton lands at 130–150 words — a full 60-second script. If your draft runs long, the problem block is usually where the fat is; if it runs short, add one more demo beat rather than more setup.",
+          ],
+        },
+        {
+          id: "mistakes-and-next-steps",
+          heading: "Common Script Mistakes, and What Happens After the Script",
+          body: [
+            "Three mistakes account for most weak demos. The menu tour: scripting the interface in left-to-right order instead of in proof order. The double opening: a logo sting plus an introduction plus a hook, spending fifteen seconds before the first useful sentence. And the orphan CTA: ending on 'thanks for watching' instead of an action. All three are script problems, which means all three are free to fix before production starts.",
+            "Once the script is locked, it drives everything downstream — the storyboard, the capture list, the voiceover, and the edit. If you would rather hand the whole chain over, our [SaaS Walkthrough Video Service](/services/saas-walkthrough-video) works from script to finished video, and our guide to [Top SaaS Product Walkthrough Examples](/blog/top-saas-product-walkthrough-examples) shows what strong finished demos look like. Rates for every format are on the [Pricing Page](/pricing).",
+          ],
+        },
+      ],
+      faqs: [
+        {
+          q: "How many words should a 60-second demo video script be?",
+          a: "About 130–150 words. Natural voiceover pace runs at roughly 130–150 words per minute, and leaving small pauses for on-screen action keeps the video from feeling rushed. If your script is over 170 words, it will either run long or sound hurried — cut setup and adjectives first.",
+        },
+        {
+          q: "Should one demo video cover all my product's features?",
+          a: "No. Cover the three moments that prove the video's single promise. Feature-complete demos are tours, and tours are for users who already signed up. Prospects need a reason to start; a focused demo gives them one, and the full tour can live in your onboarding and help-center videos instead.",
+        },
+        {
+          q: "What if my product needs more than 60 seconds to explain?",
+          a: "Then it probably needs more than one video, not a longer one. Split by job: a 60-second homepage demo that sells the core outcome, then focused walkthroughs for each workflow. If a single video truly must run longer, keep the same five-block structure and expand the demo beats — never expand the opening.",
+        },
+        {
+          q: "Who should write the demo script — marketing or product?",
+          a: "The first draft should come from whoever talks to customers most, because the hook and problem blocks must use the customer's words, not the product's vocabulary. Product knowledge matters most in the demo beats, where accuracy is checked. In practice: draft from customer language, verify against the product, then read it aloud before anyone calls it finished.",
+        },
+      ],
+    },
+  },
+{
+    slug: "saas-onboarding-video-best-practices",
+    title: "SaaS Onboarding Videos: 9 Best Practices That Reduce Support Tickets",
+    headline: "Every repeat question in your support inbox is an onboarding gap. These nine practices turn onboarding videos into the answers users actually find — and watch.",
+    excerpt:
+      "Onboarding videos fail when they tour the product instead of completing the user's first task. This guide covers the nine practices that make onboarding video work: task-first planning, ruthless length control, placement where questions happen, and a maintenance habit that keeps videos true after every release.",
+    metaDescription:
+      "SaaS onboarding videos that reduce support tickets: 9 best practices covering task-first planning, ideal length, placement in-app and in the help center, and keeping videos current.",
+    publishedAt: "2026-11-11",
+    updatedAt: "2026-11-11",
+    readingTime: "6 min read",
+    category: "Strategy",
+    featuredImage: "https://img.youtube.com/vi/npUb2yMfLPo/maxresdefault.jpg",
+    author: {
+      name: "Ali",
+      role: "Software Video Specialist & Founder of EXPLAINERACE",
+      avatar: "https://img.youtube.com/vi/2ZtQX_lXHOs/hqdefault.jpg",
+    },
+    tags: [
+      "SaaS Onboarding",
+      "Onboarding Videos",
+      "Customer Support",
+      "Product Walkthrough",
+      "User Activation",
+    ],
+    content: {
+      intro: [
+        "Support tickets are a map of your onboarding gaps. When the same 'how do I…' question arrives for the tenth time, the product has already told you exactly which video is missing. Teams that treat onboarding video as a support-reduction system — not a marketing extra — end up with both calmer inboxes and faster activation.",
+        "The failure mode is easy to recognise: a twelve-minute product tour, recorded once, that walks every menu in order and answers no specific question completely. Users do not need a tour. They need the three or four tasks that stand between signup and their first real result, each explained at the moment they attempt it.",
+        "These nine practices come from that task-first view of onboarding. They cover what to record, how long to make it, where to put it, and — the part most teams skip — how to keep it true after the next release changes the interface.",
+      ],
+      summaryBox: {
+        headline: "Quick Summary: Onboarding Videos That Work",
+        points: [
+          "Plan from support tickets and drop-off points, not from the feature list",
+          "One video per task, most between 60 seconds and 3 minutes",
+          "Place videos where the question happens: in-app empty states, checklists, and the help center",
+          "Show the completed result first, then the steps — users stay when they can see the destination",
+          "Assign an owner and a review trigger for every video, or they silently go stale after releases",
+        ],
+      },
+      sections: [
+        {
+          id: "practices-1-5",
+          heading: "Practices 1–5: Plan and Produce Around Tasks",
+          body: [
+            "The first five practices decide what gets made and how. They share one principle: the unit of onboarding video is the completed task, not the feature area.",
+          ],
+          listItems: [
+            "1. Start from the inbox: rank your last month's support questions and your onboarding drop-off points; the top repeats become your first videos, in that order",
+            "2. One task per video: 'Connect your first integration' is a video; 'Integrations overview' is not — single-task videos get found, finished, and reused in ticket replies",
+            "3. Result first, steps second: open on the finished state ('This is what a connected account looks like'), then rewind and show how to get there",
+            "4. Keep it between 60 seconds and 3 minutes: if a task needs longer, it is two tasks — split at the point where the user gets a visible win",
+            "5. Narrate the why at decision points only: one short reason where users commonly choose wrong, silence everywhere else — narration that describes every click teaches nothing and ages badly",
+          ],
+        },
+        {
+          id: "practices-6-9",
+          heading: "Practices 6–9: Placement, Findability, and Staying Current",
+          body: [
+            "A perfect video in the wrong place reduces nothing. The last four practices are about the video being present at the moment of confusion — and still being correct six months from now.",
+          ],
+          listItems: [
+            "6. Embed where the question happens: the empty state of the relevant screen, the onboarding checklist step, and the help-center article answering the same question — all three, not one",
+            "7. Title videos like tickets: use the user's words ('How do I invite my team?') rather than feature names ('Team Management'), so search — in your help center and on Google — matches how people actually ask",
+            "8. Close the loop with support: give agents the video links as saved replies; every ticket answered with a video instead of a paragraph is a ticket that does not repeat",
+            "9. Assign ownership and a review trigger: each video gets a named owner, and any release that touches its screens puts it on a review list the same week — a wrong video is worse than none, because it teaches users to distrust all of them",
+          ],
+        },
+        {
+          id: "how-many-and-how-long",
+          heading: "How Many Videos, and How Long Should They Be?",
+          body: [
+            "Most SaaS products should start with three to five videos: the path from signup to the first meaningful result, broken at its natural wins. Account setup, the core creation task, the first share or invite, and the first report or export cover the majority of early tickets for typical tools. Add videos only when a question repeats — the inbox, not enthusiasm, should commission new ones.",
+            "On length, the honest answer is 'as long as the task takes, and not a second longer.' In practice that lands between one and three minutes for onboarding tasks. Welcome and orientation videos are the exception, not the model — keep them under a minute and point them at the first task video rather than touring the product.",
+          ],
+          callout: {
+            type: "stat",
+            title: "The metric that proves it is working",
+            text: "Tag support tickets by topic before and after each video ships. A working onboarding video shows up as a falling count in its own topic within a few weeks — measure that, not view counts, which reward curiosity rather than rescued users.",
+          },
+        },
+        {
+          id: "keeping-current",
+          heading: "Keeping Videos Current Without Re-Recording Everything",
+          body: [
+            "The fear of re-recording is what stops most teams starting. Two production habits remove it. First, record in segments: keep each step of a task as a separate clip in the project file, so a changed screen means replacing one segment, not the whole video. Second, prefer zooms and highlights over pixel-perfect full-screen fidelity in fast-changing areas of the product — a slightly stylised view survives small UI changes that would date an exact capture.",
+            "Pair those habits with the review trigger from practice nine and maintenance becomes an afternoon per release, not a project per quarter.",
+            "If you want the set built for you, our [Screencast Video Production Service](/services/screencast-tutorials) produces task-based onboarding and help-center videos, and the comparison in [Screencast vs Animated Explainer: Help Center Guide](/blog/screencast-vs-animated-explainer-help-center) explains when screencasts beat animation for support content. Formats and rates are on the [Pricing Page](/pricing).",
+          ],
+        },
+      ],
+      faqs: [
+        {
+          q: "How many onboarding videos does a SaaS product need at launch?",
+          a: "Start with three to five, covering the path from signup to the first real result: setup, the core task, the first collaboration or sharing step, and the first output. That small set answers most early support questions. Expand only when the same question repeats in your inbox — let ticket volume commission new videos.",
+        },
+        {
+          q: "Should onboarding videos live in the app or in the help center?",
+          a: "Both, because users hit the same confusion in both places. Embed each video at the relevant in-app moment (empty states, checklist steps) and in the help-center article that answers the same question. Same video, two doors — production cost stays flat while findability doubles.",
+        },
+        {
+          q: "How often do onboarding videos need updating?",
+          a: "Whenever a release changes a screen the video shows. Build a review trigger into your release process: if a touched screen appears in a video, that video gets checked the same week. Recording in replaceable segments keeps most updates to minutes of work instead of full re-records.",
+        },
+        {
+          q: "Do onboarding videos really reduce support tickets?",
+          a: "They reduce the specific topics they cover, which is why they should be planned from ticket data and measured by topic. A video answering your most repeated question removes that question's volume; a generic product tour usually changes nothing. Track ticket counts by topic before and after each video to see the effect honestly.",
+        },
+      ],
+    },
+  },
 ];
