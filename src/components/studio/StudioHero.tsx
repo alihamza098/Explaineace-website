@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { ArrowRight, Play } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
+import { DotField } from "./DotField";
 import { HeroReframe } from "./HeroReframe";
 import { useFilmPlayer } from "./useFilmPlayer";
 
@@ -17,12 +18,14 @@ const points = [
 
 export const StudioHero: React.FC = () => {
   const { open, modal } = useFilmPlayer();
+  const copyRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
 
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-ink pb-16 pt-24 sm:pb-24 sm:pt-32 lg:pt-36">
-      <div className="studio-grain pointer-events-none absolute inset-0" aria-hidden />
+      <DotField sourceRef={stageRef} quietRef={copyRef} />
       <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:px-8">
-        <div>
+        <div ref={copyRef}>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-signal sm:text-[13px]">
             Software video studio · ExplainerAce
           </p>
@@ -78,7 +81,7 @@ export const StudioHero: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div ref={stageRef} className="relative">
           <div
             className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[70%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal/[0.08] blur-3xl"
             aria-hidden
