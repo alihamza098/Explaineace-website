@@ -75,7 +75,7 @@ const Cursor: React.FC<{ size: string }> = ({ size }) => (
     viewBox="0 0 24 24"
     aria-hidden
   >
-    <path d="M3 2l17 8.5-7.2 1.9-3.3 7.1z" fill="#F4F0E6" stroke="#0B0B0A" strokeWidth="1.4" strokeLinejoin="round" />
+    <path d="M3 2l17 8.5-7.2 1.9-3.3 7.1z" fill="#EEF3FF" stroke="#05070D" strokeWidth="1.4" strokeLinejoin="round" />
   </svg>
 );
 
@@ -242,7 +242,7 @@ export const FormatShowcase: React.FC = () => {
       <div>
         <div
           ref={stageRef}
-          className="fx-stage relative mx-auto h-[420px] w-full overflow-hidden rounded-2xl border border-paper/10 bg-[radial-gradient(90%_80%_at_50%_0%,rgba(244,240,230,0.05),transparent_70%)] bg-ink-2 sm:h-[460px] lg:h-[500px]"
+          className="fx-stage relative mx-auto h-[420px] w-full overflow-hidden rounded-2xl border border-paper/10 bg-[radial-gradient(90%_80%_at_50%_0%,rgba(226, 236, 255,0.05),transparent_70%)] bg-ink-2 sm:h-[460px] lg:h-[500px]"
           style={{ containerType: "size" }}
         >
           {/* ---------------- 16:9 full workflow ---------------- */}
@@ -258,7 +258,7 @@ export const FormatShowcase: React.FC = () => {
               } as React.CSSProperties
             }
           >
-            <div className="absolute bottom-0 left-0 top-0 border-r border-paper/10 bg-[#161412]" style={{ width: "19cqw", padding: "2.2cqw" }}>
+            <div className="absolute bottom-0 left-0 top-0 border-r border-paper/10 bg-[#0F1422]" style={{ width: "19cqw", padding: "2.2cqw" }}>
               <div className="flex items-center" style={{ gap: "1cqw", marginBottom: "3.4cqw" }}>
                 <span className="rounded-full bg-signal" style={{ width: "2.4cqw", height: "2.4cqw" }} />
                 <span className="font-bold text-paper" style={{ fontSize: "max(11px,2.6cqw)" }}>Pulse</span>

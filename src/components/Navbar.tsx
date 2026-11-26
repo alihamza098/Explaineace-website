@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
 
   return (
     // Static, constant-size header: it never hides, resizes or restyles on scroll.
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0B0B0A] border-b border-white/[0.08] py-3">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#05070D] border-b border-white/[0.08] py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo: EXPLAINERACE */}
         <Link
@@ -58,16 +58,16 @@ export const Navbar: React.FC = () => {
             href={siteConfig.whatsapp.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-medium text-[#F4F0E6] hover:text-white px-3 py-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.09] border border-white/[0.14] transition-colors flex items-center gap-1.5"
+            className="text-xs font-medium text-[#EEF3FF] hover:text-white px-3 py-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.09] border border-white/[0.14] transition-colors flex items-center gap-1.5"
             title="Chat directly on WhatsApp"
           >
-            <WhatsAppIcon className="w-4 h-4 text-[#F4F0E6]" />
+            <WhatsAppIcon className="w-4 h-4 text-[#EEF3FF]" />
             <span>WhatsApp</span>
           </a>
 
           <Link
             href="/#inquiry"
-            className="group relative inline-flex items-center gap-2 text-xs font-semibold text-[#1F0A02] bg-[#FF6B3D] hover:bg-[#ff8660] px-4 py-2.5 rounded-full transition-colors duration-200"
+            className="group relative inline-flex items-center gap-2 text-xs font-semibold text-[#031318] bg-[#22E4F5] hover:bg-[#6AF0FB] px-4 py-2.5 rounded-full transition-colors duration-200"
           >
             <span>Start a Project</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
 
               <Link
                 href="/#inquiry"
-                className="w-full text-center py-3.5 rounded-xl text-[#1F0A02] bg-[#FF6B3D] font-semibold text-sm flex items-center justify-center gap-2"
+                className="w-full text-center py-3.5 rounded-xl text-[#031318] bg-[#22E4F5] font-semibold text-sm flex items-center justify-center gap-2"
               >
                 Start a Project
                 <ArrowRight className="w-4 h-4" />

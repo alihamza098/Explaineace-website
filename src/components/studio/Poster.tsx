@@ -25,7 +25,7 @@ export const Poster: React.FC<{
   return (
     <div className={`relative aspect-video w-full overflow-hidden bg-ink-3 ${className}`}>
       {/* Fallback title card sits underneath so a slow image never shows blank */}
-      <div className="absolute inset-0 flex flex-col justify-end bg-[radial-gradient(120%_90%_at_20%_0%,rgba(255, 107, 61,0.16),transparent_55%)] p-4">
+      <div className="absolute inset-0 flex flex-col justify-end bg-[radial-gradient(120%_90%_at_20%_0%,rgba(34, 228, 245,0.16),transparent_55%)] p-4">
         {label && <span className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-signal">{label}</span>}
         <span className="line-clamp-2 text-sm font-semibold text-paper">{title}</span>
       </div>

@@ -28,7 +28,7 @@ export const StudioHero: React.FC = () => {
           </p>
           {/* Static, readable from first paint: no hidden-until-animated text */}
           <h1 id="hero-title" className="mt-3 text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.03em] text-paper sm:text-7xl lg:text-[5.25rem]">
-            Product films in motion.
+            Product films <span className="hr-grad">in motion.</span>
           </h1>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-paper-dim sm:mt-6 sm:text-lg">
             Launch your software with a product film, show people how it works with clear tutorials, and get social cuts
@@ -51,7 +51,7 @@ export const StudioHero: React.FC = () => {
           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
             <a
               href="#packages"
-              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-signal px-7 text-[15px] font-semibold text-signal-ink transition-colors hover:bg-[#ff8660] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-signal px-7 text-[15px] font-semibold text-signal-ink transition-colors hover:bg-[#6AF0FB] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               Explore packages <ArrowRight className="h-4 w-4" aria-hidden />
             </a>

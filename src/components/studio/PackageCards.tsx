@@ -43,7 +43,7 @@ const Card: React.FC<{ p: CampaignPackage; source: string }> = ({ p, source }) =
       data-package={p.id}
       className={`relative flex flex-col rounded-2xl border p-6 sm:p-7 ${
         p.featured
-          ? "border-signal/60 bg-ink-2 shadow-[0_0_0_1px_rgba(255, 107, 61,0.25),0_30px_80px_-40px_rgba(255, 107, 61,0.35)] lg:-my-3 lg:py-9"
+          ? "border-signal/60 bg-ink-2 shadow-[0_0_0_1px_rgba(34, 228, 245,0.25),0_30px_80px_-40px_rgba(34, 228, 245,0.35)] lg:-my-3 lg:py-9"
           : "border-paper/10 bg-ink-2"
       }`}
     >
@@ -100,7 +100,7 @@ const Card: React.FC<{ p: CampaignPackage; source: string }> = ({ p, source }) =
         aria-label={`Choose the ${p.name} package, ${money(p.price)}`}
         className={`inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink ${
           p.featured || selected
-            ? "bg-signal text-signal-ink hover:bg-[#ff8660]"
+            ? "bg-signal text-signal-ink hover:bg-[#6AF0FB]"
             : "border border-paper/25 text-paper hover:border-signal hover:text-signal"
         }`}
       >

@@ -288,12 +288,12 @@ html.js .reveal.is-visible {
 .studio-focus:focus-visible,
 .studio a:focus-visible,
 .studio button:focus-visible {
-  outline: 2px solid #ff6b3d;
+  outline: 2px solid #22e4f5;
   outline-offset: 3px;
 }
 
 .studio-grain {
-  background-image: radial-gradient(rgba(244, 240, 230, 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(226, 236, 255, 0.06) 1px, transparent 1px);
   background-size: 22px 22px;
   -webkit-mask-image: radial-gradient(ellipse 70% 60% at 70% 30%, #000 20%, transparent 75%);
   mask-image: radial-gradient(ellipse 70% 60% at 70% 30%, #000 20%, transparent 75%);
@@ -306,7 +306,7 @@ html.js .reveal.is-visible {
   top: 50%;
   overflow: hidden;
   container-type: size;
-  background: #0e0c0b;
+  background: #080B14;
   border-radius: 14px;
   transform: translate(-50%, -50%) scale(0.97);
   opacity: 0;
@@ -343,8 +343,8 @@ html.js .reveal.is-visible {
 
 /* the export control */
 .fx-btn {
-  background: #ff6b3d;
-  color: #1f0a02;
+  background: #22e4f5;
+  color: #031318;
   border-radius: 1.6cqw;
   cursor: pointer;
 }
@@ -356,7 +356,7 @@ html.js .reveal.is-visible {
   position: absolute;
   inset: -0.9cqw;
   border-radius: inherit;
-  border: 2px solid rgba(255, 107, 61, 0.7);
+  border: 2px solid rgba(34, 228, 245, 0.7);
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
@@ -387,93 +387,160 @@ html.js .reveal.is-visible {
   .fx-layer, .fx-in, .fx-ok, .fx-guide, .fx-cursor { transition-duration: 0.01ms !important; transition-delay: 0s !important; }
 }
 
-/* ---- Hero reframe loop: one action -> three cuts (transform/opacity only) ---- */
+/* ---- Hero title sequence: one action -> three cuts -> timeline (transform/opacity only) ---- */
 .hr-stage {
+  --rx: 0deg;
+  --ry: 0deg;
   position: relative;
   width: 100%;
-  aspect-ratio: 6 / 5;
+  aspect-ratio: 1 / 1;
   container-type: inline-size;
 }
+.hr-glow {
+  position: absolute;
+  inset: -8%;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 34% at 28% 30%, rgba(34, 228, 245, 0.2), transparent 70%),
+    radial-gradient(34% 34% at 82% 52%, rgba(168, 85, 247, 0.22), transparent 70%),
+    radial-gradient(40% 30% at 50% 88%, rgba(99, 102, 241, 0.16), transparent 70%);
+}
+.hr-scene {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform: perspective(1400px) rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.3s ease-out;
+}
+.hr-layer { position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none; }
+.hr-arc-x { position: absolute; inset: 0; }
 .hr-frame {
   position: absolute;
   overflow: hidden;
   container-type: size;
-  background: #0e0c0b;
-  border: 1px solid rgba(244, 240, 230, 0.14);
+  background: #080b14;
+  border: 1px solid rgba(226, 236, 255, 0.14);
   border-radius: 2cqw;
-  box-shadow: 0 3cqw 8cqw -3cqw rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 107, 61, 0.25);
 }
+.hr-c-cyan { border-color: rgba(34, 228, 245, 0.55); box-shadow: 0 3cqw 8cqw -3cqw rgba(0,0,0,.85), 0 0 5cqw -1cqw rgba(34, 228, 245, 0.35); }
+.hr-c-iris { border-color: rgba(99, 102, 241, 0.7); box-shadow: 0 3cqw 8cqw -3cqw rgba(0,0,0,.85), 0 0 5cqw -1cqw rgba(99, 102, 241, 0.45); }
+.hr-c-violet { border-color: rgba(168, 85, 247, 0.7); box-shadow: 0 3cqw 8cqw -3cqw rgba(0,0,0,.85), 0 0 5cqw -1cqw rgba(168, 85, 247, 0.45); }
+.hr-grad { background: linear-gradient(90deg, #22e4f5, #6366f1 55%, #a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hr-word { display: inline-block; }
 .hr-tag {
   position: absolute;
-  margin-top: -1.8cqw;
+  margin-top: -1.9cqw;
   font-size: max(11px, 2.3cqw);
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: #b9b4a5;
   white-space: nowrap;
 }
 .hr-tag-late { margin-top: 0.8cqw; }
-.hr-bar {
+.hr-tag-cyan { color: #22e4f5; }
+.hr-tag-iris { color: #8f93ff; }
+.hr-tag-violet { color: #c084fc; }
+.hr-sheen {
   position: absolute;
-  left: 2cqw; right: 2cqw; bottom: -3cqw; height: 2px;
-  background: #ff6b3d;
-  transform-origin: left;
-  transform: scaleX(1);
-  opacity: 0.8;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 38%, rgba(255, 255, 255, 0.14) 50%, transparent 62%);
+  transform: translateX(120%);
+  opacity: 0;
 }
-.hr-cursor { transform: translate3d(54cqw, 36cqw, 0); opacity: 0; }
+.hr-bar-col { transform-origin: 50% 100%; }
+.hr-cursor { opacity: 0; transform: translate3d(54cqw, 40cqw, 0); }
+.hr-cursor-1 { --o: 0.4; }
+.hr-cursor-2 { --o: 0.2; }
+.hr-ripple { opacity: 0; transform: scale(0.2); }
+
+/* editor timeline */
+.hr-timeline {
+  position: absolute;
+  left: 2cqw;
+  right: 14cqw;
+  top: 86cqw;
+  height: 12cqw;
+}
+.hr-track { position: relative; height: 3.4cqw; margin-bottom: 0.9cqw; }
+.hr-track-label { position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: max(10px, 2cqw); color: #7a859b; font-weight: 600; }
+.hr-clip { position: absolute; top: 0; bottom: 0; left: 10cqw; right: 0; border-radius: 1cqw; transform-origin: left; }
+.hr-clip-cyan { background: linear-gradient(90deg, rgba(34,228,245,.85), rgba(34,228,245,.35)); }
+.hr-clip-iris { left: 28cqw; right: 22cqw; background: linear-gradient(90deg, rgba(99,102,241,.9), rgba(99,102,241,.4)); }
+.hr-clip-violet { left: 50cqw; right: 6cqw; background: linear-gradient(90deg, rgba(168,85,247,.9), rgba(168,85,247,.4)); }
+.hr-playhead {
+  position: absolute;
+  left: 10cqw;
+  top: -1.5cqw;
+  bottom: -0.5cqw;
+  width: 2px;
+  background: #eef3ff;
+  box-shadow: 0 0 2cqw rgba(238, 243, 255, 0.7);
+  transform: translate3d(70cqw, 0, 0);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .hr-stage[data-paused="true"] * { animation-play-state: paused !important; }
-  .hr-master { animation: hrMaster 12s var(--ease-out-expo) infinite; }
-  .hr-square { animation: hrSquare 12s var(--ease-out-expo) infinite; }
-  .hr-tall   { animation: hrTall 12s var(--ease-out-expo) infinite; }
-  .hr-tag-late { animation: hrFade 12s ease infinite; }
-  .hr-cursor { animation: hrCursor 12s var(--ease-out-expo) infinite; }
-  .hr-btn { animation: hrPress 12s ease infinite; }
-  .hr-toast { animation: hrToast 12s ease infinite; }
-  .hr-bar { animation: hrBar 12s linear infinite; }
+  .hr-glow { animation: hrBreath 14s ease-in-out infinite alternate; }
+  .hr-master { animation: hrMaster 14s var(--ease-out-expo) infinite both; }
+  .hr-square { animation: hrSquare 14s var(--ease-out-expo) infinite both; }
+  .hr-tall { animation: hrTall 14s var(--ease-out-expo) infinite both; }
+  .hr-arc-sq { animation: hrSqX 14s cubic-bezier(0.5, 0, 0.2, 1) infinite both; }
+  .hr-arc-tall { animation: hrTallX 14s cubic-bezier(0.5, 0, 0.2, 1) infinite both; }
+  .hr-tag-late { animation: hrFade 14s ease infinite both; }
+  .hr-bar-col { animation: hrBars 14s var(--ease-out-expo) calc(var(--i) * 70ms) infinite both; }
+  .hr-cursor { animation: hrCursor 14s var(--ease-out-expo) infinite both; }
+  .hr-cursor-1 { animation-delay: 70ms; }
+  .hr-cursor-2 { animation-delay: 150ms; }
+  .hr-btn { animation: hrPress 14s ease infinite both; }
+  .hr-ripple { animation: hrRipple 14s ease-out infinite both; }
+  .hr-toast { animation: hrToast 14s ease infinite both; }
+  .hr-word { animation: hrWord 14s var(--ease-out-expo) calc(var(--w) * 130ms) infinite both; }
+  .hr-thumb { animation: hrThumb 14s ease infinite both; }
+  .hr-master .hr-sheen { animation: hrSheen 14s ease-in-out 0s infinite both; }
+  .hr-square .hr-sheen { animation: hrSheen 14s ease-in-out 3.4s infinite both; }
+  .hr-tall .hr-sheen { animation: hrSheen 14s ease-in-out 3.9s infinite both; }
+  .hr-clip-cyan { animation: hrClipA 14s var(--ease-out-expo) infinite both; }
+  .hr-clip-iris { animation: hrClipB 14s var(--ease-out-expo) infinite both; }
+  .hr-clip-violet { animation: hrClipC 14s var(--ease-out-expo) infinite both; }
+  .hr-playhead { animation: hrPlay 14s linear infinite both; }
 
-  /* master: settles slightly left while the cuts peel off */
+  @keyframes hrBreath { from { transform: scale(1) translate3d(0, 0, 0); opacity: 0.8; } to { transform: scale(1.08) translate3d(1%, -1%, 0); opacity: 1; } }
   @keyframes hrMaster {
-    0%   { transform: translate3d(14cqw, 14cqw, 0) scale(1.18); }
-    38%  { transform: translate3d(14cqw, 14cqw, 0) scale(1.18); }
-    52%, 92% { transform: none; }
-    100% { transform: translate3d(14cqw, 14cqw, 0) scale(1.18); }
+    0% { opacity: 0; transform: translate3d(14cqw, 16cqw, 0) scale(1.08); }
+    5%, 38% { opacity: 1; transform: translate3d(14cqw, 14cqw, 0) scale(1.18); }
+    54%, 93% { opacity: 1; transform: none; }
+    99%, 100% { opacity: 0; transform: translate3d(0, -2cqw, 0) scale(0.97); }
   }
-  /* 1:1 peels from behind the master and drops below it */
+  /* cuts arc out: x and y use different easing so the path curves */
+  @keyframes hrSqX { 0%, 40% { transform: translate3d(14cqw, 0, 0); } 56%, 100% { transform: none; } }
   @keyframes hrSquare {
-    0%, 40% { opacity: 0; transform: translate3d(-1cqw, -40cqw, 0) scale(0.55); }
-    54%, 90% { opacity: 1; transform: none; }
-    98%, 100% { opacity: 0; transform: translate3d(-1cqw, -40cqw, 0) scale(0.55); }
+    0%, 40% { opacity: 0; transform: translate3d(0, -40cqw, 0) scale(0.55) rotate(-8deg); }
+    58%, 93% { opacity: 1; transform: none; }
+    99%, 100% { opacity: 0; transform: translate3d(0, -40cqw, 0) scale(0.55) rotate(-8deg); }
   }
-  /* 9:16 slides out to the right */
+  @keyframes hrTallX { 0%, 44% { transform: translate3d(-40cqw, 0, 0); } 60%, 100% { transform: none; } }
   @keyframes hrTall {
-    0%, 44% { opacity: 0; transform: translate3d(-52cqw, 0, 0) scale(0.8); }
-    58%, 90% { opacity: 1; transform: none; }
-    98%, 100% { opacity: 0; transform: translate3d(-52cqw, 0, 0) scale(0.8); }
+    0%, 44% { opacity: 0; transform: translate3d(0, 10cqw, 0) scale(0.7) rotate(6deg); }
+    62%, 93% { opacity: 1; transform: none; }
+    99%, 100% { opacity: 0; transform: translate3d(0, 10cqw, 0) scale(0.7) rotate(6deg); }
   }
-  @keyframes hrFade {
-    0%, 56% { opacity: 0; }
-    64%, 90% { opacity: 1; }
-    97%, 100% { opacity: 0; }
-  }
-  /* cursor lives in master frame units; glides to Export and clicks */
+  @keyframes hrFade { 0%, 58% { opacity: 0; } 66%, 93% { opacity: 1; } 99%, 100% { opacity: 0; } }
+  @keyframes hrBars { 0%, 4% { transform: scaleY(0); } 15%, 93% { transform: scaleY(1); } 99%, 100% { transform: scaleY(0); } }
   @keyframes hrCursor {
-    0%   { opacity: 0; transform: translate3d(54cqw, 40cqw, 0); }
-    6%   { opacity: 1; transform: translate3d(54cqw, 40cqw, 0); }
-    22%, 30% { opacity: 1; transform: translate3d(90cqw, 8cqw, 0); }
-    34%, 100% { opacity: 0; transform: translate3d(90cqw, 8cqw, 0); }
+    0%, 8% { opacity: 0; transform: translate3d(50cqw, 30cqw, 0); }
+    11% { opacity: var(--o, 1); transform: translate3d(50cqw, 30cqw, 0); }
+    16% { opacity: var(--o, 1); transform: translate3d(64cqw, 30cqw, 0); }
+    26%, 31% { opacity: var(--o, 1); transform: translate3d(90cqw, 8cqw, 0); }
+    37%, 100% { opacity: 0; transform: translate3d(90cqw, 8cqw, 0); }
   }
-  @keyframes hrPress {
-    0%, 22% { transform: scale(1); }
-    25% { transform: scale(0.92); }
-    29%, 100% { transform: scale(1); }
-  }
-  @keyframes hrToast {
-    0%, 26% { opacity: 0; transform: translate3d(0, 2cqw, 0); }
-    32%, 90% { opacity: 1; transform: none; }
-    97%, 100% { opacity: 0; transform: translate3d(0, 2cqw, 0); }
-  }
-  @keyframes hrBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes hrPress { 0%, 26% { transform: scale(1); } 28% { transform: scale(0.92); } 32%, 100% { transform: scale(1); } }
+  @keyframes hrRipple { 0%, 27% { opacity: 0; transform: scale(0.2); } 28% { opacity: 0.9; transform: scale(0.3); } 38%, 100% { opacity: 0; transform: scale(2.6); } }
+  @keyframes hrToast { 0%, 29% { opacity: 0; transform: translate3d(0, 2cqw, 0); } 35%, 93% { opacity: 1; transform: none; } 99%, 100% { opacity: 0; transform: translate3d(0, 2cqw, 0); } }
+  @keyframes hrWord { 0%, 60% { opacity: 0; transform: translate3d(0, 55%, 0); } 66%, 93% { opacity: 1; transform: none; } 99%, 100% { opacity: 0; transform: translate3d(0, 55%, 0); } }
+  @keyframes hrThumb { 0%, 70% { transform: scale(1); } 74% { transform: scale(1.06); } 78%, 100% { transform: scale(1); } }
+  @keyframes hrSheen { 0%, 8% { opacity: 0; transform: translateX(-120%); } 9% { opacity: 1; } 22% { opacity: 1; transform: translateX(120%); } 23%, 100% { opacity: 0; transform: translateX(120%); } }
+  @keyframes hrClipA { 0%, 3% { transform: scaleX(0); } 14%, 93% { transform: scaleX(1); } 99%, 100% { transform: scaleX(0); } }
+  @keyframes hrClipB { 0%, 54% { transform: scaleX(0); } 64%, 93% { transform: scaleX(1); } 99%, 100% { transform: scaleX(0); } }
+  @keyframes hrClipC { 0%, 58% { transform: scaleX(0); } 68%, 93% { transform: scaleX(1); } 99%, 100% { transform: scaleX(0); } }
+  @keyframes hrPlay { 0% { transform: translate3d(0, 0, 0); } 93%, 100% { transform: translate3d(70cqw, 0, 0); } }
 }

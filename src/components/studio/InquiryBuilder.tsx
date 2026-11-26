@@ -204,7 +204,7 @@ export const InquiryBuilder: React.FC = () => {
         <div className="flex flex-col gap-3 sm:flex-row">
           <button
             type="submit"
-            className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-signal px-7 text-sm font-semibold text-signal-ink transition-colors hover:bg-[#ff8660] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+            className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-signal px-7 text-sm font-semibold text-signal-ink transition-colors hover:bg-[#6AF0FB] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
             <Mail className="h-4 w-4" aria-hidden /> Open email draft
           </button>
