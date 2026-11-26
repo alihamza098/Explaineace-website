@@ -22,14 +22,14 @@ import { CTA } from "@/components/CTA";
 export const metadata: Metadata = {
   title: "About Ali | SaaS Video Specialist",
   description:
-    "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 160+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
+    "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with a 5.0★ Fiverr profile and Upwork direct contracts. Read my story and career timeline.",
   alternates: {
     canonical: "https://explainerace.com/about",
   },
   openGraph: {
     title: "About Ali | SaaS Video Specialist & Founder of EXPLAINERACE",
     description:
-      "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 160+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
+      "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with a 5.0★ Fiverr profile and Upwork direct contracts. Read my story and career timeline.",
     url: "https://explainerace.com/about",
     type: "profile",
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Ali | SaaS Video Specialist & Founder of EXPLAINERACE",
     description:
-      "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with 160+ verified client reviews on Fiverr (Level 2) and Upwork. Read my story and career timeline.",
+      "Learn about Ali, founder of EXPLAINERACE and SaaS video specialist with a 5.0★ Fiverr profile and Upwork direct contracts. Read my story and career timeline.",
     images: ["https://explainerace.com/avatar.png"],
   },
 };
@@ -60,7 +60,7 @@ export default function AboutPage() {
     },
     {
       year: "2022 – 2023",
-      title: "Achieved Level 2 Seller Status on Fiverr",
+      title: "Built the Video Supremacy practice on Fiverr",
       description:
         "Crossed 100+ five-star verified client engagements across B2B SaaS, mobile health apps, fintech trading platforms, and developer API tools under the Video Supremacy brand. Refined calibrated dynamic zoom post-production standards.",
     },
@@ -102,27 +102,27 @@ export default function AboutPage() {
               {/* Floating verified badge */}
               <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-emerald-500/20 border border-emerald-500/40 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-semibold text-emerald-300 shadow-lg flex items-center gap-1.5 whitespace-nowrap">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Level 2 Fiverr Seller (4.8★)</span>
+                <span>5.0★ on Fiverr</span>
               </div>
             </div>
 
             {/* Quick stats & Badges below avatar */}
             <div className="mt-10 w-full p-5 rounded-2xl bg-surface-card border border-white/[0.06] space-y-3.5 shadow-card">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-400">Seller Ranking</span>
+                <span className="text-slate-400">Platforms</span>
                 <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                  <Award className="w-3.5 h-3.5" /> Level 2 Seller
+                  <Award className="w-3.5 h-3.5" /> Fiverr + Upwork
                 </span>
               </div>
               <div className="flex items-center justify-between text-xs">
                 <span className="text-slate-400">Client Rating</span>
                 <span className="text-amber-400 font-semibold flex items-center gap-1">
-                  <Star className="w-3.5 h-3.5 fill-amber-400" /> 4.8 / 5.0
+                  <Star className="w-3.5 h-3.5 fill-amber-400" /> 5.0 / 5.0
                 </span>
               </div>
               <div className="flex items-center justify-between text-xs">
                 <span className="text-slate-400">Verified Client Reviews</span>
-                <span className="text-white font-medium">160+ Reviews</span>
+                <span className="text-white font-medium">18 Reviews</span>
               </div>
               <div className="flex items-center justify-between text-xs">
                 <span className="text-slate-400">Upwork Escrow</span>
@@ -136,7 +136,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   className="w-full py-2.5 px-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/30 text-xs font-semibold text-emerald-300 flex items-center justify-center gap-1.5 transition-colors"
                 >
-                  <span>Order on Fiverr (4.8★)</span>
+                  <span>Order on Fiverr (5.0★)</span>
                   <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />
                 </a>
                 <a
@@ -171,7 +171,7 @@ export default function AboutPage() {
                 Unlike generalist video editors who cut social vlogs, travel reels, or wedding videos on the side, my entire career is dedicated exclusively to digital interfaces. I have spent thousands of hours analyzing SaaS dashboards, iOS/Android user journeys, responsive viewports, and onboarding activation funnels.
               </p>
               <p>
-                Over the course of 160+ verified client engagements on Fiverr and international direct contracts, I have built a battle-tested post-production workflow. Every project combines native 1080p/4K calibrated screen capture, dynamic 3D focal zooms that eliminate mobile squinting, stabilized bezier cursor physics, professional studio audio narration, and synchronized subtitles.
+                Across Fiverr orders and international direct contracts, I have built a battle-tested post-production workflow. Every project combines native 1080p/4K calibrated screen capture, dynamic 3D focal zooms that eliminate mobile squinting, stabilized bezier cursor physics, professional studio audio narration, and synchronized subtitles.
               </p>
               <p>
                 Whether you need a clean 60-second simple screencast tutorial for your documentation academy, an energetic product launch explainer with custom UI motion graphics, or high-retention AI UGC video ads for paid social, I collaborate directly with your team with zero agency middlemen, transparent rates, and fast turnarounds.

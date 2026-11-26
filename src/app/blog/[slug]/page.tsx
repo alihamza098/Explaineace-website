@@ -258,7 +258,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   {post.author.name}
                 </span>
                 <span className="block text-xs text-slate-400">
-                  {post.author.role} · 160+ Reviews (4.8★)
+                  {post.author.role} · 5.0★ · 18 Fiverr reviews
                 </span>
               </div>
             </div>
@@ -411,11 +411,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
                 <h4 className="text-lg font-bold text-white">Written by Ali</h4>
                 <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center gap-1">
-                  <Star className="w-3 h-3 fill-emerald-400" /> Level 2 Seller (4.8★)
+                  <Star className="w-3 h-3 fill-emerald-400" /> 5.0★ on Fiverr
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Founder of EXPLAINERACE and dedicated software video specialist with over 160+ verified client engagements on Fiverr. Specializing in UI zooms, screen recording physics, and instructional SaaS tours.
+                Founder of EXPLAINERACE and dedicated software video specialist with a 5.0★ rating across 18 reviews on Fiverr. Specializing in UI zooms, screen recording physics, and instructional SaaS tours.
               </p>
               <div className="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs font-semibold">
                 <Link href="/about" className="text-brand-300 hover:text-white underline">

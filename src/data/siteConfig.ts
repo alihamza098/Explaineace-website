@@ -25,27 +25,26 @@ export const siteConfig = {
       username: "video_supermacy",
       name: "Video Supremacy (Main Portfolio)",
       url: "https://www.fiverr.com/video_supermacy",
-      rating: "4.8",
-      reviewsCount: "160",
-      sellerLevel: "Level 2 Seller",
     },
     {
       username: "explainerace",
       name: "ExplainerAce",
       url: "https://www.fiverr.com/explainerace",
-      sellerLevel: "Verified Seller",
+      rating: "5.0",
+      reviewsCount: "18",
     },
   ],
   fiverr: {
-    username: "video_supermacy",
-    profileUrl: "https://www.fiverr.com/video_supermacy",
+    // Headline rating: @explainerace profile (owner-confirmed 5.0 / 18 reviews).
+    // Keep as plain text linking to Fiverr — never mark up as AggregateRating.
+    username: "explainerace",
+    profileUrl: "https://www.fiverr.com/explainerace",
     gigUrl: "https://www.fiverr.com/s/BbB9Ax7",
     portfolioUrl: "https://www.fiverr.com/s/vmwoBe",
-    secondProfileUrl: "https://www.fiverr.com/explainerace",
-    rating: "4.8",
+    secondProfileUrl: "https://www.fiverr.com/video_supermacy",
+    rating: "5.0",
     maxRating: "5.0",
-    reviewsCount: "160",
-    sellerLevel: "Level 2 Seller",
+    reviewsCount: "18",
     statusText: "Top Rated Performance & Reliable Turnaround",
   },
   contracts: {
@@ -69,9 +68,8 @@ export const siteConfig = {
     secondaryFeaturedVideoId: "fQ7YXzamRvQ", // Nexus AI Platform Promo
   },
   stats: [
-    { value: "4.8 / 5", label: "Client Rating", sub: "Based on verified feedback" },
-    { value: "160+", label: "Fiverr Reviews", sub: "100% genuine buyer feedback" },
-    { value: "Level 2", label: "Fiverr Seller", sub: "Vetted platform ranking" },
+    { value: "5.0 / 5", label: "Fiverr Rating", sub: "@explainerace profile" },
+    { value: "18", label: "Fiverr Reviews", sub: "Buyer feedback on Fiverr" },
     { value: "0% Fee", label: "Upwork Direct", sub: "Zero fee on client contract" },
   ],
   navLinks: [

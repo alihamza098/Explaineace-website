@@ -158,15 +158,15 @@ export default function ExplainerVideoProductionPage() {
             <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs sm:text-sm text-slate-300">
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span>160+ Fiverr reviews</span>
+                <span>18 Fiverr reviews</span>
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span>4.8 out of 5 stars</span>
+                <span>5.0 out of 5 stars</span>
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span>Level 2 Seller</span>
+                <span>Fiverr &amp; Upwork direct</span>
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />

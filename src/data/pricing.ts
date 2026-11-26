@@ -130,7 +130,7 @@ export const pricingFaqs = [
   },
   {
     q: "How do we handle payment safely?",
-    a: "You have 4 safe options: Upwork Direct Contract (0% buyer marketplace fee, full escrow protection), Payoneer business invoice, direct international bank transfer, or our vetted Fiverr Level 2 profiles.",
+    a: "You have 4 safe options: Upwork Direct Contract (0% buyer marketplace fee, full escrow protection), Payoneer business invoice, direct international bank transfer, or our Fiverr profiles.",
   },
   {
     q: "What do you need from me to get started?",

@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
                   className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors group text-sm"
                 >
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span className="font-medium text-emerald-300 group-hover:text-emerald-200">Order Fiverr Gig (4.8★)</span>
+                  <span className="font-medium text-emerald-300 group-hover:text-emerald-200">Order Fiverr Gig</span>
                   <ExternalLink className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white transition-colors" />
                 </a>
               </li>
@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
                   className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors group text-sm"
                 >
                   <span className="w-2 h-2 rounded-full bg-slate-400"></span>
-                  <span>Fiverr: @{siteConfig.fiverrProfiles[0].username} (Level 2)</span>
+                  <span>Fiverr: @{siteConfig.fiverrProfiles[0].username} </span>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-white transition-colors" />
                 </a>
               </li>
@@ -169,7 +169,7 @@ export const Footer: React.FC = () => {
               Privacy Policy
             </Link>
             <span className="text-slate-400">
-              Upwork Direct (0% Client Fee) · Payoneer Invoicing · Fiverr Level 2
+              Upwork Direct (0% Client Fee) · Payoneer Invoicing · Fiverr
             </span>
           </div>
         </div>

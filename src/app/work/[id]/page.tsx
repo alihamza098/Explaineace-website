@@ -496,10 +496,10 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               <div className="p-5 rounded-2xl bg-surface-subtle/80 border border-white/[0.04] text-xs text-slate-400 space-y-2">
                 <div className="flex items-center gap-2 text-white font-medium">
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  <span>Verified Fiverr Level 2 Seller</span>
+                  <span>Fiverr seller · 5.0★ (18 reviews)</span>
                 </div>
                 <p className="leading-relaxed">
-                  All production was created directly by Ali. 4.8/5 average rating across 160+ verified client engagements.
+                  All production was created directly by Ali. 5.0/5 on Fiverr across 18 reviews.
                 </p>
                 <a
                   href={siteConfig.fiverr.profileUrl}

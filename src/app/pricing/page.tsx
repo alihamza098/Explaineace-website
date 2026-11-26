@@ -16,18 +16,23 @@ import { pricingTiers, pricingFaqs } from "@/data/pricing";
 import { siteConfig } from "@/data/siteConfig";
 import { WhatsAppIcon, UpworkIcon } from "@/components/Icons";
 import { PricingCalculator } from "@/components/PricingCalculator";
+import { CampaignProvider } from "@/components/studio/CampaignProvider";
+import { PackageCards } from "@/components/studio/PackageCards";
+import { PublishingSection } from "@/components/studio/PublishingSection";
+import { InquiryBuilder } from "@/components/studio/InquiryBuilder";
+import { StudioSection } from "@/components/studio/StudioSection";
 
 export const metadata: Metadata = {
-  title: "SaaS Video Production Pricing & Rates | Screencasts & Demos",
+  title: "Pricing: Campaign Packages from $249 & Single-Video Rates",
   description:
-    "Transparent SaaS video pricing: $120/60s screencasts, $220/60s walkthroughs, $200–$300 AI product ads, and $800–$1,200 custom UI motion. Request your quote today.",
+    "Campaign packages from $249 (film + social edits in 16:9, 1:1 and 9:16, optional posting) plus single-video rates: $120/60s screencasts, $220/60s walkthroughs, $200–$300 AI ads, $800–$1,200 custom UI motion.",
   alternates: {
     canonical: "https://explainerace.com/pricing",
   },
   openGraph: {
-    title: "SaaS Video Production Pricing & Rates | Screencasts & Demos | EXPLAINERACE",
+    title: "Pricing: Campaign Packages from $249 & Single-Video Rates | EXPLAINERACE",
     description:
-      "Transparent SaaS video pricing: $120/60s screencasts, $220/60s walkthroughs, $200–$300 AI product ads, and $800–$1,200 custom UI motion. Request your quote today.",
+      "Campaign packages from $249 (film + social edits in 16:9, 1:1 and 9:16, optional posting) plus single-video rates: $120/60s screencasts, $220/60s walkthroughs, $200–$300 AI ads, $800–$1,200 custom UI motion.",
     url: "https://explainerace.com/pricing",
     type: "website",
     images: [
@@ -41,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaaS Video Production Pricing & Rates | Screencasts & Demos | EXPLAINERACE",
+    title: "Pricing: Campaign Packages from $249 & Single-Video Rates | EXPLAINERACE",
     description:
-      "Transparent SaaS video pricing: $120/60s screencasts, $220/60s walkthroughs, $200–$300 AI product ads, and $800–$1,200 custom UI motion. Request your quote today.",
+      "Campaign packages from $249 (film + social edits in 16:9, 1:1 and 9:16, optional posting) plus single-video rates: $120/60s screencasts, $220/60s walkthroughs, $200–$300 AI ads, $800–$1,200 custom UI motion.",
     images: ["https://img.youtube.com/vi/jzb-LpUo2i8/hqdefault.jpg"],
   },
 };
@@ -68,7 +73,47 @@ export default function PricingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <div className="pt-28 sm:pt-36 pb-24 relative overflow-hidden">
+      <div className="studio bg-ink text-paper pt-16">
+        <CampaignProvider>
+          <StudioSection
+            id="packages"
+            as="h1"
+            eyebrow="Campaign packages · introductory prices (USD)"
+            title="What exactly you receive, and what it costs."
+            intro={
+              <>
+                A main product film plus distinct social edits, every edit delivered in 16:9, 1:1 and 9:16. Looking for a
+                single video instead? Jump to{" "}
+                <a href="#single-video" className="font-medium text-paper underline decoration-lime underline-offset-4 hover:text-lime">
+                  Need just one video?
+                </a>
+              </>
+            }
+          >
+            <PackageCards source="pricing" />
+          </StudioSection>
+          <StudioSection
+            id="publishing"
+            eyebrow="After approval"
+            title="Who hits publish?"
+            intro="Publishing is optional. Either you post the finished files yourself, or we do it on a calendar you approve."
+            tone="raised"
+          >
+            <PublishingSection source="pricing" />
+          </StudioSection>
+          <StudioSection
+            id="inquiry"
+            headingId="inquiry-title"
+            headingTabIndex
+            eyebrow="Project inquiry"
+            title="Start with a short brief."
+            intro="Your package and publishing choice carry over from above. You can change either one here."
+          >
+            <InquiryBuilder />
+          </StudioSection>
+        </CampaignProvider>
+      </div>
+      <div id="single-video" className="scroll-mt-16 pt-20 sm:pt-24 pb-24 relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-brand-600/10 blur-[140px] rounded-full" />
@@ -80,15 +125,11 @@ export default function PricingPage() {
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5 text-accent-cyan" />
-            <span>Transparent Production Pricing</span>
+            <span>Single-video rates</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            Clear rates. High clarity.
-            <br />
-            <span className="bg-gradient-to-r from-brand-300 via-indigo-200 to-accent-cyan bg-clip-text text-transparent">
-              Zero guesswork.
-            </span>
-          </h1>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Need just one video?
+          </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
             From focused instructional screencasts to dynamic SaaS walkthroughs, AI UGC product ads, and custom UI motion graphics. Inbox for special discounts on longer projects and multi-video batches.
           </p>
@@ -305,16 +346,16 @@ export default function PricingPage() {
             >
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
-                  4.8★ (160 Reviews)
+                  5.0★ (18 Reviews)
                 </span>
                 <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-emerald-400 transition-colors" />
               </div>
               <h3 className="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors flex items-center justify-between">
                 <span>Fiverr Gig Order</span>
-                <span className="text-[10px] uppercase font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">Level 2</span>
+                <span className="text-[10px] uppercase font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">Fiverr</span>
               </h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Prefer standard freelance platform ordering with escrow protection? Hire directly through our active Fiverr Gig with 160+ verified 5-star reviews.
+                Prefer standard freelance platform ordering with escrow protection? Hire directly through our active Fiverr Gig, rated 5.0★ across 18 reviews.
               </p>
               <div className="pt-1 inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 group-hover:underline">
                 <span>Order on Fiverr Gig</span>

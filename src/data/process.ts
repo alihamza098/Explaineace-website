@@ -63,6 +63,6 @@ export const processFaqs = [
   {
     question: "Can I order directly through Fiverr or work with you directly?",
     answer:
-      "Both options are completely welcome. If you prefer the buyer protection of Fiverr, you can hire me through my verified Level 2 profile (video_supermacy). Or, you can reach out directly via email to initiate a custom contract.",
+      "Both options are completely welcome. If you prefer the buyer protection of Fiverr, you can hire me through my Fiverr profiles (explainerace or video_supermacy). Or, you can reach out directly via email to initiate a custom contract.",
   },
 ];

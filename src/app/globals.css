@@ -279,3 +279,110 @@ html.js .reveal.is-visible {
   }
   .demo-cursor { display: none; }
 }
+
+/* ==================================================================
+ * Studio system (homepage / pricing revamp)
+ * Warm off-white on near-black, one restrained acid-lime accent.
+ * Animate transform/opacity only. Reduced motion is honoured below.
+ * ================================================================== */
+.studio-focus:focus-visible,
+.studio a:focus-visible,
+.studio button:focus-visible {
+  outline: 2px solid #c8f23a;
+  outline-offset: 3px;
+}
+
+.studio-grain {
+  background-image: radial-gradient(rgba(244, 240, 230, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 70% 30%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 70% 30%, #000 20%, transparent 75%);
+}
+
+/* ---- One feature. Three frames. ---- */
+.fx-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  container-type: size;
+  background: #0e0f0d;
+  border-radius: 14px;
+  transform: translate(-50%, -50%) scale(0.97);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease,
+    transform 0.45s var(--ease-out-expo),
+    visibility 0s linear 0.45s;
+}
+.fx-layer[data-active="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  transition:
+    opacity 0.35s ease 0.18s,
+    transform 0.55s var(--ease-out-expo) 0.1s,
+    visibility 0s;
+}
+.fx-layer[data-fmt="16:9"] { width: min(100cqw, 177.7778cqh); aspect-ratio: 16 / 9; }
+.fx-layer[data-fmt="1:1"] { width: min(100cqw, 100cqh); aspect-ratio: 1 / 1; }
+.fx-layer[data-fmt="9:16"] { height: min(100cqh, 177.7778cqw); aspect-ratio: 9 / 16; }
+
+/* elements settle into place after the frame changes */
+.fx-in {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 0.4s ease, transform 0.5s var(--ease-out-expo);
+}
+.fx-layer[data-active="true"] .fx-in {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.28s;
+}
+
+/* the export control */
+.fx-btn {
+  background: #c8f23a;
+  color: #1b2204;
+  border-radius: 1.6cqw;
+  cursor: pointer;
+}
+.fx-layer[data-fmt="1:1"] .fx-btn { border-radius: 2.4cqw; }
+.fx-layer[data-fmt="9:16"] .fx-btn { border-radius: 5cqw; }
+.fx-btn.fx-in { transition: opacity 0.4s ease, transform 0.15s ease; }
+[data-phase="press"] .fx-layer[data-active="true"] .fx-btn { transform: scale(0.94); }
+.fx-ring {
+  position: absolute;
+  inset: -0.9cqw;
+  border-radius: inherit;
+  border: 2px solid rgba(200, 242, 58, 0.7);
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+[data-phase="press"] .fx-ring, [data-phase="done"] .fx-ring { opacity: 0; }
+.fx-done { opacity: 0; transition: opacity 0.2s ease; }
+.fx-idle { transition: opacity 0.2s ease; }
+[data-phase="done"] .fx-done { opacity: 1; }
+[data-phase="done"] .fx-idle { opacity: 0; }
+
+.fx-cursor { transform: translate3d(var(--c0x), var(--c0y), 0); opacity: 0; transition: transform 1.05s var(--ease-out-expo), opacity 0.3s ease; }
+.fx-layer[data-active="true"] .fx-cursor { opacity: 1; transition-delay: 0.4s, 0.4s; }
+[data-phase="moving"] .fx-layer .fx-cursor,
+[data-phase="press"] .fx-layer .fx-cursor { transform: translate3d(var(--c1x), var(--c1y), 0); transition-delay: 0s; }
+[data-phase="done"] .fx-layer .fx-cursor { transform: translate3d(var(--c1x), var(--c1y), 0); opacity: 0; transition-delay: 0.5s; }
+
+/* success state */
+.fx-ok { opacity: 0; transform: translate3d(0, 12px, 0); transition: opacity 0.3s ease, transform 0.45s var(--ease-out-expo); }
+[data-phase="done"] .fx-layer[data-active="true"] .fx-ok { opacity: 1; transform: none; }
+[data-phase="done"] .fx-layer[data-active="true"] .fx-fade { opacity: 0; transform: scale(0.96); }
+[data-phase="done"] .fx-layer[data-active="true"] .fx-idle-only { opacity: 0; }
+
+.fx-guide {
+  transition: transform 0.55s var(--ease-out-expo), opacity 0.3s ease;
+  transform-origin: 50% 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-layer, .fx-in, .fx-ok, .fx-guide, .fx-cursor { transition-duration: 0.01ms !important; transition-delay: 0s !important; }
+}

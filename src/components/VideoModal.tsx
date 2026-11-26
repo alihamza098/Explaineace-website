@@ -124,11 +124,21 @@ export const VideoModal: React.FC<VideoModalProps> = ({
         </div>
 
         {/* Footer info in modal */}
-        <div className="px-5 py-3 bg-surface/50 border-t border-white/[0.06] flex items-center justify-between text-xs text-slate-400">
+        <div className="px-5 py-3 bg-surface/50 border-t border-white/[0.06] flex flex-wrap gap-y-2 items-center justify-between text-xs text-slate-400">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>Recorded in native 1080p · Edited by Ali</span>
           </div>
+          {videoUrl && (
+            <a
+              href={videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-slate-300 hover:text-white underline underline-offset-4"
+            >
+              Video not loading? Watch on YouTube
+            </a>
+          )}
           {projectId && (
             <Link
               href={`/work/${projectId}`}

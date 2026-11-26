@@ -240,7 +240,7 @@ export default function ContactPage() {
             <div className="p-6 sm:p-7 rounded-3xl bg-surface-card border border-white/[0.08] shadow-card space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
-                  4.8 ★ · 160+ Reviews
+                  5.0 ★ · 18 Reviews
                 </span>
                 <ShieldCheck className="w-5 h-5 text-emerald-400" />
               </div>
@@ -250,7 +250,7 @@ export default function ContactPage() {
               </h3>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Prefer hiring through Fiverr? Place an order directly on my active Level 2 gig or explore my verified portfolio profiles:
+                Prefer hiring through Fiverr? Place an order directly on my active gig or explore my verified portfolio profiles:
               </p>
 
               <a
@@ -261,7 +261,7 @@ export default function ContactPage() {
               >
                 <div className="flex items-center justify-between text-xs">
                   <span className="font-bold text-emerald-400">Featured Active Gig</span>
-                  <span className="text-[10px] text-slate-300 font-medium">Level 2 Seller</span>
+                  <span className="text-[10px] text-slate-300 font-medium">5.0★ · 18 reviews</span>
                 </div>
                 <div className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors flex items-center justify-between mt-1">
                   <span>Order on Fiverr: Software & SaaS Explainer Gig</span>
@@ -279,7 +279,7 @@ export default function ContactPage() {
                     className="p-3 rounded-xl bg-surface-subtle hover:bg-surface-hover border border-white/[0.06] transition-colors block"
                   >
                     <span className="text-[10px] text-emerald-400 font-semibold block uppercase">
-                      {p.sellerLevel}
+                      {p.rating ? `${p.rating}★ · ${p.reviewsCount} reviews` : "Fiverr profile"}
                     </span>
                     <span className="text-xs font-bold text-white hover:text-brand-300 transition-colors flex items-center justify-between mt-0.5">
                       <span>fiverr.com/{p.username}</span>

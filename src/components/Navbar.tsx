@@ -10,17 +10,8 @@ import { siteConfig } from "@/data/siteConfig";
 import { BrandLogo } from "@/components/BrandLogo";
 
 export const Navbar: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Close mobile menu on page navigation
   useEffect(() => {
@@ -28,13 +19,8 @@ export const Navbar: React.FC = () => {
   }, [pathname]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#08090E]/92 backdrop-blur-md border-b border-white/[0.08] shadow-lg shadow-black/40 py-3.5"
-          : "bg-transparent py-5"
-      }`}
-    >
+    // Static, constant-size header: it never hides, resizes or restyles on scroll.
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0B0B0A] border-b border-white/[0.08] py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo: EXPLAINERACE */}
         <Link
@@ -80,14 +66,9 @@ export const Navbar: React.FC = () => {
           </a>
 
           <Link
-            href="/contact"
-            className="group relative inline-flex items-center gap-2 text-xs font-semibold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 px-4 py-2.5 rounded-full shadow-glow hover:shadow-glow-lg transition-all duration-200 active:scale-95"
+            href="/#inquiry"
+            className="group relative inline-flex items-center gap-2 text-xs font-semibold text-[#1B2204] bg-[#C8F23A] hover:bg-[#d6ff4a] px-4 py-2.5 rounded-full transition-colors duration-200"
           >
-            {/* Live Availability Radar Dot */}
-            <span className="relative flex h-2 w-2 mr-0.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
-            </span>
             <span>Start a Project</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </Link>
@@ -106,7 +87,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Sheet */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[60px] bg-[#08090E]/98 backdrop-blur-xl border-b border-white/[0.08] p-6 shadow-2xl animate-fade-in">
+        <div className="md:hidden fixed inset-x-0 top-[64px] bg-[#08090E]/98 backdrop-blur-xl border-b border-white/[0.08] p-6 shadow-2xl animate-fade-in">
           <nav className="flex flex-col gap-2">
             {siteConfig.navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -136,8 +117,8 @@ export const Navbar: React.FC = () => {
               </a>
 
               <Link
-                href="/contact"
-                className="w-full text-center py-3.5 rounded-xl text-white bg-gradient-to-r from-brand-600 to-indigo-600 font-semibold text-sm shadow-glow flex items-center justify-center gap-2"
+                href="/#inquiry"
+                className="w-full text-center py-3.5 rounded-xl text-[#1B2204] bg-[#C8F23A] font-semibold text-sm flex items-center justify-center gap-2"
               >
                 Start a Project
                 <ArrowRight className="w-4 h-4" />
@@ -152,7 +133,7 @@ export const Navbar: React.FC = () => {
                 >
                   <span className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    <span>Order via Fiverr Gig (4.8★)</span>
+                    <span>Order via Fiverr Gig</span>
                   </span>
                   <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />
                 </a>
@@ -162,7 +143,7 @@ export const Navbar: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-slate-300"
                 >
-                  <span>Fiverr: @video_supermacy (Level 2 · 4.8★)</span>
+                  <span>Fiverr: @{siteConfig.fiverrProfiles[0].username}</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
                 <a
@@ -171,7 +152,7 @@ export const Navbar: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-slate-300"
                 >
-                  <span>Fiverr: @explainerace</span>
+                  <span>Fiverr: @{siteConfig.fiverrProfiles[1].username} ({siteConfig.fiverrProfiles[1].rating}★ · {siteConfig.fiverrProfiles[1].reviewsCount} reviews)</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>

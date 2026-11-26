@@ -58,7 +58,7 @@ export const CTA: React.FC = () => {
             className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors group"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
-            <span>Order via Fiverr Gig (Level 2 Seller · 4.8★)</span>
+            <span>Order via Fiverr Gig (5.0★ · 18 reviews)</span>
             <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-white transition-colors" />
           </a>
 
