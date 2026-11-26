@@ -415,7 +415,7 @@ html.js .reveal.is-visible {
 .hr-tag-late { margin-top: 0.8cqw; }
 .hr-bar {
   position: absolute;
-  left: 2cqw; right: 2cqw; bottom: 1cqw; height: 2px;
+  left: 2cqw; right: 2cqw; bottom: -3cqw; height: 2px;
   background: #ff6b3d;
   transform-origin: left;
   transform: scaleX(1);
