@@ -19,7 +19,7 @@ export const StudioSection: React.FC<{
   >
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="mb-10 max-w-3xl sm:mb-14">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-lime">{eyebrow}</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-signal">{eyebrow}</p>
         <H
           id={headingId ?? `${id}-title`}
           {...(headingTabIndex ? { tabIndex: -1, "data-inquiry-heading": "" } : {})}

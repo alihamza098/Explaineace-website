@@ -28,9 +28,9 @@ export const SelectedFilms: React.FC = () => {
                 type="button"
                 onClick={() => open(id, "selected-films")}
                 aria-label={`Play ${p.title}, ${p.duration}`}
-                className="relative block text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-lime"
+                className="relative block text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-signal"
               >
-                <Poster videoId={p.videoId} title={p.title} label={label} />
+                <Poster videoId={p.videoId} title={p.client} label={label} />
                 <span className="absolute inset-0 flex items-center justify-center bg-ink/20 transition-colors group-hover:bg-ink/5">
                   <span className="flex h-14 w-14 items-center justify-center rounded-full bg-paper text-ink shadow-xl transition-transform group-hover:scale-105">
                     <Play className="ml-0.5 h-5 w-5 fill-current" aria-hidden />
@@ -41,13 +41,13 @@ export const SelectedFilms: React.FC = () => {
                 </span>
               </button>
               <div className="flex flex-1 flex-col p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-lime">{label}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-signal">{label}</p>
                 <h3 className="mt-1 text-lg font-semibold leading-snug text-paper">{p.client}</h3>
                 <p className="mt-1 text-sm text-paper-dim">{p.title}</p>
                 <p className="mt-2 text-sm text-paper-mute">{why}</p>
                 <Link
                   href={`/work/${p.id}`}
-                  className="mt-4 inline-flex min-h-[44px] items-center gap-1.5 self-start text-sm font-semibold text-paper underline decoration-paper/30 underline-offset-4 hover:text-lime focus:outline-none focus-visible:ring-2 focus-visible:ring-lime"
+                  className="mt-4 inline-flex min-h-[44px] items-center gap-1.5 self-start text-sm font-semibold text-paper underline decoration-paper/30 underline-offset-4 hover:text-signal focus:outline-none focus-visible:ring-2 focus-visible:ring-signal"
                 >
                   Read the case study <ArrowRight className="h-4 w-4" aria-hidden />
                 </Link>
@@ -59,7 +59,7 @@ export const SelectedFilms: React.FC = () => {
       <div className="mt-8">
         <Link
           href="/work"
-          className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-paper/25 px-6 text-sm font-semibold text-paper transition-colors hover:border-lime hover:text-lime focus:outline-none focus-visible:ring-2 focus-visible:ring-lime"
+          className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-paper/25 px-6 text-sm font-semibold text-paper transition-colors hover:border-signal hover:text-signal focus:outline-none focus-visible:ring-2 focus-visible:ring-signal"
         >
           See the full portfolio <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>

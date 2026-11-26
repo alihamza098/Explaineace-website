@@ -85,7 +85,7 @@ Whenever making changes, always:
 
 ## 5. Strict SEO & Content Rules (DO NOT BREAK)
 1. **Never Add `AggregateRating` Schema**:
-   - The user explicitly requested: keep the 4.8/5 (157 reviews) as plain text linking to Fiverr.
+   - The user explicitly requested: keep the Fiverr rating (now 5.0 / 18 reviews on @explainerace, see siteConfig) as plain text linking to Fiverr; never use the old 4.8 / 157 / "Level 2" figures.
    - Do NOT mark up reviews with Google schema to prevent rich-snippet review penalties.
 2. **Contact Email Sitewide**:
    - Always use `ali@explainerace.com`. Never re-introduce `explaineracepro@gmail.com`.

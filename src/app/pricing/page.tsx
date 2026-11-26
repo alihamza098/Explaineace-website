@@ -84,7 +84,7 @@ export default function PricingPage() {
               <>
                 A main product film plus distinct social edits, every edit delivered in 16:9, 1:1 and 9:16. Looking for a
                 single video instead? Jump to{" "}
-                <a href="#single-video" className="font-medium text-paper underline decoration-lime underline-offset-4 hover:text-lime">
+                <a href="#single-video" className="font-medium text-paper underline decoration-signal underline-offset-4 hover:text-signal">
                   Need just one video?
                 </a>
               </>

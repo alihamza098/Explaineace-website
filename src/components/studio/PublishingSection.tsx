@@ -44,22 +44,22 @@ export const PublishingSection: React.FC<{ source?: string }> = ({ source = "hom
               tabIndex={on ? 0 : -1}
               onClick={() => setPublishing(o.id, source)}
               onKeyDown={(e) => onKey(e, idx)}
-              className={`flex min-h-[44px] flex-col rounded-2xl border p-5 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lime ${
-                on ? "border-lime bg-lime/[0.06]" : "border-paper/10 bg-ink-2 hover:border-paper/30"
+              className={`flex min-h-[44px] flex-col rounded-2xl border p-5 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-signal ${
+                on ? "border-signal bg-signal/[0.06]" : "border-paper/10 bg-ink-2 hover:border-paper/30"
               }`}
             >
               <span className="flex items-start justify-between gap-3">
                 <span className="text-base font-semibold text-paper">{o.label}</span>
                 <span
                   className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${
-                    on ? "border-lime bg-lime text-lime-ink" : "border-paper/30"
+                    on ? "border-signal bg-signal text-signal-ink" : "border-paper/30"
                   }`}
                   aria-hidden
                 >
                   {on && <Check className="h-3 w-3" />}
                 </span>
               </span>
-              <span className="mt-1 text-2xl font-semibold tracking-tight text-lime">{o.priceLabel}</span>
+              <span className="mt-1 text-2xl font-semibold tracking-tight text-signal">{o.priceLabel}</span>
               <span className="mt-2 text-sm font-medium text-paper">{o.who}</span>
               <span className="mt-2 text-sm leading-relaxed text-paper-dim">{o.included}</span>
             </button>
@@ -72,11 +72,11 @@ export const PublishingSection: React.FC<{ source?: string }> = ({ source = "hom
       {/* Sample calendar: agenda on phones, three columns on larger screens */}
       <div className="mt-10 rounded-2xl border border-paper/10 bg-ink-2 p-5 sm:p-8">
         <div className="flex flex-wrap items-center gap-3">
-          <CalendarDays className="h-5 w-5 text-lime" aria-hidden />
+          <CalendarDays className="h-5 w-5 text-signal" aria-hidden />
           <h3 className="text-lg font-semibold text-paper">
             Sample calendar: Product Launch + Publish our launch
           </h3>
-          <span className="rounded-full border border-lime/40 px-3 py-1 text-xs font-semibold text-lime">
+          <span className="rounded-full border border-signal/40 px-3 py-1 text-xs font-semibold text-signal">
             {combo.display}
           </span>
         </div>
@@ -89,7 +89,7 @@ export const PublishingSection: React.FC<{ source?: string }> = ({ source = "hom
           {sampleCalendar.map((c, i) => (
             <li key={c.edit} className="relative rounded-xl border border-paper/10 bg-ink p-4 sm:p-5">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-lime">{c.when}</span>
+                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-signal">{c.when}</span>
                 <span className="text-xs text-paper-mute">{c.day}</span>
               </div>
               <p className="mt-2 text-base font-semibold text-paper">

@@ -58,16 +58,16 @@ export const Navbar: React.FC = () => {
             href={siteConfig.whatsapp.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-medium text-emerald-400 hover:text-emerald-300 px-3 py-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/15 border border-emerald-500/20 transition-colors flex items-center gap-1.5"
+            className="text-xs font-medium text-[#F4F0E6] hover:text-white px-3 py-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.09] border border-white/[0.14] transition-colors flex items-center gap-1.5"
             title="Chat directly on WhatsApp"
           >
-            <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
+            <WhatsAppIcon className="w-4 h-4 text-[#F4F0E6]" />
             <span>WhatsApp</span>
           </a>
 
           <Link
             href="/#inquiry"
-            className="group relative inline-flex items-center gap-2 text-xs font-semibold text-[#1B2204] bg-[#C8F23A] hover:bg-[#d6ff4a] px-4 py-2.5 rounded-full transition-colors duration-200"
+            className="group relative inline-flex items-center gap-2 text-xs font-semibold text-[#1F0A02] bg-[#FF6B3D] hover:bg-[#ff8660] px-4 py-2.5 rounded-full transition-colors duration-200"
           >
             <span>Start a Project</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
 
               <Link
                 href="/#inquiry"
-                className="w-full text-center py-3.5 rounded-xl text-[#1B2204] bg-[#C8F23A] font-semibold text-sm flex items-center justify-center gap-2"
+                className="w-full text-center py-3.5 rounded-xl text-[#1F0A02] bg-[#FF6B3D] font-semibold text-sm flex items-center justify-center gap-2"
               >
                 Start a Project
                 <ArrowRight className="w-4 h-4" />

@@ -17,10 +17,10 @@ export const SingleVideoRates: React.FC = () => (
       <Link
         key={t.id}
         href={links[t.id] ?? "/pricing#single-video"}
-        className="group flex min-h-[44px] flex-col rounded-2xl border border-paper/10 bg-ink-2 p-5 transition-colors hover:border-lime/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime"
+        className="group flex min-h-[44px] flex-col rounded-2xl border border-paper/10 bg-ink-2 p-5 transition-colors hover:border-signal/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-signal"
       >
         <span className="text-sm font-semibold text-paper">{t.name}</span>
-        <span className="mt-2 text-2xl font-semibold tracking-tight text-lime">{t.price}</span>
+        <span className="mt-2 text-2xl font-semibold tracking-tight text-signal">{t.price}</span>
         <span className="text-xs text-paper-mute">{t.priceUnit}</span>
         <span className="mt-3 inline-flex items-center gap-1 text-sm text-paper-dim group-hover:text-paper">
           See the service <ArrowRight className="h-4 w-4" aria-hidden />

@@ -16,7 +16,7 @@ import { events, trackEvent } from "@/lib/analytics";
 import { INQUIRY_ID, useCampaign } from "./CampaignProvider";
 
 const field =
-  "w-full rounded-xl border border-paper/15 bg-ink px-4 py-3 text-base text-paper placeholder:text-paper-mute focus:border-lime focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/60";
+  "w-full rounded-xl border border-paper/15 bg-ink px-4 py-3 text-base text-paper placeholder:text-paper-mute focus:border-signal focus:outline-none focus-visible:ring-2 focus-visible:ring-signal/60";
 const label = "mb-1.5 block text-sm font-medium text-paper";
 
 type Status = "idle" | "draft-opened" | "copied" | "invalid";
@@ -81,8 +81,8 @@ export const InquiryBuilder: React.FC = () => {
               return (
                 <label
                   key={p.id}
-                  className={`flex min-h-[44px] cursor-pointer flex-col rounded-xl border p-4 transition-colors focus-within:ring-2 focus-within:ring-lime ${
-                    on ? "border-lime bg-lime/[0.06]" : "border-paper/10 bg-ink-2 hover:border-paper/30"
+                  className={`flex min-h-[44px] cursor-pointer flex-col rounded-xl border p-4 transition-colors focus-within:ring-2 focus-within:ring-signal ${
+                    on ? "border-signal bg-signal/[0.06]" : "border-paper/10 bg-ink-2 hover:border-paper/30"
                   }`}
                 >
                   <input
@@ -94,7 +94,7 @@ export const InquiryBuilder: React.FC = () => {
                     className="sr-only"
                   />
                   <span className="text-sm font-semibold text-paper">{p.name}</span>
-                  <span className="mt-0.5 text-lg font-semibold text-lime">${p.price}</span>
+                  <span className="mt-0.5 text-lg font-semibold text-signal">${p.price}</span>
                   <span className="mt-1 text-xs text-paper-mute">{p.totalFiles} finished files</span>
                 </label>
               );
@@ -110,8 +110,8 @@ export const InquiryBuilder: React.FC = () => {
               return (
                 <label
                   key={o.id}
-                  className={`flex min-h-[44px] cursor-pointer flex-col rounded-xl border p-4 transition-colors focus-within:ring-2 focus-within:ring-lime ${
-                    on ? "border-lime bg-lime/[0.06]" : "border-paper/10 bg-ink-2 hover:border-paper/30"
+                  className={`flex min-h-[44px] cursor-pointer flex-col rounded-xl border p-4 transition-colors focus-within:ring-2 focus-within:ring-signal ${
+                    on ? "border-signal bg-signal/[0.06]" : "border-paper/10 bg-ink-2 hover:border-paper/30"
                   }`}
                 >
                   <input
@@ -123,7 +123,7 @@ export const InquiryBuilder: React.FC = () => {
                     className="sr-only"
                   />
                   <span className="text-sm font-semibold text-paper">{o.label}</span>
-                  <span className="mt-0.5 text-lg font-semibold text-lime">{o.priceLabel}</span>
+                  <span className="mt-0.5 text-lg font-semibold text-signal">{o.priceLabel}</span>
                   <span className="mt-1 text-xs text-paper-mute">{o.id === "self" ? "You post the files" : "We post for you"}</span>
                 </label>
               );
@@ -135,7 +135,7 @@ export const InquiryBuilder: React.FC = () => {
           <p className="text-sm font-semibold text-paper">3. A short brief</p>
           <div>
             <label htmlFor="inq-product" className={label}>
-              Product name or URL <span className="text-lime">*</span>
+              Product name or URL <span className="text-signal">*</span>
             </label>
             <input
               id="inq-product"
@@ -187,7 +187,7 @@ export const InquiryBuilder: React.FC = () => {
           </div>
           <div>
             <label htmlFor="inq-email" className={label}>
-              Your email, so Ali can reply <span className="text-lime">*</span>
+              Your email, so Ali can reply <span className="text-signal">*</span>
             </label>
             <input
               id="inq-email"
@@ -204,7 +204,7 @@ export const InquiryBuilder: React.FC = () => {
         <div className="flex flex-col gap-3 sm:flex-row">
           <button
             type="submit"
-            className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-lime px-7 text-sm font-semibold text-lime-ink transition-colors hover:bg-[#d6ff4a] focus:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+            className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-signal px-7 text-sm font-semibold text-signal-ink transition-colors hover:bg-[#ff8660] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
             <Mail className="h-4 w-4" aria-hidden /> Open email draft
           </button>
@@ -213,7 +213,7 @@ export const InquiryBuilder: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent(events.whatsappClick, { package: packageId, publishing: publishingId })}
-            className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-paper/25 px-7 text-sm font-semibold text-paper transition-colors hover:border-lime hover:text-lime focus:outline-none focus-visible:ring-2 focus-visible:ring-lime"
+            className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-paper/25 px-7 text-sm font-semibold text-paper transition-colors hover:border-signal hover:text-signal focus:outline-none focus-visible:ring-2 focus-visible:ring-signal"
           >
             <WhatsAppIcon className="h-4 w-4" /> Message on WhatsApp
           </a>
@@ -229,7 +229,7 @@ export const InquiryBuilder: React.FC = () => {
             <p className="text-paper-dim">
               <strong className="text-paper">Your email app should now show a draft addressed to {siteConfig.contactEmail}.</strong>{" "}
               Nothing has been sent yet — it only goes out when you press send there. No mail app opened?{" "}
-              <button type="button" onClick={copyBrief} className="underline hover:text-lime">
+              <button type="button" onClick={copyBrief} className="underline hover:text-signal">
                 Copy the brief
               </button>{" "}
               or use WhatsApp.
@@ -237,7 +237,7 @@ export const InquiryBuilder: React.FC = () => {
           )}
           {status === "copied" && (
             <p className="flex items-center gap-2 text-paper-dim">
-              <Check className="h-4 w-4 text-lime" aria-hidden /> Brief copied. Paste it into an email to {siteConfig.contactEmail}.
+              <Check className="h-4 w-4 text-signal" aria-hidden /> Brief copied. Paste it into an email to {siteConfig.contactEmail}.
             </p>
           )}
         </div>
@@ -246,7 +246,7 @@ export const InquiryBuilder: React.FC = () => {
       {/* Live estimate */}
       <aside
         aria-label="Your estimate"
-        className="rounded-2xl border border-lime/40 bg-ink-2 p-6 sm:p-7 lg:sticky lg:top-28"
+        className="rounded-2xl border border-signal/40 bg-ink-2 p-6 sm:p-7 lg:sticky lg:top-28"
       >
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-paper-mute">Your estimate</p>
         <p data-testid="estimate-display" className="mt-2 text-3xl font-semibold leading-tight tracking-tight text-paper" aria-live="polite">

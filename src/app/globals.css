@@ -282,13 +282,13 @@ html.js .reveal.is-visible {
 
 /* ==================================================================
  * Studio system (homepage / pricing revamp)
- * Warm off-white on near-black, one restrained acid-lime accent.
+ * Warm off-white on near-black, one restrained signal-orange accent.
  * Animate transform/opacity only. Reduced motion is honoured below.
  * ================================================================== */
 .studio-focus:focus-visible,
 .studio a:focus-visible,
 .studio button:focus-visible {
-  outline: 2px solid #c8f23a;
+  outline: 2px solid #ff6b3d;
   outline-offset: 3px;
 }
 
@@ -306,7 +306,7 @@ html.js .reveal.is-visible {
   top: 50%;
   overflow: hidden;
   container-type: size;
-  background: #0e0f0d;
+  background: #0e0c0b;
   border-radius: 14px;
   transform: translate(-50%, -50%) scale(0.97);
   opacity: 0;
@@ -343,8 +343,8 @@ html.js .reveal.is-visible {
 
 /* the export control */
 .fx-btn {
-  background: #c8f23a;
-  color: #1b2204;
+  background: #ff6b3d;
+  color: #1f0a02;
   border-radius: 1.6cqw;
   cursor: pointer;
 }
@@ -356,7 +356,7 @@ html.js .reveal.is-visible {
   position: absolute;
   inset: -0.9cqw;
   border-radius: inherit;
-  border: 2px solid rgba(200, 242, 58, 0.7);
+  border: 2px solid rgba(255, 107, 61, 0.7);
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
@@ -385,4 +385,95 @@ html.js .reveal.is-visible {
 
 @media (prefers-reduced-motion: reduce) {
   .fx-layer, .fx-in, .fx-ok, .fx-guide, .fx-cursor { transition-duration: 0.01ms !important; transition-delay: 0s !important; }
+}
+
+/* ---- Hero reframe loop: one action -> three cuts (transform/opacity only) ---- */
+.hr-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  container-type: inline-size;
+}
+.hr-frame {
+  position: absolute;
+  overflow: hidden;
+  container-type: size;
+  background: #0e0c0b;
+  border: 1px solid rgba(244, 240, 230, 0.14);
+  border-radius: 2cqw;
+  box-shadow: 0 3cqw 8cqw -3cqw rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 107, 61, 0.25);
+}
+.hr-tag {
+  position: absolute;
+  margin-top: -1.8cqw;
+  font-size: max(11px, 2.3cqw);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #b9b4a5;
+  white-space: nowrap;
+}
+.hr-tag-late { margin-top: 0.8cqw; }
+.hr-bar {
+  position: absolute;
+  left: 2cqw; right: 2cqw; bottom: 1cqw; height: 2px;
+  background: #ff6b3d;
+  transform-origin: left;
+  transform: scaleX(1);
+  opacity: 0.8;
+}
+.hr-cursor { transform: translate3d(54cqw, 36cqw, 0); opacity: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hr-stage[data-paused="true"] * { animation-play-state: paused !important; }
+  .hr-master { animation: hrMaster 12s var(--ease-out-expo) infinite; }
+  .hr-square { animation: hrSquare 12s var(--ease-out-expo) infinite; }
+  .hr-tall   { animation: hrTall 12s var(--ease-out-expo) infinite; }
+  .hr-tag-late { animation: hrFade 12s ease infinite; }
+  .hr-cursor { animation: hrCursor 12s var(--ease-out-expo) infinite; }
+  .hr-btn { animation: hrPress 12s ease infinite; }
+  .hr-toast { animation: hrToast 12s ease infinite; }
+  .hr-bar { animation: hrBar 12s linear infinite; }
+
+  /* master: settles slightly left while the cuts peel off */
+  @keyframes hrMaster {
+    0%   { transform: translate3d(14cqw, 14cqw, 0) scale(1.18); }
+    38%  { transform: translate3d(14cqw, 14cqw, 0) scale(1.18); }
+    52%, 92% { transform: none; }
+    100% { transform: translate3d(14cqw, 14cqw, 0) scale(1.18); }
+  }
+  /* 1:1 peels from behind the master and drops below it */
+  @keyframes hrSquare {
+    0%, 40% { opacity: 0; transform: translate3d(-1cqw, -40cqw, 0) scale(0.55); }
+    54%, 90% { opacity: 1; transform: none; }
+    98%, 100% { opacity: 0; transform: translate3d(-1cqw, -40cqw, 0) scale(0.55); }
+  }
+  /* 9:16 slides out to the right */
+  @keyframes hrTall {
+    0%, 44% { opacity: 0; transform: translate3d(-52cqw, 0, 0) scale(0.8); }
+    58%, 90% { opacity: 1; transform: none; }
+    98%, 100% { opacity: 0; transform: translate3d(-52cqw, 0, 0) scale(0.8); }
+  }
+  @keyframes hrFade {
+    0%, 56% { opacity: 0; }
+    64%, 90% { opacity: 1; }
+    97%, 100% { opacity: 0; }
+  }
+  /* cursor lives in master frame units; glides to Export and clicks */
+  @keyframes hrCursor {
+    0%   { opacity: 0; transform: translate3d(54cqw, 40cqw, 0); }
+    6%   { opacity: 1; transform: translate3d(54cqw, 40cqw, 0); }
+    22%, 30% { opacity: 1; transform: translate3d(90cqw, 8cqw, 0); }
+    34%, 100% { opacity: 0; transform: translate3d(90cqw, 8cqw, 0); }
+  }
+  @keyframes hrPress {
+    0%, 22% { transform: scale(1); }
+    25% { transform: scale(0.92); }
+    29%, 100% { transform: scale(1); }
+  }
+  @keyframes hrToast {
+    0%, 26% { opacity: 0; transform: translate3d(0, 2cqw, 0); }
+    32%, 90% { opacity: 1; transform: none; }
+    97%, 100% { opacity: 0; transform: translate3d(0, 2cqw, 0); }
+  }
+  @keyframes hrBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 }

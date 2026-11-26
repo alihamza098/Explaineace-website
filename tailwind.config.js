@@ -29,9 +29,9 @@ module.exports = {
           800: "#3730A3",
           900: "#312E81",
         },
-        ink: { DEFAULT: "#0B0B0A", 2: "#121210", 3: "#1A1A17", line: "rgba(244,240,230,0.12)" },
+        ink: { DEFAULT: "#0C0A09", 2: "#14110F", 3: "#1C1815", line: "rgba(244,240,230,0.12)" },
         paper: { DEFAULT: "#F4F0E6", dim: "#B9B4A5", mute: "#8A8678" },
-        lime: { DEFAULT: "#C8F23A", dim: "#A3C72B", ink: "#1B2204" },
+        signal: { DEFAULT: "#FF6B3D", dim: "#E0522A", ink: "#1F0A02" },
         accent: {
           cyan: "#38BDF8",
           purple: "#A855F7",

@@ -3,7 +3,7 @@
 import React from "react";
 import { ArrowRight, Play } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
-import { HeroMacbook } from "./HeroMacbook";
+import { HeroReframe } from "./HeroReframe";
 import { useFilmPlayer } from "./useFilmPlayer";
 
 /** Launch film shown by "Watch launch film": a real ExplainerAce project. */
@@ -23,7 +23,7 @@ export const StudioHero: React.FC = () => {
       <div className="studio-grain pointer-events-none absolute inset-0" aria-hidden />
       <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:px-8">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-lime sm:text-[13px]">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-signal sm:text-[13px]">
             Software video studio · ExplainerAce
           </p>
           {/* Static, readable from first paint: no hidden-until-animated text */}
@@ -38,7 +38,7 @@ export const StudioHero: React.FC = () => {
           <ol className="mt-5 max-w-xl space-y-2.5 sm:mt-7">
             {points.map((p) => (
               <li key={p.n} className="flex gap-3">
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-lime/60 text-xs font-semibold text-lime">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-signal/60 text-xs font-semibold text-signal">
                   {p.n}
                 </span>
                 <span className="text-sm leading-snug text-paper-dim">
@@ -51,14 +51,14 @@ export const StudioHero: React.FC = () => {
           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
             <a
               href="#packages"
-              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-lime px-7 text-[15px] font-semibold text-lime-ink transition-colors hover:bg-[#d6ff4a] focus:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-signal px-7 text-[15px] font-semibold text-signal-ink transition-colors hover:bg-[#ff8660] focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               Explore packages <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
             <button
               type="button"
               onClick={() => open(LAUNCH_FILM_ID, "hero")}
-              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-paper/25 px-7 text-[15px] font-semibold text-paper transition-colors hover:border-lime hover:text-lime focus:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-paper/25 px-7 text-[15px] font-semibold text-paper transition-colors hover:border-signal hover:text-signal focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               <Play className="h-4 w-4 fill-current" aria-hidden /> Watch launch film
             </button>
@@ -80,10 +80,10 @@ export const StudioHero: React.FC = () => {
 
         <div className="relative">
           <div
-            className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[70%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-lime/[0.08] blur-3xl"
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[70%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal/[0.08] blur-3xl"
             aria-hidden
           />
-          <HeroMacbook />
+          <HeroReframe />
         </div>
       </div>
       {modal}

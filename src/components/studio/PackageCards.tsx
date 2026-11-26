@@ -43,12 +43,12 @@ const Card: React.FC<{ p: CampaignPackage; source: string }> = ({ p, source }) =
       data-package={p.id}
       className={`relative flex flex-col rounded-2xl border p-6 sm:p-7 ${
         p.featured
-          ? "border-lime/60 bg-ink-2 shadow-[0_0_0_1px_rgba(200,242,58,0.25),0_30px_80px_-40px_rgba(200,242,58,0.35)] lg:-my-3 lg:py-9"
+          ? "border-signal/60 bg-ink-2 shadow-[0_0_0_1px_rgba(255, 107, 61,0.25),0_30px_80px_-40px_rgba(255, 107, 61,0.35)] lg:-my-3 lg:py-9"
           : "border-paper/10 bg-ink-2"
       }`}
     >
       {p.featured && (
-        <span className="absolute -top-3 left-6 rounded-full bg-lime px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-lime-ink">
+        <span className="absolute -top-3 left-6 rounded-full bg-signal px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-signal-ink">
           Featured
         </span>
       )}
@@ -63,7 +63,7 @@ const Card: React.FC<{ p: CampaignPackage; source: string }> = ({ p, source }) =
       </p>
 
       <p className="mt-4 text-[15px] font-medium leading-snug text-paper">{p.headline}</p>
-      <p className="mt-1 text-sm font-semibold text-lime">{p.totalFiles} finished video files</p>
+      <p className="mt-1 text-sm font-semibold text-signal">{p.totalFiles} finished video files</p>
       <p className="mt-1 text-xs text-paper-mute">{fileMath(p)}</p>
 
       <div className="mt-5">
@@ -73,18 +73,18 @@ const Card: React.FC<{ p: CampaignPackage; source: string }> = ({ p, source }) =
       <ul className="mt-5 space-y-2 text-sm text-paper-dim">
         {p.masters.description.map((d) => (
           <li key={d} className="flex gap-2">
-            <Check className="mt-0.5 h-4 w-4 shrink-0 text-lime" aria-hidden />
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-signal" aria-hidden />
             <span>{d}</span>
           </li>
         ))}
         <li className="flex gap-2">
-          <Check className="mt-0.5 h-4 w-4 shrink-0 text-lime" aria-hidden />
+          <Check className="mt-0.5 h-4 w-4 shrink-0 text-signal" aria-hidden />
           <span>
             {p.socialEdits.count} distinct social edits: {p.socialEdits.names.join(", ")}
           </span>
         </li>
         <li className="flex gap-2">
-          <Check className="mt-0.5 h-4 w-4 shrink-0 text-lime" aria-hidden />
+          <Check className="mt-0.5 h-4 w-4 shrink-0 text-signal" aria-hidden />
           <span>Each social edit in 16:9, 1:1 and 9:16</span>
         </li>
       </ul>
@@ -98,10 +98,10 @@ const Card: React.FC<{ p: CampaignPackage; source: string }> = ({ p, source }) =
         type="button"
         onClick={() => choosePackage(p.id, source)}
         aria-label={`Choose the ${p.name} package, ${money(p.price)}`}
-        className={`inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink ${
+        className={`inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink ${
           p.featured || selected
-            ? "bg-lime text-lime-ink hover:bg-[#d6ff4a]"
-            : "border border-paper/25 text-paper hover:border-lime hover:text-lime"
+            ? "bg-signal text-signal-ink hover:bg-[#ff8660]"
+            : "border border-paper/25 text-paper hover:border-signal hover:text-signal"
         }`}
       >
         {selected ? (
@@ -154,7 +154,7 @@ export const PackageCards: React.FC<{ source?: string }> = ({ source = "home" })
           <ul className="mt-3 grid gap-2 text-sm text-paper-dim sm:grid-cols-2 lg:grid-cols-1">
             {everyPackageIncludes.map((i) => (
               <li key={i} className="flex gap-2">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-lime" aria-hidden />
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-signal" aria-hidden />
                 {i}
               </li>
             ))}

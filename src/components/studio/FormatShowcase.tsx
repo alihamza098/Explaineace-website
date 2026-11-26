@@ -57,7 +57,7 @@ const Bars: React.FC<{ h: string; gap: string; w: string; label: string }> = ({ 
     {bars.map((v, i) => (
       <div key={i} className="flex flex-col items-center justify-end" style={{ width: w, height: "100%" }}>
         <div
-          className={i === 5 ? "bg-lime" : "bg-paper/25"}
+          className={i === 5 ? "bg-signal" : "bg-paper/25"}
           style={{ height: `${v}%`, width: "100%", borderRadius: "0.6cqw" }}
         />
         <span className="text-paper-mute" style={{ fontSize: label, lineHeight: 1.6 }}>
@@ -210,11 +210,11 @@ export const FormatShowcase: React.FC = () => {
                 tabIndex={on ? 0 : -1}
                 onClick={() => choose(f.id)}
                 onKeyDown={(e) => onTabKey(e, i)}
-                className={`flex min-h-[56px] flex-col justify-center rounded-xl border px-3 py-2 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lime lg:min-h-[72px] lg:px-5 ${
-                  on ? "border-lime bg-lime/[0.08]" : "border-paper/10 bg-ink-2 hover:border-paper/30"
+                className={`flex min-h-[56px] flex-col justify-center rounded-xl border px-3 py-2 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-signal lg:min-h-[72px] lg:px-5 ${
+                  on ? "border-signal bg-signal/[0.08]" : "border-paper/10 bg-ink-2 hover:border-paper/30"
                 }`}
               >
-                <span className={`text-base font-semibold lg:text-lg ${on ? "text-lime" : "text-paper"}`}>{f.id}</span>
+                <span className={`text-base font-semibold lg:text-lg ${on ? "text-signal" : "text-paper"}`}>{f.id}</span>
                 <span className="text-xs leading-tight text-paper-dim lg:text-sm">{f.name}</span>
               </button>
             );
@@ -222,7 +222,7 @@ export const FormatShowcase: React.FC = () => {
         </div>
 
         <div id="fmt-panel" role="tabpanel" aria-labelledby={`fmt-tab-${fmt}`} className="mt-6 min-h-[15rem]">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-lime">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-signal">
             {active.id} · {active.tag}
           </p>
           <h3 className="mt-1 text-2xl font-semibold tracking-tight text-paper">{active.name}</h3>
@@ -254,19 +254,19 @@ export const FormatShowcase: React.FC = () => {
             aria-label="16:9 full workflow composition"
             style={
               {
-                "--c0x": "58cqw", "--c0y": "34cqw", "--c1x": "87cqw", "--c1y": "4.6cqw",
+                "--c0x": "58cqw", "--c0y": "34cqw", "--c1x": "92.5cqw", "--c1y": "7cqw",
               } as React.CSSProperties
             }
           >
-            <div className="absolute bottom-0 left-0 top-0 border-r border-paper/10 bg-[#141512]" style={{ width: "19cqw", padding: "2.2cqw" }}>
+            <div className="absolute bottom-0 left-0 top-0 border-r border-paper/10 bg-[#161412]" style={{ width: "19cqw", padding: "2.2cqw" }}>
               <div className="flex items-center" style={{ gap: "1cqw", marginBottom: "3.4cqw" }}>
-                <span className="rounded-full bg-lime" style={{ width: "2.4cqw", height: "2.4cqw" }} />
+                <span className="rounded-full bg-signal" style={{ width: "2.4cqw", height: "2.4cqw" }} />
                 <span className="font-bold text-paper" style={{ fontSize: "max(11px,2.6cqw)" }}>Pulse</span>
               </div>
               {["Overview", "Reports", "Teams", "Billing", "Settings"].map((n) => (
                 <div
                   key={n}
-                  className={`${n === "Reports" ? "bg-lime/15 text-lime" : "text-paper-mute"} fx-in`}
+                  className={`${n === "Reports" ? "bg-signal/15 text-signal" : "text-paper-mute"} fx-in`}
                   style={{ fontSize: "max(9px,2.2cqw)", padding: "1.1cqw 1.2cqw", borderRadius: "0.8cqw", marginBottom: "0.5cqw" }}
                 >
                   {n}
@@ -277,14 +277,14 @@ export const FormatShowcase: React.FC = () => {
               <p className="text-paper-mute" style={{ fontSize: "max(9px,2cqw)" }}>Reports / Weekly report</p>
               <p className="font-bold text-paper" style={{ fontSize: "max(13px,3.6cqw)", lineHeight: 1.2 }}>Weekly report</p>
             </div>
-            <div className="fx-in absolute" style={{ left: "22cqw", right: "3cqw", top: "13cqw", height: "24cqw" }}>
+            <div className="fx-in absolute" style={{ left: "22cqw", right: "3cqw", top: "13cqw", height: "21cqw" }}>
               <div className="h-full rounded-[1.4cqw] border border-paper/10 bg-ink-3" style={{ padding: "2cqw" }}>
                 <Bars h="100%" gap="2cqw" w="8.8cqw" label="max(8px,1.7cqw)" />
               </div>
             </div>
-            <div className="fx-in absolute grid grid-cols-3" style={{ left: "22cqw", right: "3cqw", top: "39.5cqw", gap: "1.6cqw" }}>
+            <div className="fx-in absolute grid grid-cols-3" style={{ left: "22cqw", right: "3cqw", top: "36.5cqw", gap: "1.6cqw" }}>
               {[["Active users", "12,480"], ["Signups", "+18%"], ["Retention", "91%"]].map(([a, b]) => (
-                <div key={a} className="rounded-[1.2cqw] border border-paper/10 bg-ink-3" style={{ padding: "1.4cqw 1.6cqw" }}>
+                <div key={a} className="rounded-[1.2cqw] border border-paper/10 bg-ink-3" style={{ padding: "1cqw 1.4cqw" }}>
                   <p className="text-paper-mute" style={{ fontSize: "max(8px,1.8cqw)" }}>{a}</p>
                   <p className="font-bold text-paper" style={{ fontSize: "max(11px,3.2cqw)" }}>{b}</p>
                 </div>
@@ -301,8 +301,8 @@ export const FormatShowcase: React.FC = () => {
               <span className="fx-ring" aria-hidden />
               <ExportLabel icon="✓" />
             </button>
-            <div className="fx-ok absolute flex items-center rounded-[1.4cqw] bg-paper font-semibold text-lime-ink" style={{ right: "3cqw", bottom: "3cqw", padding: "1.4cqw 2cqw", gap: "1cqw", fontSize: "max(10px,2.4cqw)" }}>
-              <span className="flex items-center justify-center rounded-full bg-lime" style={{ width: "3cqw", height: "3cqw" }}>✓</span>
+            <div className="fx-ok absolute flex items-center rounded-[1.4cqw] bg-paper font-semibold text-signal-ink" style={{ right: "3cqw", bottom: "3cqw", padding: "1.4cqw 2cqw", gap: "1cqw", fontSize: "max(10px,2.4cqw)" }}>
+              <span className="flex items-center justify-center rounded-full bg-signal" style={{ width: "3cqw", height: "3cqw" }}>✓</span>
               Weekly report exported
             </div>
             <Cursor size="4.4cqw" />
@@ -315,10 +315,10 @@ export const FormatShowcase: React.FC = () => {
             data-active={act("1:1")}
             aria-hidden={!act("1:1")}
             aria-label="1:1 feature spotlight composition"
-            style={{ "--c0x": "44cqw", "--c0y": "66cqw", "--c1x": "76cqw", "--c1y": "43cqw" } as React.CSSProperties}
+            style={{ "--c0x": "44cqw", "--c0y": "66cqw", "--c1x": "83cqw", "--c1y": "46cqw" } as React.CSSProperties}
           >
             <div className="fx-in absolute flex items-center" style={{ left: "6cqw", top: "5cqw", gap: "1.4cqw" }}>
-              <span className="rounded-full bg-lime" style={{ width: "3.4cqw", height: "3.4cqw" }} />
+              <span className="rounded-full bg-signal" style={{ width: "3.4cqw", height: "3.4cqw" }} />
               <span className="font-bold text-paper" style={{ fontSize: "max(13px,4cqw)" }}>Pulse</span>
             </div>
             <h4 className="fx-in absolute font-bold tracking-tight text-paper" style={{ left: "6cqw", right: "6cqw", top: "13cqw", fontSize: "max(20px,8.4cqw)", lineHeight: 1.05 }}>
@@ -341,8 +341,8 @@ export const FormatShowcase: React.FC = () => {
               <span className="fx-ring" aria-hidden />
               <ExportLabel icon="✓" />
             </button>
-            <div className="fx-ok absolute flex items-center justify-center rounded-full bg-paper font-semibold text-lime-ink" style={{ left: "6cqw", right: "6cqw", bottom: "5cqw", height: "9cqw", gap: "2cqw", fontSize: "max(12px,4cqw)" }}>
-              <span className="flex items-center justify-center rounded-full bg-lime" style={{ width: "5cqw", height: "5cqw" }}>✓</span>
+            <div className="fx-ok absolute flex items-center justify-center rounded-full bg-paper font-semibold text-signal-ink" style={{ left: "6cqw", right: "6cqw", bottom: "5cqw", height: "9cqw", gap: "2cqw", fontSize: "max(12px,4cqw)" }}>
+              <span className="flex items-center justify-center rounded-full bg-signal" style={{ width: "5cqw", height: "5cqw" }}>✓</span>
               Exported · weekly-report.pdf
             </div>
             <Cursor size="6cqw" />
@@ -355,7 +355,7 @@ export const FormatShowcase: React.FC = () => {
             data-active={act("9:16")}
             aria-hidden={!act("9:16")}
             aria-label="9:16 action close-up composition"
-            style={{ "--c0x": "70cqw", "--c0y": "100cqw", "--c1x": "46cqw", "--c1y": "143cqw" } as React.CSSProperties}
+            style={{ "--c0x": "70cqw", "--c0y": "100cqw", "--c1x": "74cqw", "--c1y": "150cqw" } as React.CSSProperties}
           >
             <p className="fx-in absolute font-bold leading-[1.05] tracking-tight text-paper" style={{ left: "7cqw", right: "7cqw", top: "9cqw", fontSize: "max(21px,11cqw)" }}>
               Export your weekly report
@@ -369,13 +369,13 @@ export const FormatShowcase: React.FC = () => {
             </div>
             {/* success close-up */}
             <div className="fx-ok absolute flex flex-col items-center text-center" style={{ left: "7cqw", right: "7cqw", top: "46cqw" }}>
-              <span className="flex items-center justify-center rounded-full bg-lime text-lime-ink" style={{ width: "24cqw", height: "24cqw", fontSize: "14cqw" }}>✓</span>
+              <span className="flex items-center justify-center rounded-full bg-signal text-signal-ink" style={{ width: "24cqw", height: "24cqw", fontSize: "14cqw" }}>✓</span>
               <p className="font-bold text-paper" style={{ marginTop: "5cqw", fontSize: "max(20px,10cqw)", lineHeight: 1.05 }}>Report exported</p>
               <p className="rounded-full bg-paper/10 text-paper" style={{ marginTop: "4cqw", padding: "2cqw 4cqw", fontSize: "max(12px,5.4cqw)" }}>weekly-report.pdf · ready</p>
             </div>
             {/* thumb zone */}
-            <div className="fx-in pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-lime/[0.12] to-transparent" style={{ height: "62cqw" }} />
-            <p className="fx-in fx-idle-only absolute text-lime/80" style={{ left: "7cqw", top: "122cqw", fontSize: "max(11px,4.6cqw)" }}>
+            <div className="fx-in pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-signal/[0.12] to-transparent" style={{ height: "62cqw" }} />
+            <p className="fx-in fx-idle-only absolute text-signal/80" style={{ left: "7cqw", top: "122cqw", fontSize: "max(11px,4.6cqw)" }}>
               Thumb-reach zone
             </p>
             <button
@@ -395,7 +395,7 @@ export const FormatShowcase: React.FC = () => {
           {/* Frame boundary: animates between compositions with transform only */}
           <div
             aria-hidden
-            className="fx-guide pointer-events-none absolute inset-0 z-40 rounded-[14px] border-2 border-lime/80"
+            className="fx-guide pointer-events-none absolute inset-0 z-40 rounded-[14px] border-2 border-signal/80"
             style={{ transform: frame ? `scale(${frame.sx}, ${frame.sy})` : "scale(1)", opacity: frame ? 1 : 0 }}
           />
 
@@ -412,7 +412,7 @@ export const FormatShowcase: React.FC = () => {
           <button
             type="button"
             onClick={replay}
-            className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-paper/25 px-5 text-sm font-semibold text-paper transition-colors hover:border-lime hover:text-lime focus:outline-none focus-visible:ring-2 focus-visible:ring-lime"
+            className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-paper/25 px-5 text-sm font-semibold text-paper transition-colors hover:border-signal hover:text-signal focus:outline-none focus-visible:ring-2 focus-visible:ring-signal"
           >
             <RotateCcw className="h-4 w-4" aria-hidden />
             {phase === "done" ? "Replay the action" : phase === "rest" ? "Play the action" : "Playing…"}

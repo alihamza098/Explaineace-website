@@ -57,7 +57,7 @@ export default function HomePage() {
           <PackageCards source="home" />
           <p className="mt-8 text-sm text-paper-dim">
             Need just one video?{" "}
-            <Link href="/pricing#single-video" className="font-medium text-paper underline decoration-lime underline-offset-4 hover:text-lime">
+            <Link href="/pricing#single-video" className="font-medium text-paper underline decoration-signal underline-offset-4 hover:text-signal">
               See single-video rates
             </Link>
             .
