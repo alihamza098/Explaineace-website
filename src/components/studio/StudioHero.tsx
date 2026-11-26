@@ -3,7 +3,7 @@
 import React from "react";
 import { ArrowRight, Play } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
-import { HeroReframe } from "./HeroReframe";
+import { HeroVideo } from "./HeroVideo";
 import { useFilmPlayer } from "./useFilmPlayer";
 
 /** Launch film shown by "Watch launch film": a real ExplainerAce project. */
@@ -83,7 +83,7 @@ export const StudioHero: React.FC = () => {
             className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[70%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal/[0.08] blur-3xl"
             aria-hidden
           />
-          <HeroReframe />
+          <HeroVideo />
         </div>
       </div>
       {modal}
